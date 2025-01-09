@@ -1,0 +1,68 @@
+{
+    "UserAgent": "aws-amplify-cli/2.0",
+    "Version": "1.0",
+    "auth": {
+        "plugins": {
+            "awsCognitoAuthPlugin": {
+                "UserAgent": "aws-amplify/cli",
+                "Version": "0.1.0",
+                "IdentityManager": {
+                    "Default": {}
+                },
+                "CredentialsProvider": {
+                    "CognitoIdentity": {
+                        "Default": {
+                            "PoolId": "eu-central-1:964680f8-e3cc-4d24-b0b7-3d1dbd4c1d14",
+                            "Region": "eu-central-1"
+                        }
+                    }
+                },
+                "CognitoUserPool": {
+                    "Default": {
+                        "PoolId": "eu-central-1_sAP3cFdj3",
+                        "AppClientId": "35p8indjq1o4osjfal9rua4s4u",
+                        "AppClientSecret": "1rmd26eqdr0f3rjc7ju54kc86esu8bp15ho352vsee72t518tb36",
+                        "Region": "eu-central-1"
+                    }
+                },
+                "Auth": {
+                    "Default": {
+                        "OAuth": {
+                            "WebDomain": "icebackfederated.auth.eu-central-1.amazoncognito.com",
+                            "AppClientId": "35p8indjq1o4osjfal9rua4s4u",
+                            "AppClientSecret": "1rmd26eqdr0f3rjc7ju54kc86esu8bp15ho352vsee72t518tb36",
+                            "SignInRedirectURI": "myapp://iceback",
+                            "SignOutRedirectURI": "myapp://icebacksingout",
+                            "Scopes": [
+                                "phone",
+                                "email",
+                                "openid",
+                                "profile",
+                                "aws.cognito.signin.user.admin"
+                            ]
+                        },
+                        "authenticationFlowType": "USER_SRP_AUTH",
+                        "mfaConfiguration": "OFF",
+                        "mfaTypes": [
+                            "SMS"
+                        ],
+                        "passwordProtectionSettings": {
+                            "passwordPolicyMinLength": 8,
+                            "passwordPolicyCharacters": []
+                        },
+                        "signupAttributes": [
+                            "EMAIL"
+                        ],
+                        "socialProviders": [],
+                        "usernameAttributes": [
+                            "EMAIL"
+                        ],
+                        "verificationMechanisms": [
+                            "EMAIL"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

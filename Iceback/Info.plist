@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string></string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.768891046844-c47438l0omtp2hj5tdlod5lq4unbgdn8</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb392264726578857</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>myapp</string>
+			</array>
+		</dict>
+	</array>
+	<key>FacebookAppID</key>
+	<string>392264726578857</string>
+	<key>FacebookAutoLogAppEventsEnabled</key>
+	<true/>
+	<key>FacebookClientToken</key>
+	<string>4ec2c797336143c9e877fadf30614591</string>
+	<key>FacebookDisplayName</key>
+	<string>Ice-Back</string>
+	<key>FirebaseAppDelegateProxyEnabled</key>
+	<false/>
+	<key>FirebaseAutomaticScreenReportingEnabled</key>
+	<false/>
+	<key>GIDClientID</key>
+	<string>768891046844-c47438l0omtp2hj5tdlod5lq4unbgdn8.apps.googleusercontent.com</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fb-messenger-share-api</string>
+		<string>fbapi</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Avenir LT Std 45 Book.otf</string>
+		<string>Avenir LT Std 55 Oblique.otf</string>
+		<string>Avenir LT Std 35 Light.otf</string>
+		<string>Avenir LT Std 65 Medium.otf</string>
+		<string>Avenir LT Std 45 Book Oblique.otf</string>
+		<string>Avenir LT Std 85 Heavy Oblique.otf</string>
+		<string>Avenir LT Std 55 Roman.otf</string>
+		<string>Avenir LT Std 65 Medium Oblique.otf</string>
+		<string>Avenir LT Std 95 Black.otf</string>
+		<string>Avenir LT Std 85 Heavy.otf</string>
+		<string>Avenir LT Std 95 Black Oblique.otf</string>
+	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>remote-notification</string>
+	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+</dict>
+</plist>

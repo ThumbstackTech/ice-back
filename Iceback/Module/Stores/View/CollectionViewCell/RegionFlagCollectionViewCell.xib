@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="RegionFlagCollectionViewCell" customModule="Iceback" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="62"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="62"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="psK-r4-cZg">
+                        <rect key="frame" x="0.0" y="0.0" width="45" height="40"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgGermanyFlag" translatesAutoresizingMaskIntoConstraints="NO" id="oyP-1a-A2u">
+                                <rect key="frame" x="0.0" y="7" width="35" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="6PJ-fA-yom"/>
+                                    <constraint firstAttribute="height" constant="25" id="XEL-qP-z8d"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="oyP-1a-A2u" secondAttribute="bottom" constant="8" id="C2F-rn-KNm"/>
+                            <constraint firstItem="oyP-1a-A2u" firstAttribute="leading" secondItem="psK-r4-cZg" secondAttribute="leading" id="ZOj-o6-tPX"/>
+                            <constraint firstItem="oyP-1a-A2u" firstAttribute="top" secondItem="psK-r4-cZg" secondAttribute="top" constant="7" id="o8U-1v-GOW"/>
+                            <constraint firstAttribute="trailing" secondItem="oyP-1a-A2u" secondAttribute="trailing" constant="10" id="xji-5a-ZBQ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="psK-r4-cZg" secondAttribute="trailing" id="0ab-HG-sOd"/>
+                <constraint firstItem="psK-r4-cZg" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Ju3-TD-rXD"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="psK-r4-cZg" secondAttribute="bottom" id="Rzl-my-4aH"/>
+                <constraint firstItem="psK-r4-cZg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="hXt-T6-MxN"/>
+            </constraints>
+            <size key="customSize" width="50" height="62"/>
+            <connections>
+                <outlet property="imgRegionFlag" destination="oyP-1a-A2u" id="St7-bn-b3V"/>
+            </connections>
+            <point key="canvasLocation" x="90.07633587786259" y="-30.281690140845072"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="imgGermanyFlag" width="1200" height="720"/>
+    </resources>
+</document>

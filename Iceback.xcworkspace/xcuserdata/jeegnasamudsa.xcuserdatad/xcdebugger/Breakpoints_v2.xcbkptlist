@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "E3EBA4AB-0293-474F-9188-998622A6F986"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6BEAC922-CAA4-4F4D-89D9-15EEB80ED991"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Iceback/Module/LRF/View/VerificationVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "SignInAccessTokenSuccess(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FACD9664-4EA3-4111-A54C-3F59F31499AA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Iceback/Module/Custom SideMenu/View/PurchaseHistoryVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "setUpController()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F5753A75-5458-439E-BBF4-48F04698BE4B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Iceback/API Manager/SideMenuManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "getUserProfile(successCompletion:errorCompletion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F5753A75-5458-439E-BBF4-48F04698BE4B - b65d0a2f7be41940"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Iceback.SideMenuManager.getUserProfile(successCompletion: (Iceback.UserProfile) -&gt; (), errorCompletion: (Swift.String) -&gt; ()) -&gt; ()"
+                  moduleName = "Iceback"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jeegnasamudsa/Downloads/iOS_Iceback_Mobile_App/Iceback/API%20Manager/SideMenuManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "207">
+               </Location>
+               <Location
+                  uuid = "F5753A75-5458-439E-BBF4-48F04698BE4B - 169a92aba2fd6dd1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.AnyObject&gt;) -&gt; () in Iceback.SideMenuManager.getUserProfile(successCompletion: (Iceback.UserProfile) -&gt; (), errorCompletion: (Swift.String) -&gt; ()) -&gt; ()"
+                  moduleName = "Iceback"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jeegnasamudsa/Downloads/iOS_Iceback_Mobile_App/Iceback/API%20Manager/SideMenuManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "213">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "374A3FE5-186D-43BE-8306-1166B637DA04"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Iceback/Module/Custom SideMenu/ViewModel/CustomSideMenuViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "getUserProfile()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "374A3FE5-186D-43BE-8306-1166B637DA04 - 387f63627ace5a51"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Iceback.CustomSideMenuViewModel.getUserProfile() -&gt; ()"
+                  moduleName = "Iceback"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jeegnasamudsa/Downloads/iOS_Iceback_Mobile_App/Iceback/Module/Custom%20SideMenu/ViewModel/CustomSideMenuViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "123">
+               </Location>
+               <Location
+                  uuid = "374A3FE5-186D-43BE-8306-1166B637DA04 - 387f63627ace5a51"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Iceback.CustomSideMenuViewModel.getUserProfile() -&gt; ()"
+                  moduleName = "Iceback"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jeegnasamudsa/Downloads/iOS_Iceback_Mobile_App/Iceback/Module/Custom%20SideMenu/ViewModel/CustomSideMenuViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "152">
+               </Location>
+               <Location
+                  uuid = "374A3FE5-186D-43BE-8306-1166B637DA04 - 17d160ad1b956500"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Iceback.UserProfile) -&gt; () in Iceback.CustomSideMenuViewModel.getUserProfile() -&gt; ()"
+                  moduleName = "Iceback"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jeegnasamudsa/Downloads/iOS_Iceback_Mobile_App/Iceback/Module/Custom%20SideMenu/ViewModel/CustomSideMenuViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "69">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "43956014-3BAC-4184-8B0E-0544F2400C5E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Iceback/API Manager/SideMenuManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "getUserProfile(successCompletion:errorCompletion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FB5E7178-9843-4EA8-AE1B-E56F5BD57AB8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Iceback/API Manager/SideMenuManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "getUserProfile(successCompletion:errorCompletion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "07D9A11C-A8D5-42A3-9A36-F1D3729868A4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Iceback/Module/Report Issue/View/ReportIssueDetailVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "viewReportList(response:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "29E96725-EA49-4303-BEC0-FCE5BD0470B9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Iceback/Module/Report Issue/View/ReportIssueDetailVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "setupData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "29E96725-EA49-4303-BEC0-FCE5BD0470B9 - cc6301ac39b90697"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Iceback.ReportIssueDetailVC.setupData() -&gt; ()"
+                  moduleName = "Iceback"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jeegnasamudsa/Downloads/iOS_Iceback_Mobile_App/Iceback/Module/Report%20Issue/View/ReportIssueDetailVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "33">
+               </Location>
+               <Location
+                  uuid = "29E96725-EA49-4303-BEC0-FCE5BD0470B9 - 825fefc31e8b2475"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Iceback.ReportViewData) -&gt; () in Iceback.ReportIssueDetailVC.setupData() -&gt; ()"
+                  moduleName = "Iceback"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jeegnasamudsa/Downloads/iOS_Iceback_Mobile_App/Iceback/Module/Report%20Issue/View/ReportIssueDetailVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "80">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "720C5696-0679-4316-BAF0-529B02145D89"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Iceback/Module/Stores/View/CouponDetailsVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
+            landmarkName = "setUpController()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F177B375-54C9-4E32-A1F3-80B5CB8D664D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Iceback/Module/Report Issue/View/CreateReportIssueVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

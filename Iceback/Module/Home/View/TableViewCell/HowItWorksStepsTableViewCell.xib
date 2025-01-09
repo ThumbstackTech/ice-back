@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="97" id="KGk-i7-Jjw" customClass="HowItWorksStepsTableViewCell" customModule="Iceback" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="97"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="97"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l0P-zg-AgD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDk-ed-zMg">
+                                <rect key="frame" x="10" y="10" width="30" height="30"/>
+                                <color key="backgroundColor" name="App1F8DFF(20%)"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="eDk-ed-zMg" secondAttribute="height" multiplier="1:1" id="vjj-FF-gzf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="13"/>
+                                <color key="textColor" name="App000000"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7y0-Pv-DSt">
+                                <rect key="frame" x="55" y="15" width="250" height="20.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Choose your shop &amp; order">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="15" name="Avenir-Black"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="AppEFF8FF"/>
+                        <constraints>
+                            <constraint firstItem="7y0-Pv-DSt" firstAttribute="centerY" secondItem="l0P-zg-AgD" secondAttribute="centerY" id="Gvu-Di-M5j"/>
+                            <constraint firstAttribute="bottom" secondItem="eDk-ed-zMg" secondAttribute="bottom" constant="10" id="Ph1-8P-gnE"/>
+                            <constraint firstAttribute="trailing" secondItem="7y0-Pv-DSt" secondAttribute="trailing" constant="15" id="UoS-lT-LQc"/>
+                            <constraint firstAttribute="width" secondItem="l0P-zg-AgD" secondAttribute="height" multiplier="32:5" id="VcJ-fa-BNT"/>
+                            <constraint firstItem="eDk-ed-zMg" firstAttribute="top" secondItem="l0P-zg-AgD" secondAttribute="top" constant="10" id="bjW-Bo-YkI"/>
+                            <constraint firstItem="eDk-ed-zMg" firstAttribute="leading" secondItem="l0P-zg-AgD" secondAttribute="leading" constant="10" id="cE5-zr-xmW"/>
+                            <constraint firstItem="7y0-Pv-DSt" firstAttribute="leading" secondItem="eDk-ed-zMg" secondAttribute="trailing" constant="15" id="qkr-LX-vwm"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="l0P-zg-AgD" secondAttribute="trailing" id="6XD-7r-ptL"/>
+                    <constraint firstItem="l0P-zg-AgD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="K2h-kI-wH3"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="l0P-zg-AgD" secondAttribute="bottom" constant="10" id="RIt-U7-Xkv"/>
+                    <constraint firstItem="l0P-zg-AgD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="w20-Yt-aeC"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="lblStepNo" destination="eDk-ed-zMg" id="1bu-D5-uCY"/>
+                <outlet property="lblStepTitle" destination="7y0-Pv-DSt" id="SiB-VR-ajR"/>
+            </connections>
+            <point key="canvasLocation" x="22.900763358778626" y="-13.732394366197184"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="App000000">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="App1F8DFF(20%)">
+            <color red="0.12200000137090683" green="0.55299997329711914" blue="1" alpha="0.20000000298023224" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppEFF8FF">
+            <color red="0.93725490196078431" green="0.97254901960784312" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

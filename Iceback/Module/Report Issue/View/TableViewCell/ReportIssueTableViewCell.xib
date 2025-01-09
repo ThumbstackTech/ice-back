@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir LT Std 55 Roman.otf">
+            <string>AvenirLTStd-Roman</string>
+        </array>
+        <array key="Avenir LT Std 85 Heavy.otf">
+            <string>AvenirLTStd-Heavy</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="141" id="KGk-i7-Jjw" customClass="ReportIssueTableViewCell" customModule="Iceback" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="141"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="141"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j0e-Ld-ey3">
+                        <rect key="frame" x="20" y="0.0" width="280" height="57"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aMn-SU-s3i">
+                                <rect key="frame" x="10" y="15" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="AvenirLTStd-Heavy" family="Avenir LT Std" pointSize="17"/>
+                                <color key="textColor" name="App000000"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgi-5K-zAk">
+                                <rect key="frame" x="270" y="15" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="AvenirLTStd-Roman" family="Avenir LT Std" pointSize="14"/>
+                                <color key="textColor" name="App000000(70%)"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tun-hF-dwF">
+                                <rect key="frame" x="10" y="27" width="260" height="1"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="ZgE-fr-aOX"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftL-Rl-fUZ">
+                                <rect key="frame" x="10" y="42" width="260" height="0.0"/>
+                                <fontDescription key="fontDescription" name="AvenirLTStd-Heavy" family="Avenir LT Std" pointSize="16"/>
+                                <color key="textColor" name="App000000"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="AppEFF8FF(80%)"/>
+                        <constraints>
+                            <constraint firstItem="Tun-hF-dwF" firstAttribute="leading" secondItem="aMn-SU-s3i" secondAttribute="leading" id="CQp-3t-czs"/>
+                            <constraint firstItem="hgi-5K-zAk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="aMn-SU-s3i" secondAttribute="trailing" constant="10" id="IRJ-y7-8bn"/>
+                            <constraint firstItem="Tun-hF-dwF" firstAttribute="top" secondItem="aMn-SU-s3i" secondAttribute="bottom" constant="12" id="JQF-sx-tjG"/>
+                            <constraint firstAttribute="bottom" secondItem="ftL-Rl-fUZ" secondAttribute="bottom" constant="15" id="LGV-Ck-hjS"/>
+                            <constraint firstItem="aMn-SU-s3i" firstAttribute="leading" secondItem="j0e-Ld-ey3" secondAttribute="leading" constant="10" id="Mm4-Vo-fR3"/>
+                            <constraint firstItem="Tun-hF-dwF" firstAttribute="trailing" secondItem="hgi-5K-zAk" secondAttribute="trailing" id="PAP-hI-JRY"/>
+                            <constraint firstItem="hgi-5K-zAk" firstAttribute="top" secondItem="aMn-SU-s3i" secondAttribute="top" id="Tjl-8P-MXW"/>
+                            <constraint firstItem="ftL-Rl-fUZ" firstAttribute="top" secondItem="Tun-hF-dwF" secondAttribute="bottom" constant="14" id="UbY-VB-Z6U"/>
+                            <constraint firstAttribute="trailing" secondItem="ftL-Rl-fUZ" secondAttribute="trailing" constant="10" id="bkd-xM-SrZ"/>
+                            <constraint firstItem="ftL-Rl-fUZ" firstAttribute="leading" secondItem="j0e-Ld-ey3" secondAttribute="leading" constant="10" id="jj3-rk-el4"/>
+                            <constraint firstItem="aMn-SU-s3i" firstAttribute="top" secondItem="j0e-Ld-ey3" secondAttribute="top" constant="15" id="nV4-71-05q"/>
+                            <constraint firstAttribute="trailing" secondItem="hgi-5K-zAk" secondAttribute="trailing" constant="10" id="sld-G9-LTt"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="j0e-Ld-ey3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="DXU-QG-mCy"/>
+                    <constraint firstAttribute="trailing" secondItem="j0e-Ld-ey3" secondAttribute="trailing" constant="20" id="J5e-ac-D2A"/>
+                    <constraint firstItem="j0e-Ld-ey3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="SwF-DT-E2c"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="j0e-Ld-ey3" secondAttribute="bottom" constant="20" id="fbN-aJ-0g9"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="lblIssueDate" destination="hgi-5K-zAk" id="wfF-kZ-RVd"/>
+                <outlet property="lblIssueId" destination="aMn-SU-s3i" id="lo1-ck-6Dz"/>
+                <outlet property="lblIssueSubject" destination="ftL-Rl-fUZ" id="M6X-rI-bdA"/>
+                <outlet property="viewDash" destination="Tun-hF-dwF" id="vy0-jV-cIS"/>
+            </connections>
+            <point key="canvasLocation" x="4.5801526717557248" y="1.7605633802816902"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="App000000">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="App000000(70%)">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.69999998807907104" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppEFF8FF(80%)">
+            <color red="0.93699997663497925" green="0.97299998998641968" blue="1" alpha="0.80000001192092896" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

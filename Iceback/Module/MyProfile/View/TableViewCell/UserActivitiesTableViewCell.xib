@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir LT Std 55 Roman.otf">
+            <string>AvenirLTStd-Roman</string>
+        </array>
+        <array key="Avenir LT Std 65 Medium.otf">
+            <string>AvenirLTStd-Medium</string>
+        </array>
+        <array key="Avenir LT Std 85 Heavy.otf">
+            <string>AvenirLTStd-Heavy</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="149" id="KGk-i7-Jjw" customClass="UserActivitiesTableViewCell" customModule="Iceback" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="149"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="149"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UUJ-gy-snA">
+                        <rect key="frame" x="24" y="8" width="272" height="50"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifH-MD-OXQ">
+                                <rect key="frame" x="10" y="15" width="252" height="0.0"/>
+                                <fontDescription key="fontDescription" name="AvenirLTStd-Roman" family="Avenir LT Std" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UtV-5I-00W">
+                                <rect key="frame" x="10" y="25" width="252" height="0.0"/>
+                                <fontDescription key="fontDescription" name="AvenirLTStd-Heavy" family="Avenir LT Std" pointSize="16"/>
+                                <color key="textColor" name="App000000"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eck-Si-Bg2">
+                                <rect key="frame" x="10" y="35" width="252" height="0.0"/>
+                                <fontDescription key="fontDescription" name="AvenirLTStd-Medium" family="Avenir LT Std" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="AppEFF8FF(80%)"/>
+                        <constraints>
+                            <constraint firstItem="Eck-Si-Bg2" firstAttribute="trailing" secondItem="ifH-MD-OXQ" secondAttribute="trailing" id="1b2-BV-IZI"/>
+                            <constraint firstAttribute="trailing" secondItem="ifH-MD-OXQ" secondAttribute="trailing" constant="10" id="3TN-FA-xPd"/>
+                            <constraint firstItem="UtV-5I-00W" firstAttribute="top" secondItem="ifH-MD-OXQ" secondAttribute="bottom" constant="10" id="AD8-QC-p00"/>
+                            <constraint firstItem="ifH-MD-OXQ" firstAttribute="leading" secondItem="UUJ-gy-snA" secondAttribute="leading" constant="10" id="BxK-YT-LwR"/>
+                            <constraint firstItem="Eck-Si-Bg2" firstAttribute="leading" secondItem="UtV-5I-00W" secondAttribute="leading" id="MHQ-FL-YzR"/>
+                            <constraint firstItem="Eck-Si-Bg2" firstAttribute="top" secondItem="UtV-5I-00W" secondAttribute="bottom" constant="10" id="MQz-6E-uZv"/>
+                            <constraint firstItem="ifH-MD-OXQ" firstAttribute="top" secondItem="UUJ-gy-snA" secondAttribute="top" constant="15" id="Oef-1p-ULX"/>
+                            <constraint firstItem="Eck-Si-Bg2" firstAttribute="trailing" secondItem="UtV-5I-00W" secondAttribute="trailing" id="OlY-Hz-CxK"/>
+                            <constraint firstItem="UtV-5I-00W" firstAttribute="leading" secondItem="ifH-MD-OXQ" secondAttribute="leading" id="Rot-1Z-Adw"/>
+                            <constraint firstAttribute="bottom" secondItem="Eck-Si-Bg2" secondAttribute="bottom" constant="15" id="niG-WT-Io1"/>
+                            <constraint firstItem="UtV-5I-00W" firstAttribute="trailing" secondItem="ifH-MD-OXQ" secondAttribute="trailing" id="ybE-Ay-NCR"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="UUJ-gy-snA" secondAttribute="trailing" constant="24" id="aaH-qt-waQ"/>
+                    <constraint firstItem="UUJ-gy-snA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="gNE-hX-8mB"/>
+                    <constraint firstItem="UUJ-gy-snA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="uMa-xh-nj1"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="UUJ-gy-snA" secondAttribute="bottom" constant="12" id="uZj-aQ-XgS"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="constDealsNameTop" destination="MQz-6E-uZv" id="Op2-hT-V4T"/>
+                <outlet property="lblDate" destination="ifH-MD-OXQ" id="5b5-wj-3sU"/>
+                <outlet property="lblDealName" destination="Eck-Si-Bg2" id="yuF-8Y-pxq"/>
+                <outlet property="lblShopName" destination="UtV-5I-00W" id="JcC-44-Th2"/>
+            </connections>
+            <point key="canvasLocation" x="19.847328244274809" y="3.8732394366197185"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="App000000">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppEFF8FF(80%)">
+            <color red="0.93699997663497925" green="0.97299998998641968" blue="1" alpha="0.80000001192092896" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

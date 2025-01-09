@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir LT Std 65 Medium.otf">
+            <string>AvenirLTStd-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MenuListCell" rowHeight="89" id="KGk-i7-Jjw" customClass="MenuListCell" customModule="Iceback" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="328" height="89"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="328" height="89"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dashboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ItK-fF-GTP">
+                        <rect key="frame" x="122" y="15" width="84.333333333333314" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="OE2-5L-bmm"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="AvenirLTStd-Medium" family="Avenir LT Std" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <switch hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="V0B-9v-00U">
+                        <rect key="frame" x="231.33333333333337" y="9.6666666666666643" width="52" height="35"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="8Rm-Pb-Lia"/>
+                            <constraint firstAttribute="width" constant="50" id="U4m-ZW-D35"/>
+                        </constraints>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="onTintColor" name="App1F8DFF(20%)"/>
+                        <color key="thumbTintColor" name="App1F8DFF"/>
+                    </switch>
+                </subviews>
+                <color key="backgroundColor" red="0.0" green="0.32941176470588235" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="V0B-9v-00U" firstAttribute="leading" secondItem="ItK-fF-GTP" secondAttribute="trailing" constant="25" id="G4Y-ao-m8D"/>
+                    <constraint firstItem="ItK-fF-GTP" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="U6M-ZC-9aq"/>
+                    <constraint firstAttribute="bottom" secondItem="ItK-fF-GTP" secondAttribute="bottom" constant="15" id="hjF-pw-gEb"/>
+                    <constraint firstItem="V0B-9v-00U" firstAttribute="centerY" secondItem="ItK-fF-GTP" secondAttribute="centerY" id="ixH-e0-6dy"/>
+                    <constraint firstItem="ItK-fF-GTP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="szd-ep-bKb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="lblTitle" destination="ItK-fF-GTP" id="3TM-6j-LDY"/>
+                <outlet property="switchEnable" destination="V0B-9v-00U" id="C6T-9e-T0R"/>
+            </connections>
+            <point key="canvasLocation" x="19.847328244274809" y="-16.549295774647888"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="App1F8DFF">
+            <color red="0.12156862745098039" green="0.55294117647058827" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="App1F8DFF(20%)">
+            <color red="0.12200000137090683" green="0.55299997329711914" blue="1" alpha="0.20000000298023224" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

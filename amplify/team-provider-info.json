@@ -1,0 +1,38 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-iceback-dev-9eaf1-authRole",
+      "UnauthRoleArn": "arn:aws:iam::845941822793:role/amplify-iceback-dev-9eaf1-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::845941822793:role/amplify-iceback-dev-9eaf1-authRole",
+      "Region": "eu-central-1",
+      "DeploymentBucketName": "amplify-iceback-dev-9eaf1-deployment",
+      "UnauthRoleName": "amplify-iceback-dev-9eaf1-unauthRole",
+      "StackName": "amplify-iceback-dev-9eaf1",
+      "StackId": "arn:aws:cloudformation:eu-central-1:845941822793:stack/amplify-iceback-dev-9eaf1/4b2690a0-f671-11ee-83ba-06cab8ff7247",
+      "AmplifyAppId": "db8o9jwmmprnr"
+    },
+    "categories": {
+      "auth": {
+        "icebackd7f8e07d": {}
+      }
+    }
+  },
+  "iceback": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-iceback-iceback-8f48d-authRole",
+      "UnauthRoleArn": "arn:aws:iam::845941822793:role/amplify-iceback-iceback-8f48d-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::845941822793:role/amplify-iceback-iceback-8f48d-authRole",
+      "Region": "eu-central-1",
+      "DeploymentBucketName": "amplify-iceback-iceback-8f48d-deployment",
+      "UnauthRoleName": "amplify-iceback-iceback-8f48d-unauthRole",
+      "StackName": "amplify-iceback-iceback-8f48d",
+      "StackId": "arn:aws:cloudformation:eu-central-1:845941822793:stack/amplify-iceback-iceback-8f48d/0a451bf0-f672-11ee-84b1-06ff9e4e81dd",
+      "AmplifyAppId": "db8o9jwmmprnr"
+    },
+    "categories": {
+      "auth": {
+        "icebackd7f8e07d": {}
+      }
+    }
+  }
+}

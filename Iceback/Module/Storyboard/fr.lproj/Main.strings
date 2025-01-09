@@ -1,0 +1,336 @@
+
+/* Class = "UILabel"; text = "Welcome to Iceback"; ObjectID = "0VT-Wx-nsY"; */
+"0VT-Wx-nsY.text" = "Welcome to Iceback";
+
+/* Class = "UILabel"; text = "Customer Support"; ObjectID = "0YX-35-KlG"; */
+"0YX-35-KlG.text" = "Customer Support";
+
+/* Class = "UILabel"; text = "Confirm Password "; ObjectID = "0dX-0C-tKn"; */
+"0dX-0C-tKn.text" = "Confirm Password ";
+
+/* Class = "UILabel"; text = "We have delivered the authentication code by SMS to email address. Please enter the code to complete the verification."; ObjectID = "0dh-N1-BAz"; */
+"0dh-N1-BAz.text" = "We have delivered the authentication code by SMS to email address. Please enter the code to complete the verification.";
+
+/* Class = "UILabel"; text = "Remember Me"; ObjectID = "1h7-aw-Xi1"; */
+"1h7-aw-Xi1.text" = "Remember Me";
+
+/* Class = "UILabel"; text = "I Accept all the Terms & Condition of the Iceback Application"; ObjectID = "1iJ-fY-SwM"; */
+"1iJ-fY-SwM.text" = "I Accept all the Terms & Condition of the Iceback Application";
+
+/* Class = "UILabel"; text = "Family name "; ObjectID = "2IG-VU-oOz"; */
+"2IG-VU-oOz.text" = "Family name ";
+
+/* Class = "UILabel"; text = "Enter the Email Address Associated with your Account."; ObjectID = "2JF-J6-FgD"; */
+"2JF-J6-FgD.text" = "Enter the Email Address Associated with your Account.";
+
+/* Class = "UILabel"; text = "11"; ObjectID = "2Lw-96-5Ll"; */
+"2Lw-96-5Ll.text" = "11";
+
+/* Class = "UILabel"; text = "Message"; ObjectID = "3Ok-2Z-TRb"; */
+"3Ok-2Z-TRb.text" = "Message";
+
+/* Class = "UILabel"; text = "0 CHF"; ObjectID = "5dG-4g-Jal"; */
+"5dG-4g-Jal.text" = "0 CHF";
+
+/* Class = "UIButton"; normalTitle = "Yes"; ObjectID = "67s-dc-wrt"; */
+"67s-dc-wrt.normalTitle" = "Yes";
+
+/* Class = "UILabel"; text = "+49"; ObjectID = "6OE-Dg-Gp2"; */
+"6OE-Dg-Gp2.text" = "+49";
+
+/* Class = "UILabel"; text = "Trending"; ObjectID = "6iW-LC-0p5"; */
+"6iW-LC-0p5.text" = "Trending";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "7FN-ko-zWP"; */
+"7FN-ko-zWP.text" = "Password";
+
+/* Class = "UILabel"; text = "Project Cost"; ObjectID = "8gs-TK-PfX"; */
+"8gs-TK-PfX.text" = "Project Cost";
+
+/* Class = "UIButton"; normalTitle = "Reset Password"; ObjectID = "8hd-tO-KAr"; */
+"8hd-tO-KAr.normalTitle" = "Reset Password";
+
+/* Class = "UITextField"; placeholder = "Enter email"; ObjectID = "AB7-62-rhX"; */
+"AB7-62-rhX.placeholder" = "Enter email";
+
+/* Class = "UILabel"; text = "55 CHF"; ObjectID = "AT0-vm-cEZ"; */
+"AT0-vm-cEZ.text" = "55 CHF";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "B4e-3I-aXr"; */
+"B4e-3I-aXr.normalTitle" = "Cancel";
+
+/* Class = "UIButton"; normalTitle = "Register"; ObjectID = "BFq-8L-M5M"; */
+"BFq-8L-M5M.normalTitle" = "Register";
+
+/* Class = "UILabel"; text = "Phone number"; ObjectID = "Cnm-xU-nBm"; */
+"Cnm-xU-nBm.text" = "Phone number";
+
+/* Class = "UILabel"; text = "Payment Options"; ObjectID = "Cuu-ag-xFD"; */
+"Cuu-ag-xFD.text" = "Payment Options";
+
+/* Class = "UIButton"; normalTitle = "Donate"; ObjectID = "Dh2-Pf-qdx"; */
+"Dh2-Pf-qdx.normalTitle" = "Donate";
+
+/* Class = "UILabel"; text = "980 CHF"; ObjectID = "Ep1-a2-2cj"; */
+"Ep1-a2-2cj.text" = "980 CHF";
+
+/* Class = "UITextField"; placeholder = "Enter confirm password"; ObjectID = "FDs-1m-7kQ"; */
+"FDs-1m-7kQ.placeholder" = "Enter confirm password";
+
+/* Class = "UILabel"; text = "Filter"; ObjectID = "G7K-Vd-g0b"; */
+"G7K-Vd-g0b.text" = "Filter";
+
+/* Class = "UILabel"; text = "Notification"; ObjectID = "Gnk-9K-g75"; */
+"Gnk-9K-g75.text" = "Notification";
+
+/* Class = "UILabel"; text = "Referral bonus"; ObjectID = "HQ1-Zt-bkN"; */
+"HQ1-Zt-bkN.text" = "Referral bonus";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "HSq-OC-aHf"; */
+"HSq-OC-aHf.text" = "Name";
+
+/* Class = "UITextField"; placeholder = "Enter password"; ObjectID = "IXZ-uN-Ynm"; */
+"IXZ-uN-Ynm.placeholder" = "Enter password";
+
+/* Class = "UILabel"; text = "Referral donations"; ObjectID = "Ils-kr-N0O"; */
+"Ils-kr-N0O.text" = "Referral donations";
+
+/* Class = "UILabel"; text = "Face ID"; ObjectID = "JW2-NP-ckK"; */
+"JW2-NP-ckK.text" = "Face ID";
+
+/* Class = "UILabel"; text = "Given name"; ObjectID = "KoE-T2-8ve"; */
+"KoE-T2-8ve.text" = "Given name";
+
+/* Class = "UILabel"; text = "Select Language"; ObjectID = "KrX-9B-sdb"; */
+"KrX-9B-sdb.text" = "Select Language";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "LMJ-SH-Ut8"; */
+"LMJ-SH-Ut8.text" = "Email";
+
+/* Class = "UIButton"; normalTitle = "Forgot Password?"; ObjectID = "M4H-0P-R8E"; */
+"M4H-0P-R8E.normalTitle" = "Forgot Password?";
+
+/* Class = "UILabel"; text = "Authentication Code"; ObjectID = "MEo-m6-Xkg"; */
+"MEo-m6-Xkg.text" = "Authentication Code";
+
+/* Class = "UILabel"; text = "Trending"; ObjectID = "MLD-Ur-uY8"; */
+"MLD-Ur-uY8.text" = "Trending";
+
+/* Class = "UIButton"; normalTitle = "Apply"; ObjectID = "MM6-e0-ek8"; */
+"MM6-e0-ek8.normalTitle" = "Apply";
+
+/* Class = "UILabel"; text = "All"; ObjectID = "MTi-yo-Kvo"; */
+"MTi-yo-Kvo.text" = "All";
+
+/* Class = "UIButton"; normalTitle = "Report Issue"; ObjectID = "NUI-mm-Neq"; */
+"NUI-mm-Neq.normalTitle" = "Report Issue";
+
+/* Class = "UIButton"; normalTitle = "Update"; ObjectID = "NtE-wq-OIk"; */
+"NtE-wq-OIk.normalTitle" = "Update";
+
+/* Class = "UILabel"; text = "Forgot Password"; ObjectID = "Ohr-Xj-SLh"; */
+"Ohr-Xj-SLh.text" = "Forgot Password";
+
+/* Class = "UILabel"; text = "Please Enter Your Details"; ObjectID = "PU5-xB-ItC"; */
+"PU5-xB-ItC.text" = "Please Enter Your Details";
+
+/* Class = "UILabel"; text = "Caskback Active"; ObjectID = "PYo-4l-NXT"; */
+"PYo-4l-NXT.text" = "Caskback Active";
+
+/* Class = "UILabel"; text = "Sort by"; ObjectID = "Pbp-rC-ZZs"; */
+"Pbp-rC-ZZs.text" = "Sort by";
+
+/* Class = "UILabel"; text = "Confirm password "; ObjectID = "Psr-1e-69S"; */
+"Psr-1e-69S.text" = "Confirm password ";
+
+/* Class = "UILabel"; text = "Email Address"; ObjectID = "QZ4-iO-TZY"; */
+"QZ4-iO-TZY.text" = "Email Address";
+
+/* Class = "UILabel"; text = "Enter a New Password & Confirm Password"; ObjectID = "Qcx-q6-BBA"; */
+"Qcx-q6-BBA.text" = "Enter a New Password & Confirm Password";
+
+/* Class = "UIButton"; normalTitle = "Clear All"; ObjectID = "R5m-xx-azC"; */
+"R5m-xx-azC.normalTitle" = "Clear All";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "SK9-4C-42x"; */
+"SK9-4C-42x.text" = "Password";
+
+/* Class = "UILabel"; text = "Payment Options"; ObjectID = "SRq-FP-era"; */
+"SRq-FP-era.text" = "Payment Options";
+
+/* Class = "UIButton"; normalTitle = "Verify"; ObjectID = "TD4-UD-N25"; */
+"TD4-UD-N25.normalTitle" = "Verify";
+
+/* Class = "UILabel"; text = "Donated"; ObjectID = "TN3-Oy-0hE"; */
+"TN3-Oy-0hE.text" = "Donated";
+
+/* Class = "UILabel"; text = "Shipping & Delivery"; ObjectID = "TWF-39-wMe"; */
+"TWF-39-wMe.text" = "Shipping & Delivery";
+
+/* Class = "UILabel"; text = "Already have an account? Login"; ObjectID = "U2K-et-alK"; */
+"U2K-et-alK.text" = "Already have an account? Login";
+
+/* Class = "UITextField"; placeholder = "Enter email"; ObjectID = "UFS-2U-mAL"; */
+"UFS-2U-mAL.placeholder" = "Enter email";
+
+/* Class = "UILabel"; text = "Similar Projects"; ObjectID = "Udm-UX-qZM"; */
+"Udm-UX-qZM.text" = "Similar Projects";
+
+/* Class = "UIButton"; normalTitle = "Register"; ObjectID = "Uq2-YP-FPU"; */
+"Uq2-YP-FPU.normalTitle" = "Register";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "Uyq-rg-J7D"; */
+"Uyq-rg-J7D.text" = "Email";
+
+/* Class = "UILabel"; text = "New"; ObjectID = "V68-of-TdK"; */
+"V68-of-TdK.text" = "New";
+
+/* Class = "UITextField"; placeholder = "Enter name"; ObjectID = "V9h-9m-sWI"; */
+"V9h-9m-sWI.placeholder" = "Enter name";
+
+/* Class = "UITextField"; placeholder = "Search"; ObjectID = "VBv-1d-bdx"; */
+"VBv-1d-bdx.placeholder" = "Search";
+
+/* Class = "UILabel"; text = "Welcome Back"; ObjectID = "W6o-6T-bSb"; */
+"W6o-6T-bSb.text" = "Welcome Back";
+
+/* Class = "UILabel"; text = "Filter"; ObjectID = "XaQ-M9-CZr"; */
+"XaQ-M9-CZr.text" = "Filter";
+
+/* Class = "UIButton"; normalTitle = "Apply"; ObjectID = "Xxd-YA-Yc1"; */
+"Xxd-YA-Yc1.normalTitle" = "Apply";
+
+/* Class = "UILabel"; text = "Don’t have an account? Sign Up"; ObjectID = "Ye8-0m-WED"; */
+"Ye8-0m-WED.text" = "Don’t have an account? Sign Up";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "a51-OG-H0u"; */
+"a51-OG-H0u.text" = "Email";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "a9b-Bu-lgw"; */
+"a9b-Bu-lgw.normalTitle" = "Submit";
+
+/* Class = "UILabel"; text = "Friends Registered"; ObjectID = "afP-Q2-wie"; */
+"afP-Q2-wie.text" = "Friends Registered";
+
+/* Class = "UITextField"; placeholder = "Enter email"; ObjectID = "aj6-S5-PKh"; */
+"aj6-S5-PKh.placeholder" = "Enter email";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "any-iD-NUO"; */
+"any-iD-NUO.normalTitle" = "Cancel";
+
+/* Class = "UILabel"; text = "Remaining Balance"; ObjectID = "b80-Ah-fZY"; */
+"b80-Ah-fZY.text" = "Remaining Balance";
+
+/* Class = "UILabel"; text = "New"; ObjectID = "bLx-In-04K"; */
+"bLx-In-04K.text" = "New";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "bMN-vQ-FOx"; */
+"bMN-vQ-FOx.normalTitle" = "Submit";
+
+/* Class = "UILabel"; text = "Verification Code"; ObjectID = "bmf-It-Yan"; */
+"bmf-It-Yan.text" = "Verification Code";
+
+/* Class = "UILabel"; text = "Deals & Vouchers"; ObjectID = "cMb-Ll-4lb"; */
+"cMb-Ll-4lb.text" = "Deals & Vouchers";
+
+/* Class = "UIButton"; normalTitle = "Continue as Guest"; ObjectID = "cZc-CJ-DpV"; */
+"cZc-CJ-DpV.normalTitle" = "Continue as Guest";
+
+/* Class = "UITextField"; placeholder = "Enter given name"; ObjectID = "cdv-8a-0yD"; */
+"cdv-8a-0yD.placeholder" = "Enter given name";
+
+/* Class = "UILabel"; text = "0 CHF"; ObjectID = "d9S-Mu-wxm"; */
+"d9S-Mu-wxm.text" = "0 CHF";
+
+/* Class = "UILabel"; text = "Reset Password"; ObjectID = "dvV-Td-xU7"; */
+"dvV-Td-xU7.text" = "Reset Password";
+
+/* Class = "UITextField"; placeholder = "Enter email address"; ObjectID = "eqd-1t-DDE"; */
+"eqd-1t-DDE.placeholder" = "Enter email address";
+
+/* Class = "UILabel"; text = "New Password"; ObjectID = "esz-wZ-sGL"; */
+"esz-wZ-sGL.text" = "New Password";
+
+/* Class = "UILabel"; text = "Stores"; ObjectID = "exI-qh-Jzc"; */
+"exI-qh-Jzc.text" = "Stores";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "ey8-Yn-OdM"; */
+"ey8-Yn-OdM.normalTitle" = "Login";
+
+/* Class = "UITextField"; placeholder = "Enter family name"; ObjectID = "fmK-RD-gXm"; */
+"fmK-RD-gXm.placeholder" = "Enter family name";
+
+/* Class = "UIButton"; normalTitle = "Register"; ObjectID = "gJo-mC-MRt"; */
+"gJo-mC-MRt.normalTitle" = "Register";
+
+/* Class = "UILabel"; text = "No data to display"; ObjectID = "gp8-tF-Ej9"; */
+"gp8-tF-Ej9.text" = "No data to display";
+
+/* Class = "UITextField"; placeholder = "Enter phone number"; ObjectID = "jBg-ik-AVN"; */
+"jBg-ik-AVN.placeholder" = "Enter phone number";
+
+/* Class = "UILabel"; text = "All"; ObjectID = "jQd-hm-gYg"; */
+"jQd-hm-gYg.text" = "All";
+
+/* Class = "UILabel"; text = "Or"; ObjectID = "k3C-kN-yi5"; */
+"k3C-kN-yi5.text" = "Or";
+
+/* Class = "UILabel"; text = "Donation Projects"; ObjectID = "lNR-6f-pqf"; */
+"lNR-6f-pqf.text" = "Donation Projects";
+
+/* Class = "UILabel"; text = "Shipping: "; ObjectID = "lQF-i4-7AI"; */
+"lQF-i4-7AI.text" = "Shipping: ";
+
+/* Class = "UIButton"; normalTitle = "Clear All"; ObjectID = "lRj-qs-2sy"; */
+"lRj-qs-2sy.normalTitle" = "Clear All";
+
+/* Class = "UITextField"; placeholder = "Enter password"; ObjectID = "lbH-WJ-UY2"; */
+"lbH-WJ-UY2.placeholder" = "Enter password";
+
+/* Class = "UILabel"; text = "No data to display"; ObjectID = "mck-ou-nAv"; */
+"mck-ou-nAv.text" = "No data to display";
+
+/* Class = "UILabel"; text = "No data to display"; ObjectID = "nA1-To-Db5"; */
+"nA1-To-Db5.text" = "No data to display";
+
+/* Class = "UILabel"; text = "Delivery Time : "; ObjectID = "nBy-uO-BaW"; */
+"nBy-uO-BaW.text" = "Delivery Time : ";
+
+/* Class = "UILabel"; text = "Didn’t receive the code? Resend"; ObjectID = "nXx-zc-gfl"; */
+"nXx-zc-gfl.text" = "Didn’t receive the code? Resend";
+
+/* Class = "UIButton"; normalTitle = "No"; ObjectID = "qQj-zs-nnK"; */
+"qQj-zs-nnK.normalTitle" = "No";
+
+/* Class = "UITextField"; placeholder = "Enter new password"; ObjectID = "qbL-XA-yMT"; */
+"qbL-XA-yMT.placeholder" = "Enter new password";
+
+/* Class = "UILabel"; text = "Purchase History"; ObjectID = "qsa-EA-aaQ"; */
+"qsa-EA-aaQ.text" = "Purchase History";
+
+/* Class = "UILabel"; text = "0 CHF"; ObjectID = "qud-cw-Sy6"; */
+"qud-cw-Sy6.text" = "0 CHF";
+
+/* Class = "UILabel"; text = "About Us"; ObjectID = "rKk-El-Icf"; */
+"rKk-El-Icf.text" = "About Us";
+
+/* Class = "UILabel"; text = "Are you sure you want to log out of your account?"; ObjectID = "rtc-nB-zGQ"; */
+"rtc-nB-zGQ.text" = "Are you sure you want to log out of your account?";
+
+/* Class = "UILabel"; text = "Expiry Date: "; ObjectID = "tRI-kx-X73"; */
+"tRI-kx-X73.text" = "Expiry Date: ";
+
+/* Class = "UITextField"; placeholder = "Enter confirm password"; ObjectID = "wey-Tv-P3N"; */
+"wey-Tv-P3N.placeholder" = "Enter confirm password";
+
+/* Class = "UILabel"; text = "Special Deals & Vouchers"; ObjectID = "xVt-gP-E1V"; */
+"xVt-gP-E1V.text" = "Special Deals & Vouchers";
+
+/* Class = "UITextField"; placeholder = "Search"; ObjectID = "xwR-rm-DoU"; */
+"xwR-rm-DoU.placeholder" = "Search";
+
+/* Class = "UIButton"; normalTitle = "View More"; ObjectID = "yTN-2U-qEy"; */
+"yTN-2U-qEy.normalTitle" = "View More";
+
+/* Class = "UILabel"; text = "Shipping & Delivery"; ObjectID = "zKC-XW-ao5"; */
+"zKC-XW-ao5.text" = "Shipping & Delivery";

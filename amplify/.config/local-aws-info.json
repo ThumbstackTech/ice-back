@@ -1,0 +1,12 @@
+{
+  "dev": {
+    "configLevel": "project",
+    "useProfile": false,
+    "awsConfigFilePath": "/Users/admin/.amplify/awscloudformation/XBMUpFq98M"
+  },
+  "iceback": {
+    "configLevel": "project",
+    "useProfile": false,
+    "awsConfigFilePath": "/Users/admin/.amplify/awscloudformation/hDIt6nPq3k"
+  }
+}

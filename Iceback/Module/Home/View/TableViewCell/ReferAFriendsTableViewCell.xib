@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir LT Std 55 Roman.otf">
+            <string>AvenirLTStd-Roman</string>
+        </array>
+        <array key="Avenir LT Std 95 Black.otf">
+            <string>AvenirLTStd-Black</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="403" id="KGk-i7-Jjw" customClass="ReferAFriendsTableViewCell" customModule="Iceback" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="297" height="403"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="297" height="403"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Abt-cd-VAc">
+                        <rect key="frame" x="0.0" y="0.0" width="297" height="189"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fWN-wq-9PV">
+                                <rect key="frame" x="5" y="5" width="287" height="103.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fWN-wq-9PV" secondAttribute="height" multiplier="360:130" id="GW8-48-Sud"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="26"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCU-ZF-D4Q">
+                                <rect key="frame" x="15" y="123.5" width="267" height="0.0"/>
+                                <fontDescription key="fontDescription" name="AvenirLTStd-Roman" family="Avenir LT Std" pointSize="14"/>
+                                <color key="textColor" name="App000000(80%)"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Jb-Jx-rpH">
+                                <rect key="frame" x="15" y="138.5" width="267" height="35.5"/>
+                                <color key="backgroundColor" name="App1F8DFF"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5Jb-Jx-rpH" secondAttribute="height" multiplier="340:45" id="3zP-jQ-gVu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirLTStd-Black" family="Avenir LT Std" pointSize="14"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="I Want to Know More">
+                                    <color key="titleColor" name="AppFFFFFF"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="AppEFF8FF"/>
+                        <constraints>
+                            <constraint firstItem="5Jb-Jx-rpH" firstAttribute="top" secondItem="GCU-ZF-D4Q" secondAttribute="bottom" constant="15" id="08I-G1-wBi"/>
+                            <constraint firstAttribute="trailing" secondItem="fWN-wq-9PV" secondAttribute="trailing" constant="5" id="0Ar-sM-dqZ"/>
+                            <constraint firstAttribute="trailing" secondItem="GCU-ZF-D4Q" secondAttribute="trailing" constant="15" id="1RS-jC-19a"/>
+                            <constraint firstAttribute="trailing" secondItem="5Jb-Jx-rpH" secondAttribute="trailing" constant="15" id="HCE-lk-aaQ"/>
+                            <constraint firstItem="GCU-ZF-D4Q" firstAttribute="top" secondItem="fWN-wq-9PV" secondAttribute="bottom" constant="15" id="KgO-qo-YfU"/>
+                            <constraint firstItem="fWN-wq-9PV" firstAttribute="leading" secondItem="Abt-cd-VAc" secondAttribute="leading" constant="5" id="R6t-RI-tmu"/>
+                            <constraint firstItem="5Jb-Jx-rpH" firstAttribute="leading" secondItem="Abt-cd-VAc" secondAttribute="leading" constant="15" id="WCb-7p-x5q"/>
+                            <constraint firstAttribute="bottom" secondItem="5Jb-Jx-rpH" secondAttribute="bottom" constant="15" id="dVx-40-0oC"/>
+                            <constraint firstItem="fWN-wq-9PV" firstAttribute="top" secondItem="Abt-cd-VAc" secondAttribute="top" constant="5" id="n4w-5v-1bU"/>
+                            <constraint firstItem="GCU-ZF-D4Q" firstAttribute="leading" secondItem="Abt-cd-VAc" secondAttribute="leading" constant="15" id="qiR-Iy-wJi"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="29"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Abt-cd-VAc" secondAttribute="bottom" id="4pz-Nl-tfW"/>
+                    <constraint firstAttribute="trailing" secondItem="Abt-cd-VAc" secondAttribute="trailing" id="DMd-Ju-1YM"/>
+                    <constraint firstItem="Abt-cd-VAc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="UKP-im-zUx"/>
+                    <constraint firstItem="Abt-cd-VAc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="r7k-gQ-iww"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="btnIWantToKnowMore" destination="5Jb-Jx-rpH" id="Mlm-fG-5FC"/>
+                <outlet property="imgReferAFriend" destination="fWN-wq-9PV" id="F4I-dc-tby"/>
+                <outlet property="lblReferAFriendDescription" destination="GCU-ZF-D4Q" id="krh-K7-eVV"/>
+            </connections>
+            <point key="canvasLocation" x="5.343511450381679" y="94.014084507042256"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="App000000(80%)">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.80000001192092896" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="App1F8DFF">
+            <color red="0.12156862745098039" green="0.55294117647058827" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppEFF8FF">
+            <color red="0.93725490196078431" green="0.97254901960784312" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppFFFFFF">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

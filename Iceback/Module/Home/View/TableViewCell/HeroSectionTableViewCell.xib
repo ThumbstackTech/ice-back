@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir LT Std 95 Black.otf">
+            <string>AvenirLTStd-Black</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="340" id="KGk-i7-Jjw" customClass="HeroSectionTableViewCell" customModule="Iceback" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="392" height="340"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="392" height="340"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ab-vD-lI0">
+                        <rect key="frame" x="0.0" y="15" width="392" height="246"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcG-aX-622">
+                                <rect key="frame" x="15" y="158" width="362" height="0.0"/>
+                                <fontDescription key="fontDescription" name="AvenirLTStd-Black" family="Avenir LT Std" pointSize="16"/>
+                                <color key="textColor" name="App000000"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5l-Qe-GyX">
+                                <rect key="frame" x="15" y="168" width="362" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="14"/>
+                                <color key="textColor" name="App000000(80%)"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBH-4G-O6j">
+                                <rect key="frame" x="15" y="183" width="362" height="48"/>
+                                <color key="backgroundColor" name="App1F8DFF"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="DBH-4G-O6j" secondAttribute="height" multiplier="340:45" id="fld-yB-Nmq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="14"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Get My Card">
+                                    <color key="titleColor" name="AppFFFFFF"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eDb-Oa-eao">
+                                <rect key="frame" x="5" y="5" width="382" height="138"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="eDb-Oa-eao" secondAttribute="height" multiplier="360:130" id="Hgm-8D-VjB"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="26"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" name="AppEFF8FF"/>
+                        <constraints>
+                            <constraint firstItem="eDb-Oa-eao" firstAttribute="top" secondItem="2ab-vD-lI0" secondAttribute="top" constant="5" id="2Tx-gq-4zf"/>
+                            <constraint firstAttribute="trailing" secondItem="eDb-Oa-eao" secondAttribute="trailing" constant="5" id="2dU-Qc-bjd"/>
+                            <constraint firstItem="e5l-Qe-GyX" firstAttribute="leading" secondItem="bcG-aX-622" secondAttribute="leading" id="5AT-NB-sRN"/>
+                            <constraint firstItem="e5l-Qe-GyX" firstAttribute="top" secondItem="bcG-aX-622" secondAttribute="bottom" constant="10" id="69X-Ph-M2O"/>
+                            <constraint firstItem="e5l-Qe-GyX" firstAttribute="trailing" secondItem="bcG-aX-622" secondAttribute="trailing" id="6oZ-15-zm6"/>
+                            <constraint firstItem="bcG-aX-622" firstAttribute="leading" secondItem="2ab-vD-lI0" secondAttribute="leading" constant="15" id="BPx-zw-Eyv"/>
+                            <constraint firstItem="DBH-4G-O6j" firstAttribute="trailing" secondItem="e5l-Qe-GyX" secondAttribute="trailing" id="DS4-WZ-C0o"/>
+                            <constraint firstAttribute="bottom" secondItem="DBH-4G-O6j" secondAttribute="bottom" constant="15" id="Fvh-fa-5Te"/>
+                            <constraint firstItem="DBH-4G-O6j" firstAttribute="leading" secondItem="e5l-Qe-GyX" secondAttribute="leading" id="TVC-2J-Hln"/>
+                            <constraint firstAttribute="trailing" secondItem="bcG-aX-622" secondAttribute="trailing" constant="15" id="WJT-E8-k7S"/>
+                            <constraint firstItem="DBH-4G-O6j" firstAttribute="top" secondItem="e5l-Qe-GyX" secondAttribute="bottom" constant="15" id="cmK-fY-NHu"/>
+                            <constraint firstItem="eDb-Oa-eao" firstAttribute="leading" secondItem="2ab-vD-lI0" secondAttribute="leading" constant="5" id="plu-Jf-xdX"/>
+                            <constraint firstItem="bcG-aX-622" firstAttribute="top" secondItem="eDb-Oa-eao" secondAttribute="bottom" constant="15" id="qm3-7T-ZPI"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="29"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="2ab-vD-lI0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Saj-Xj-zOs"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="2ab-vD-lI0" secondAttribute="bottom" id="WwY-VJ-OuZ"/>
+                    <constraint firstItem="2ab-vD-lI0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="lko-jw-hOT"/>
+                    <constraint firstAttribute="trailing" secondItem="2ab-vD-lI0" secondAttribute="trailing" id="t6Q-aX-Xjo"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="btnSignUp" destination="DBH-4G-O6j" id="6re-nd-p7D"/>
+                <outlet property="imgBanner" destination="eDb-Oa-eao" id="hMt-Sx-MZk"/>
+                <outlet property="lblBannerDescription" destination="e5l-Qe-GyX" id="KRb-bw-u62"/>
+                <outlet property="lblBannerTitle" destination="bcG-aX-622" id="dOg-eG-XPB"/>
+            </connections>
+            <point key="canvasLocation" x="77.862595419847324" y="71.83098591549296"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="App000000">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="App000000(80%)">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.80000001192092896" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="App1F8DFF">
+            <color red="0.12156862745098039" green="0.55294117647058827" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppEFF8FF">
+            <color red="0.93725490196078431" green="0.97254901960784312" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppFFFFFF">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

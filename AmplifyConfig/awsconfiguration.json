@@ -1,0 +1,71 @@
+{
+    "UserAgent": "aws-amplify/cli",
+    "Version": "0.1.0",
+    "IdentityManager": {
+        "Default": {}
+    },
+    "CredentialsProvider": {
+        "CognitoIdentity": {
+            "Default": {
+                "PoolId": "eu-central-1:964680f8-e3cc-4d24-b0b7-3d1dbd4c1d14",
+                "Region": "eu-central-1"
+            }
+        }
+    },
+    "CognitoUserPool": {
+        "Default": {
+            "PoolId": "eu-central-1_sAP3cFdj3",
+            "AppClientId": "35p8indjq1o4osjfal9rua4s4u",
+            "AppClientSecret": "1rmd26eqdr0f3rjc7ju54kc86esu8bp15ho352vsee72t518tb36",
+            "Region": "eu-central-1"
+        }
+    },
+    
+    "FacebookSignIn": {
+        "Permissions": "public_profile,email",
+        "AppId": "967410627750578",
+        "AppSecret": "c02c4b606c36373bdd0e6d8cea58eb4f"
+      },
+    "GoogleSignIn": {
+        "Permissions": "email,openid",
+        "ClientId-WebApp": "768891046844-e6epopi894quf5j3o62re1d7afinspp0.apps.googleusercontent.com",
+        "ClientId-iOS": "768891046844-c47438l0omtp2hj5tdlod5lq4unbgdn8.apps.googleusercontent.com"
+    },
+    "Auth": {
+        "Default": {
+            "OAuth": {
+                "WebDomain": "icebackfederated.auth.eu-central-1.amazoncognito.com",
+                "AppClientId": "35p8indjq1o4osjfal9rua4s4u",
+                "AppClientSecret": "1rmd26eqdr0f3rjc7ju54kc86esu8bp15ho352vsee72t518tb36",
+                "SignInRedirectURI": "myapp://icebacklogin",
+                "SignOutRedirectURI": "myapp://icebacksingout",
+                "Scopes": [
+                    "phone",
+                    "email",
+                    "openid",
+                    "profile",
+                    "aws.cognito.signin.user.admin"
+                ]
+            },
+            "authenticationFlowType": "USER_SRP_AUTH",
+            "mfaConfiguration": "OFF",
+            "mfaTypes": [
+                "SMS"
+            ],
+            "passwordProtectionSettings": {
+                "passwordPolicyMinLength": 8,
+                "passwordPolicyCharacters": []
+            },
+            "signupAttributes": [
+                "EMAIL"
+            ],
+            "socialProviders": [],
+            "usernameAttributes": [
+                "EMAIL"
+            ],
+            "verificationMechanisms": [
+                "EMAIL"
+            ]
+        }
+    }
+}

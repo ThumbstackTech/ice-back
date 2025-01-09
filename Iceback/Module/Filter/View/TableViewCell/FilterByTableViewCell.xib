@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir LT Std 65 Medium.otf">
+            <string>AvenirLTStd-Medium</string>
+        </array>
+        <array key="Avenir LT Std 85 Heavy.otf">
+            <string>AvenirLTStd-Heavy</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="60" id="KGk-i7-Jjw" customClass="FilterByTableViewCell" customModule="Iceback" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P1b-Zj-EIc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5pG-X3-YDb">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="1"/>
+                                <color key="backgroundColor" name="App000000(10%)"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="rnY-F2-uNY"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6T5-9O-z4C">
+                                <rect key="frame" x="29.999999999999993" y="10" width="69.333333333333314" height="40"/>
+                                <fontDescription key="fontDescription" name="AvenirLTStd-Heavy" family="Avenir LT Std" pointSize="16"/>
+                                <color key="textColor" name="App000000"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y8o-dP-BeR">
+                                <rect key="frame" x="296" y="24" width="14" height="12"/>
+                                <fontDescription key="fontDescription" name="AvenirLTStd-Medium" family="Avenir LT Std" pointSize="12"/>
+                                <color key="textColor" name="App000000(60%)"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cKc-LS-lbz">
+                                <rect key="frame" x="0.0" y="59" width="320" height="1"/>
+                                <color key="backgroundColor" name="App000000(10%)"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="iUB-B5-Vok"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6T5-9O-z4C" firstAttribute="top" secondItem="P1b-Zj-EIc" secondAttribute="top" constant="10" id="67l-Fc-4iA"/>
+                            <constraint firstItem="cKc-LS-lbz" firstAttribute="leading" secondItem="P1b-Zj-EIc" secondAttribute="leading" id="88p-Zq-yii"/>
+                            <constraint firstAttribute="trailing" secondItem="y8o-dP-BeR" secondAttribute="trailing" constant="10" id="ADw-8A-DhB"/>
+                            <constraint firstItem="6T5-9O-z4C" firstAttribute="leading" secondItem="P1b-Zj-EIc" secondAttribute="leading" constant="30" id="BZt-Nk-576"/>
+                            <constraint firstItem="5pG-X3-YDb" firstAttribute="top" secondItem="P1b-Zj-EIc" secondAttribute="top" id="Bsp-Yu-Ngd"/>
+                            <constraint firstItem="y8o-dP-BeR" firstAttribute="centerY" secondItem="6T5-9O-z4C" secondAttribute="centerY" id="JCn-dB-fUd"/>
+                            <constraint firstAttribute="trailing" secondItem="cKc-LS-lbz" secondAttribute="trailing" id="JIj-kO-2TD"/>
+                            <constraint firstAttribute="bottom" secondItem="cKc-LS-lbz" secondAttribute="bottom" id="Vdl-3b-MHk"/>
+                            <constraint firstAttribute="trailing" secondItem="5pG-X3-YDb" secondAttribute="trailing" id="d5T-Cz-hsH"/>
+                            <constraint firstItem="5pG-X3-YDb" firstAttribute="leading" secondItem="P1b-Zj-EIc" secondAttribute="leading" id="ixo-lw-Wph"/>
+                            <constraint firstAttribute="bottom" secondItem="6T5-9O-z4C" secondAttribute="bottom" constant="10" id="raJ-Z9-pma"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="P1b-Zj-EIc" secondAttribute="trailing" id="EIg-x0-j2a"/>
+                    <constraint firstAttribute="bottom" secondItem="P1b-Zj-EIc" secondAttribute="bottom" id="JCD-RA-Dhy"/>
+                    <constraint firstItem="P1b-Zj-EIc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="K6h-Un-Q59"/>
+                    <constraint firstItem="P1b-Zj-EIc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="mbn-5H-wWF"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bgView" destination="P1b-Zj-EIc" id="EmG-I3-WdQ"/>
+                <outlet property="bottomView" destination="cKc-LS-lbz" id="YjG-9x-FCf"/>
+                <outlet property="lblCategoryCount" destination="y8o-dP-BeR" id="k02-1V-6YI"/>
+                <outlet property="lblName" destination="6T5-9O-z4C" id="AaN-mx-73W"/>
+                <outlet property="viewTop" destination="5pG-X3-YDb" id="zPS-QG-nXp"/>
+            </connections>
+            <point key="canvasLocation" x="-56.488549618320612" y="25.35211267605634"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="App000000">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="App000000(10%)">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.10000000149011612" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="App000000(60%)">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.60000002384185791" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

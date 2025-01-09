@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir LT Std 95 Black.otf">
+            <string>AvenirLTStd-Black</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SpecialDealsAndVouchersCollectionViewCell" customModule="Iceback" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="176" height="283"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="176" height="283"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YaG-s5-Yid">
+                        <rect key="frame" x="0.0" y="0.0" width="176" height="283"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_coupon_list" translatesAutoresizingMaskIntoConstraints="NO" id="Kuf-x5-7Le">
+                                <rect key="frame" x="5" y="5" width="166" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="MCX-0l-Wru"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voucher" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A0h-Ah-4kA">
+                                <rect key="frame" x="57.333333333333343" y="80" width="61.666666666666657" height="16"/>
+                                <fontDescription key="fontDescription" name="AvenirLTStd-Black" family="Avenir LT Std" pointSize="16"/>
+                                <color key="textColor" name="App000000"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rxz-KE-vhV">
+                                <rect key="frame" x="9" y="104" width="158" height="63"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="123% OFF on NITECORE NWL20 600 Lumens Rechargeable COB Outdoor Tool Light Multi-fu">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="12" name="AvenirLTStd-Roman"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="AppEFF8FF"/>
+                        <constraints>
+                            <constraint firstItem="Kuf-x5-7Le" firstAttribute="leading" secondItem="YaG-s5-Yid" secondAttribute="leading" constant="5" id="1nE-LX-Zjh"/>
+                            <constraint firstAttribute="trailing" secondItem="Kuf-x5-7Le" secondAttribute="trailing" constant="5" id="Lhe-z0-ali"/>
+                            <constraint firstAttribute="trailing" secondItem="Rxz-KE-vhV" secondAttribute="trailing" constant="9" id="T4c-Mm-GL0"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Rxz-KE-vhV" secondAttribute="bottom" constant="8" id="Ysk-hz-9hY"/>
+                            <constraint firstItem="A0h-Ah-4kA" firstAttribute="centerX" secondItem="YaG-s5-Yid" secondAttribute="centerX" id="iFD-y9-aMZ"/>
+                            <constraint firstItem="Rxz-KE-vhV" firstAttribute="leading" secondItem="YaG-s5-Yid" secondAttribute="leading" constant="9" id="kzB-Wz-kRu"/>
+                            <constraint firstItem="Kuf-x5-7Le" firstAttribute="top" secondItem="YaG-s5-Yid" secondAttribute="top" constant="5" id="lrG-qZ-pqI"/>
+                            <constraint firstItem="A0h-Ah-4kA" firstAttribute="top" secondItem="Kuf-x5-7Le" secondAttribute="bottom" constant="10" id="sdq-bS-oC9"/>
+                            <constraint firstItem="Rxz-KE-vhV" firstAttribute="top" secondItem="A0h-Ah-4kA" secondAttribute="bottom" constant="8" id="zcN-4x-yyX"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="YaG-s5-Yid" secondAttribute="trailing" id="OOI-Bq-p29"/>
+                <constraint firstAttribute="bottom" secondItem="YaG-s5-Yid" secondAttribute="bottom" id="Px4-Jx-BOF"/>
+                <constraint firstItem="YaG-s5-Yid" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="TZy-Tc-FF3"/>
+                <constraint firstItem="YaG-s5-Yid" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="oKf-vC-YjO"/>
+            </constraints>
+            <size key="customSize" width="176" height="283"/>
+            <connections>
+                <outlet property="imgVoucher" destination="Kuf-x5-7Le" id="zTb-6v-Aho"/>
+                <outlet property="lblVoucherDetail" destination="Rxz-KE-vhV" id="g0e-T0-8f8"/>
+                <outlet property="lblVoucherTitle" destination="A0h-Ah-4kA" id="cqR-PZ-kqo"/>
+            </connections>
+            <point key="canvasLocation" x="119.08396946564885" y="49.647887323943664"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ic_coupon_list" width="226.66667175292969" height="86.666664123535156"/>
+        <namedColor name="App000000">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppEFF8FF">
+            <color red="0.93725490196078431" green="0.97254901960784312" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

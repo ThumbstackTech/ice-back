@@ -1,0 +1,60 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-iceback-iceback-8f48d-authRole",
+      "UnauthRoleArn": "arn:aws:iam::845941822793:role/amplify-iceback-iceback-8f48d-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::845941822793:role/amplify-iceback-iceback-8f48d-authRole",
+      "Region": "eu-central-1",
+      "DeploymentBucketName": "amplify-iceback-iceback-8f48d-deployment",
+      "UnauthRoleName": "amplify-iceback-iceback-8f48d-unauthRole",
+      "StackName": "amplify-iceback-iceback-8f48d",
+      "StackId": "arn:aws:cloudformation:eu-central-1:845941822793:stack/amplify-iceback-iceback-8f48d/0a451bf0-f672-11ee-84b1-06ff9e4e81dd",
+      "AmplifyAppId": "db8o9jwmmprnr"
+    }
+  },
+  "auth": {
+    "icebackd7f8e07d": {
+      "customAuth": false,
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-iceback-iceback-8f48d-deployment/amplify-cfn-templates/auth/icebackd7f8e07d-cloudformation-template.json",
+        "logicalId": "authicebackd7f8e07d"
+      },
+      "lastPushTimeStamp": "2024-04-09T13:21:06.810Z",
+      "output": {
+        "UserPoolId": "eu-central-1_FFDeJVdX9",
+        "AppClientIDWeb": "590pcvct8cdpp56otehraotvvc",
+        "AppClientID": "2or8uaj42d43e16vuh1mab8n51",
+        "HostedUIDomain": "icebackd7f8e07d-d7f8e07d-iceback",
+        "IdentityPoolId": "eu-central-1:d6ce66a0-49d0-482c-a23f-50013f91f45b",
+        "UserPoolArn": "arn:aws:cognito-idp:eu-central-1:845941822793:userpool/eu-central-1_FFDeJVdX9",
+        "IdentityPoolName": "icebackd7f8e07d_identitypool_d7f8e07d__iceback",
+        "OAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"myapp://\"],\"LogoutURLs\":[\"myapp://\"]}",
+        "UserPoolName": "icebackd7f8e07d_userpool_d7f8e07d"
+      },
+      "lastPushDirHash": "GNNrLlnCGQHCt7Nx7aAfyYfX8tQ="
+    }
+  }
+}

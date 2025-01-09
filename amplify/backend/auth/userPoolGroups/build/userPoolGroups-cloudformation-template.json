@@ -1,0 +1,109 @@
+{
+  "Description": "Root Stack for AWS Amplify CLI",
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Parameters": {
+    "env": {
+      "Type": "String"
+    },
+    "AuthRoleArn": {
+      "Type": "String"
+    },
+    "UnauthRoleArn": {
+      "Type": "String"
+    },
+    "authicebackd7f8e07dUserPoolId": {
+      "Type": "String",
+      "Default": "authicebackd7f8e07dUserPoolId"
+    },
+    "authicebackd7f8e07dIdentityPoolId": {
+      "Type": "String",
+      "Default": "authicebackd7f8e07dIdentityPoolId"
+    },
+    "authicebackd7f8e07dAppClientID": {
+      "Type": "String",
+      "Default": "authicebackd7f8e07dAppClientID"
+    },
+    "authicebackd7f8e07dAppClientIDWeb": {
+      "Type": "String",
+      "Default": "authicebackd7f8e07dAppClientIDWeb"
+    }
+  },
+  "Conditions": {
+    "ShouldNotCreateEnvResources": {
+      "Fn::Equals": [
+        {
+          "Ref": "env"
+        },
+        "NONE"
+      ]
+    }
+  },
+  "Resources": {
+    "AppleSiginGroup": {
+      "Type": "AWS::Cognito::UserPoolGroup",
+      "Properties": {
+        "UserPoolId": {
+          "Ref": "authicebackd7f8e07dUserPoolId"
+        },
+        "Description": "override success",
+        "GroupName": "AppleSigin",
+        "Precedence": 1,
+        "RoleArn": {
+          "Fn::GetAtt": [
+            "AppleSiginGroupRole",
+            "Arn"
+          ]
+        }
+      }
+    },
+    "AppleSiginGroupRole": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Sid": "",
+              "Effect": "Allow",
+              "Principal": {
+                "Federated": "cognito-identity.amazonaws.com"
+              },
+              "Action": "sts:AssumeRoleWithWebIdentity",
+              "Condition": {
+                "StringEquals": {
+                  "cognito-identity.amazonaws.com:aud": {
+                    "Ref": "authicebackd7f8e07dIdentityPoolId"
+                  }
+                },
+                "ForAnyValue:StringLike": {
+                  "cognito-identity.amazonaws.com:amr": "authenticated"
+                }
+              }
+            }
+          ]
+        },
+        "RoleName": {
+          "Fn::Join": [
+            "",
+            [
+              {
+                "Ref": "authicebackd7f8e07dUserPoolId"
+              },
+              "-AppleSiginGroupRole"
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "Outputs": {
+    "AppleSiginGroupRole": {
+      "Value": {
+        "Fn::GetAtt": [
+          "AppleSiginGroupRole",
+          "Arn"
+        ]
+      }
+    }
+  }
+}
