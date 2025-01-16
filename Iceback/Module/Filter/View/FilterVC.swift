@@ -689,7 +689,7 @@ extension FilterVC : UITableViewDataSource {
                     
                 }
                 
-                //  print("arrFilterCategoriesIds",arrFilterCategoriesIds)
+                // dPrint("arrFilterCategoriesIds",arrFilterCategoriesIds)
                 
             } else {
                 
@@ -825,7 +825,7 @@ extension FilterVC: UITableViewDelegate {
                                 AllStoreCategoryCount = 0
                             }
                             else {
-                                var removeindex = arrAllStoreCategoriesIds.firstIndex(of: arrCategoryLists[indexPath.row].categoryId)
+                               let removeindex = arrAllStoreCategoriesIds.firstIndex(of: arrCategoryLists[indexPath.row].categoryId)
                                 arrAllStoreCategoriesIds.remove(at: removeindex!)
                                 AllStoreCategoryCount -= 1
                             }
@@ -837,7 +837,7 @@ extension FilterVC: UITableViewDelegate {
                                 NewStoreCategoryCount = 0
                             }
                             else {
-                                var removeindex = arrNewStoreCategoriesIds.firstIndex(of: arrCategoryLists[indexPath.row].categoryId)
+                               let removeindex = arrNewStoreCategoriesIds.firstIndex(of: arrCategoryLists[indexPath.row].categoryId)
                                 arrNewStoreCategoriesIds.remove(at: removeindex!)
                                 NewStoreCategoryCount -= 1
                             }
@@ -848,7 +848,7 @@ extension FilterVC: UITableViewDelegate {
                                 TrendingStoreCategoryCount = 0
                             }
                             else {
-                                var removeindex = arrTrendingStoreCategoriesIds.firstIndex(of: arrCategoryLists[indexPath.row].categoryId)
+                               let removeindex = arrTrendingStoreCategoriesIds.firstIndex(of: arrCategoryLists[indexPath.row].categoryId)
                                 arrTrendingStoreCategoriesIds.remove(at: removeindex!)
                                 TrendingStoreCategoryCount -= 1
                             }
@@ -930,7 +930,7 @@ extension FilterVC: UITableViewDelegate {
                                 AllStoreRegionCount = 0
                                 arrAllStoreRegionIds.removeAll()
                             } else {
-                                var removeindex = arrAllStoreRegionIds.firstIndex(of: arrRegionLists[indexPath.row].RegionId)
+                               let removeindex = arrAllStoreRegionIds.firstIndex(of: arrRegionLists[indexPath.row].RegionId)
                                 arrAllStoreRegionIds.remove(at: removeindex!)
                                 AllStoreRegionCount -= 1
                             }
@@ -940,7 +940,7 @@ extension FilterVC: UITableViewDelegate {
                                 NewStoreRegionCount = 0
                                 arrNewStoreRegionIds.removeAll()
                             } else {
-                                var removeindex = arrNewStoreRegionIds.firstIndex(of: arrRegionLists[indexPath.row].RegionId)
+                               let removeindex = arrNewStoreRegionIds.firstIndex(of: arrRegionLists[indexPath.row].RegionId)
                                 arrNewStoreRegionIds.remove(at: removeindex!)
                                 NewStoreRegionCount -= 1
                             }
@@ -950,7 +950,7 @@ extension FilterVC: UITableViewDelegate {
                                 TrendingStoreRegionCount = 0
                                 arrTrendingStoreRegionIds.removeAll()
                             } else {
-                                var removeindex = arrTrendingStoreRegionIds.firstIndex(of: arrRegionLists[indexPath.row].RegionId)
+                               let removeindex = arrTrendingStoreRegionIds.firstIndex(of: arrRegionLists[indexPath.row].RegionId)
                                 arrTrendingStoreRegionIds.remove(at: removeindex!)
                                 TrendingStoreRegionCount -= 1
                             }

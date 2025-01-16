@@ -75,7 +75,7 @@ class Utility: NSObject {
     class func fullNameValid(strFullName:String?,isFullName:Bool = false) -> Bool{
         let characterset = CharacterSet(charactersIn: isFullName ? "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ " :"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
         if strFullName?.rangeOfCharacter(from: characterset.inverted) == nil {
-            print("string contains special characters")
+           dPrint("string contains special characters")
                 return true
             }
         return false
@@ -85,7 +85,7 @@ class Utility: NSObject {
         guard let strSearch = strSearch else { return false }
         let characterset = CharacterSet(charactersIn: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$@$!%*?&#. ")
         if !strSearch.blank() {
-            print("string does not contains only whites spaces")
+           dPrint("string does not contains only whites spaces")
                 return true
             }
         return false
@@ -95,7 +95,7 @@ class Utility: NSObject {
         
         let characterset = CharacterSet(charactersIn: isAmount ? "0123456789." : "0123456789")
         if strNumberPad?.rangeOfCharacter(from: characterset.inverted) == nil {
-            print("string contains special characters")
+           dPrint("string contains special characters")
                 return true
             }
         return false

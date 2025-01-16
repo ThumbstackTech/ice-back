@@ -320,7 +320,7 @@ class StoresVC: UIViewController {
         guard let intStoreId = notification.userInfo?["storeId"] as? Int else {
             return
         }
-        print("NSNotification CALLED STOREID: ", intStoreId)
+       dPrint("NSNotification CALLED STOREID: ", intStoreId)
         let dataAll = arrAllstoreLists.first(where: {$0.storeId == intStoreId})
         if dataAll != nil {
             dataAll?.isFavourite = 0
@@ -342,7 +342,7 @@ class StoresVC: UIViewController {
         guard let intStoreId = notification.userInfo?["storeId"] as? Int else {
             return
         }
-        print("NSNotification CALLED STOREID: ", intStoreId)
+       dPrint("NSNotification CALLED STOREID: ", intStoreId)
         let dataAll = arrAllstoreLists.first(where: {$0.storeId == intStoreId})
         if dataAll != nil {
             dataAll?.isFavourite = 1
@@ -365,7 +365,6 @@ class StoresVC: UIViewController {
 extension StoresVC {
     @IBAction func btnCancelSearchClk(_ sender: UIButton) {
         self.txtSearch.text = ""
-        //        filteredData = arrStores
         self.btnCancelSearch.isHidden = true
         self.lblNoDataAvailable.isHidden = true
         
@@ -745,7 +744,7 @@ extension StoresVC : UITableViewDataSource {
 //MARK: - UITableViewDelegate
 extension StoresVC : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let cell = tableView.cellForRow(at: indexPath) as? StoresAndDealsVouchersCell else { return }
+       guard tableView.cellForRow(at: indexPath) is StoresAndDealsVouchersCell else { return }
         let vc: CouponDetailsVC = CouponDetailsVC.instantiate(appStoryboard:.stores)
         if strSelectedStore == "All" {
             vc.intStoreId = arrAllstoreLists[indexPath.row].storeId
@@ -772,7 +771,7 @@ extension StoresVC: UIScrollViewDelegate {
                         tblStoreLists.showLoadingFooter()
                         currentAllStorePage += 1
                         viewModelStoresData.StoresLists(page: currentAllStorePage, regions: passAllRegionIds, categories: passAllCategoriesIds,search: strAllSearch, sortbycashbackpercentage: allSortByCashbackPercentage, sortbyname: allSortByName)
-                        print("Works All Store")
+                       dPrint("Works All Store")
                     } else {
                         self.isAllLoadMore = arrAllstoreLists.isEmpty ? false : true
                     }
@@ -783,7 +782,7 @@ extension StoresVC: UIScrollViewDelegate {
                         tblStoreLists.showLoadingFooter()
                         currentNewStorePage += 1
                         viewModelStoresData.StoresLists(page: currentNewStorePage, regions: passNewRegionIds, categories: passNewCategoriesIds,search: strNewSearch, isNewStore: true, sortbycashbackpercentage: newSortByCashbackPercentage, sortbyname: newSortByName)
-                        print("Works New Store")
+                       dPrint("Works New Store")
                     }else {
                         self.isNewLoadMore = arrNewstoreLists.isEmpty ? false : true
                     }
@@ -795,7 +794,7 @@ extension StoresVC: UIScrollViewDelegate {
                         tblStoreLists.showLoadingFooter()
                         currentTrendingStorePage += 1
                         viewModelStoresData.StoresLists(page: currentTrendingStorePage, regions: passTrendingRegionIds, categories: passTrendingCategoriesIds,search: strTrendingSearch, sortbycashbackpercentage: trendingSortByCashbackPercentage, sortbyname: trendingSortByName)
-                        print("Works Trending Store")
+                       dPrint("Works Trending Store")
                     }else {
                         self.isTrendingLoadMore = arrTrendingstoreLists.isEmpty ? false : true
                     }
@@ -844,8 +843,6 @@ extension StoresVC {
 //MARK: - SortByDelegate
 extension StoresVC: SortByDelegate {
     func sortBy(sort: String, intPrevius: Int) {
-        
-        //strSort = sort
         allSortByCashbackPercentage = ""
         allSortByName = ""
         newSortByCashbackPercentage = ""
@@ -934,7 +931,6 @@ extension StoresVC: FilterByDelegate {
         
         if isClearAll {
             AllStoreIndex = 0
-            //strSort = LABELTITLE.NONETITLE.localized()
             isAllSortingApplied = false
         }
         arrAllstoreLists.removeAll()
@@ -985,7 +981,6 @@ extension StoresVC: FilterByDelegate {
         self.passTrendingCategoriesIds = categoryIds
         self.passTrendingRegionIds = regionIds
         
-        
         self.arrTrendingStoreRegionLists = regionList
         self.arrTrendingStoreCategoryLists = categoryList
         
@@ -1026,7 +1021,7 @@ extension StoresVC : StoresListDelegate{
         
         if strSelectedStore == "All" {
             arrAllstoreLists.append(contentsOf: arrstores)
-            print("All Store Count",arrAllstoreLists.count)
+           dPrint("All Store Count",arrAllstoreLists.count)
             
             guard !arrstores.isEmpty else {
                 self.isAllLoadMore = arrAllstoreLists.isEmpty ? false : true
@@ -1044,7 +1039,7 @@ extension StoresVC : StoresListDelegate{
         } else if strSelectedStore == "New" {
        
             arrNewstoreLists.append(contentsOf: arrstores)
-            print("New Store Count",arrNewstoreLists.count)
+           dPrint("New Store Count",arrNewstoreLists.count)
             
             guard !arrstores.isEmpty else {
                 self.isNewLoadMore = arrNewstoreLists.isEmpty ? false : true
@@ -1060,7 +1055,7 @@ extension StoresVC : StoresListDelegate{
             
         } else {
                 arrTrendingstoreLists.append(contentsOf: arrstores)
-            print("Trending Store Count",arrTrendingstoreLists.count)
+           dPrint("Trending Store Count",arrTrendingstoreLists.count)
             
             guard !arrstores.isEmpty else {
                 self.isTrendingLoadMore = arrTrendingstoreLists.isEmpty ? false : true

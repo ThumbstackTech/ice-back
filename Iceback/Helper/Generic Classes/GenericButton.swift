@@ -24,14 +24,6 @@ class GenericButton: UIButton {
     
     func initialize() {
         
-//        if self.tag == 11 {
-//            
-//            let height = CViewHeight(self)*CScreenWidth/414
-//            self.layer.cornerRadius = height/2
-//            //self.layer.masksToBounds = false
-//
-//        }
-        
         self.titleLabel?.font =  self.titleLabel?.font.convertToAppFont()
         
         self.setTitle(self.titleLabel?.text, for: .normal)

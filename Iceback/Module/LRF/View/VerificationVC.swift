@@ -75,7 +75,7 @@ class VerificationVC: UIViewController {
     //MARK: - TapGesture Action
     @objc func tapResendOtpLabel(gesture: UITapGestureRecognizer) {
         if gesture.didTapAttributedTextInLabel(label: lblResend, inRange: targetRangeResendOTP) {
-            print("Tapped Resend OTP")
+           dPrint("Tapped Resend OTP")
             if let viewControllers = self.navigationController?.viewControllers {
                 for viewController in viewControllers {
                     if let vc = viewController as? LoginVC {
@@ -85,7 +85,7 @@ class VerificationVC: UIViewController {
                 }
             }
         } else {
-            print("Tapped none")
+           dPrint("Tapped none")
         }
     }
     
@@ -137,7 +137,7 @@ extension VerificationVC: SignInAccessTokenDelegate {
         lRFViewModel.mobileAwsTokensDelegate = self
         lRFViewModel.mobileAwsTokens(accessToken: strData)
         awsToken = strData
-        print("ACCESS TOKEN DETAILS>>", strData)
+       dPrint("ACCESS TOKEN DETAILS>>", strData)
     }
     
 }

@@ -61,7 +61,7 @@ class PPAlerts: NSObject {
     }
     
     func topMostViewController() -> UIViewController {
-        var topController: UIViewController? = UIApplication.shared.keyWindow?.rootViewController
+       var topController: UIViewController? = appDelegate.window?.rootViewController
         while ((topController?
             .presentedViewController) != nil) {
             topController = topController?.presentedViewController
@@ -82,9 +82,7 @@ class PPAlerts: NSObject {
         alertController.addAction(UIAlertAction(title:BUTTONTITLE.OK, style: .default, handler: btnOneTapped))
         self.topMostViewController().present(alertController, animated: true, completion: nil)
     }
-    func ToastAlert(message: String, withTimeoutImterval interval:TimeInterval) {
-       // self.topMostViewController().view.makeToast(message, duration: interval, position: .bottom)
-    
+    func ToastAlert(message: String, withTimeoutImterval interval:TimeInterval) {    
         appDelegate.window?.makeToast(message, duration: interval, position: .bottom)
     }
 

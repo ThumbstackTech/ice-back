@@ -57,7 +57,7 @@ class StoresViewModel {
             param["sortbyname"] = sortbyname
         }
         
-            print("param",param)
+           dPrint("param",param)
             
             StoresManager.sharedInstance.isStoreTrending = isStoreTrending == true ? true : false
             
@@ -94,9 +94,7 @@ class StoresViewModel {
         }
     }
     
-    func specialDealsAndVouchers(specialId: Int) {
-//        HUD.show()
-        
+    func specialDealsAndVouchers(specialId: Int) {        
         StoresManager.sharedInstance.specialDealsAndVouchers(specialId: specialId) { [self] success in
             self.HUD.hide()
             specialDealsAndVoucherDelegate.specialDealsAndVoucher(success)

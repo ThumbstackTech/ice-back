@@ -82,12 +82,11 @@ extension UILabel{
         let attributedText = NSMutableAttributedString(string: text) // 1
         let range = NSString(string: text).range(of: search, options:.caseInsensitive) // 2
         let highlightColor = UIColor.appGreen    // 3
-       // let highlightedAttributes: [NSAttributedString.Key: Any] = [[NSAttributedString.Key.underlineColor]: highlightColor ?? .black,[NSAttributedString.Key.underlineStyle]:NSUnderlineStyle.thick] // 4.
         let attributes: [NSAttributedString.Key: Any] = [
             .underlineColor: highlightColor,
             .foregroundColor:UIColor.appPurple,
             .underlineStyle:NSUnderlineStyle.single.rawValue
-        ]
+        ] //4
         attributedText.addAttributes(attributes, range: range ) // 5
         self.attributedText = attributedText // 6
        
@@ -97,7 +96,6 @@ extension UILabel{
         let attributedText = NSMutableAttributedString(string: text) // 1
         let range = NSString(string: text).range(of: search, options:.caseInsensitive) // 2
         let highlightColor = UIColor.appGreen    // 3
-       // let highlightedAttributes: [NSAttributedString.Key: Any] = [[NSAttributedString.Key.underlineColor]: highlightColor ?? .black,[NSAttributedString.Key.underlineStyle]:NSUnderlineStyle.thick] // 4.
         let attributes: [NSAttributedString.Key: Any] = [
             .foregroundColor:UIColor.appPurple,
         ]
@@ -121,7 +119,6 @@ extension UILabel{
         let attributedText = NSMutableAttributedString(string: text) // 1
         let range = NSString(string: text).range(of: searchOne, options:.caseInsensitive) // 2
         let highlightColor = UIColor.appGreen    // 3
-       // let highlightedAttributes: [NSAttributedString.Key: Any] = [[NSAttributedString.Key.underlineColor]: highlightColor ?? .black,[NSAttributedString.Key.underlineStyle]:NSUnderlineStyle.thick] // 4.
         let attributesOne: [NSAttributedString.Key: Any] = [
             .foregroundColor:UIColor.appPurple
         ]
@@ -151,19 +148,7 @@ extension UILabel{
         self.attributedText  = partOne
        
     }
-    
-    
-//    override var text: String? {
-//        didSet {
-//            guard let text = text else { return }
-//            let textRange = NSMakeRange(0, text.count)
-//            let attributedText = NSMutableAttributedString(string: text)
-//            attributedText.addAttribute(NSAttributedString.Key.underlineStyle , value: NSUnderlineStyle.single.rawValue, range: textRange)
-//            // Add other attributes if needed
-//            self.attributedText = attributedText
-//            }
-//        }
-//    }
+
 }
 extension NSMutableAttributedString {
 
@@ -194,7 +179,6 @@ extension NSMutableAttributedString {
 
         //generate the bold font
         let font: UIFont = UIFont(name: name , size: label.font.pointSize)!
-        //font = UIFont(descriptor: font.fontDescriptor.withSymbolicTraits(.traitBold) ?? font.fontDescriptor, size: font.pointSize)
 
         //generate attributes
         let attrs: [NSAttributedString.Key: Any] = [NSAttributedString.Key.font: font]
@@ -223,7 +207,6 @@ extension NSMutableAttributedString {
 
         //generate the bold font
         let font: UIFont = UIFont(name: name , size: fontSize)!
-        //font = UIFont(descriptor: font.fontDescriptor.withSymbolicTraits(.traitBold) ?? font.fontDescriptor, size: font.pointSize)
 
         //generate attributes
         let attrs: [NSAttributedString.Key: Any] = [NSAttributedString.Key.font: font]
@@ -240,7 +223,6 @@ extension NSMutableAttributedString {
 
             //generate the bold font
             let font: UIFont = UIFont(name: name , size: fontSize)!
-            //font = UIFont(descriptor: font.fontDescriptor.withSymbolicTraits(.traitBold) ?? font.fontDescriptor, size: font.pointSize)
 
             //generate attributes
         let attrs: [NSAttributedString.Key: Any] = [NSAttributedString.Key.font: font, NSAttributedString.Key.foregroundColor: color]

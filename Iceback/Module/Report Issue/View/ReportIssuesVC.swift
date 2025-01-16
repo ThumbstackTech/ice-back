@@ -118,7 +118,7 @@ extension ReportIssuesVC: UITableViewDataSource {
 extension ReportIssuesVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let cell = tableView.cellForRow(at: indexPath) as? ReportIssueTableViewCell else { return }
+       guard tableView.cellForRow(at: indexPath) is ReportIssueTableViewCell else { return }
         let vc: ReportIssueDetailVC = ReportIssueDetailVC.instantiate(appStoryboard:.reportIssue)
         vc.intReportId = arrReportList[indexPath.row].id
         self.navigationController?.pushViewController(vc, animated: true)
@@ -137,7 +137,7 @@ extension ReportIssuesVC: UIScrollViewDelegate {
                     tblReportIssues.showLoadingFooter()
                     currentPage += 1
                     reportList.report(pageCount: currentPage)
-                    print("Works")
+                   dPrint("Works")
                 } else {
                     self.isLoadMore = arrReportList.isEmpty ? false : true
                 }

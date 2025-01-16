@@ -32,7 +32,7 @@ extension UINavigationController {
     func navigateToViewController<T: UIViewController>(type: T.Type, animated: Bool, storyboard: AppStoryboard) {
         for controller in self.viewControllers {
             if controller.isKind(of: type) {
-                print("INSIDE CONTROLLER NAME: \(controller)")
+               dPrint("INSIDE CONTROLLER NAME: \(controller)")
                 self.popToViewController(controller, animated: animated)
                 return
             }

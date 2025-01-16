@@ -15,7 +15,6 @@ class AuthController : ObservableObject{
     
     init() {
         context = LAContext()
-       // context?.localizedCancelTitle = "Use Password" //Asked on the first/second fail biometric auth, default is cancel.
         context?.localizedFallbackTitle = "Use Password" //Asked on the second fail biometric auth. Default is Enter Password
     }
     

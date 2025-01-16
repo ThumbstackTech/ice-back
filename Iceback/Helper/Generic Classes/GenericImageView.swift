@@ -40,7 +40,6 @@ class GenericImageView: UIImageView {
             Common.shared.roundCorners(view: self, corners: [.topLeft, .topRight], radius: 14.0)
         }
         else if self.tag == 11 { //--- Corner only
-            //            let height = CViewHeight(self)*CScreenWidth/414
             self.layer.cornerRadius = (CViewHeight(self)/2.0)
             self.layer.masksToBounds = true
             

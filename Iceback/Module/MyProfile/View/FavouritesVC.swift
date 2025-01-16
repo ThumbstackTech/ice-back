@@ -125,7 +125,7 @@ extension FavouritesVC : UITableViewDataSource {
 //MARK: - UITableViewDelegate
 extension FavouritesVC : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let cell = tableView.cellForRow(at: indexPath) as? StoresAndDealsVouchersCell else { return }
+       guard tableView.cellForRow(at: indexPath) is StoresAndDealsVouchersCell else { return }
         let vc: CouponDetailsVC = CouponDetailsVC.instantiate(appStoryboard:.stores)
         vc.intStoreId = arrFavourite[indexPath.row].storeId
         self.navigationController?.pushViewController(vc, animated: false)
@@ -143,7 +143,7 @@ extension FavouritesVC: UIScrollViewDelegate {
                         tblFavouritesList.showLoadingFooter()
                         intCurrentPage += 1
                         myProfileViewModel.favouriteStores(intPage: intCurrentPage)
-                        print("Works Favourite Pagination")
+                       dPrint("Works Favourite Pagination")
                     } else {
                         self.isLoadMore = arrFavourite.isEmpty ? false : true
                     }

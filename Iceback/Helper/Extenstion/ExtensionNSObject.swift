@@ -42,13 +42,6 @@ class MultiCastDelegate: NSObject
         return false
     }
     
-//        override func methodSignatureForSelector(aSelector: Selector) -> NSMethodSignature! {
-//            _delegates.enumerateObjectsUsingBlock { (delegate, index, finish) in
-//                if (delegate.respondsToSelector(aSelector)) {
-//                    return delegate.methodForSelector(aSelector)
-//                }
-//            }
-//        }
 }
 
 

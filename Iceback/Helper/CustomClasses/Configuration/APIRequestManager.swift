@@ -100,6 +100,7 @@ class APIRequestManager {
         _ = Networking.sharedInstance.GET(param: param, header: header, tag: apiPoint, success: { (task, response, statusCode) in
             if let dictResponse = response {
                 if let response = self.appendStatusCodeToResponse(response: dictResponse, statusCode: statusCode) {
+                   dPrint("response = \(response)")
                     successCallBack(dictResponse)
                 }
             }
@@ -126,6 +127,7 @@ class APIRequestManager {
         _ = Networking.sharedInstance.requestPOSTURL(param: param, header: header, tag: apiPoint, success: { (task, response, statusCode) in
             if let dictResponse = response {
                 if let response = self.appendStatusCodeToResponse(response: dictResponse, statusCode: statusCode) {
+                   dPrint("response = \(response)")
                     successCallBack(dictResponse)
                 }
             }
@@ -155,10 +157,11 @@ class APIRequestManager {
         }
         
         Networking.sharedInstance.requestPOSTImage(param: param, tag: apiPoint, imgData: imgData, headers: headers, multipartFormData: { (response) in
-            print("POSTMultipart response -", response)
+           dPrint("POSTMultipart response -", response)
         }, success: { (task, response, statusCode) in
             if let dictResponse = response {
                 if let response = self.appendStatusCodeToResponse(response: dictResponse, statusCode: statusCode) {
+                   dPrint("resposne = \(response)")
                     successCallBack(dictResponse)
                 }
             }
@@ -186,6 +189,7 @@ class APIRequestManager {
         _ = Networking.sharedInstance.requestDELETEURL(param: param, header: header, tag: apiPoint, success: { (task, response, statusCode) in
             if let dictResponse = response {
                 if let response = self.appendStatusCodeToResponse(response: dictResponse, statusCode: statusCode) {
+                   dPrint("response = \(response)")
                     successCallBack(dictResponse)
                 }
             }

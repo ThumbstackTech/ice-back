@@ -245,7 +245,7 @@ extension HomeVC: UITableViewDelegate {
 extension HomeVC: TableViewReloadDelegate {
     func reloadTableView() {
         tblHome.reloadData()
-        print("DELEGATE TABLEVIEW RELOAD")
+       dPrint("DELEGATE TABLEVIEW RELOAD")
     }
 }
 
@@ -291,7 +291,7 @@ extension HomeVC: HomeDetailDelegate {
 //MARK: - HomeShopWithCashbackDelegate
 extension HomeVC: HomeShopWithCashbackDelegate {
     func shopWithCashback(_ arrData: [ShopWithCashbackData]) {
-        print("SHOP WITH CASHBACK DELEGATE: \(arrData.count)")
+       dPrint("SHOP WITH CASHBACK DELEGATE: \(arrData.count)")
         self.arrCashback = arrData
         if isHomeSucess {
             self.tblHome.reloadData()
@@ -302,7 +302,7 @@ extension HomeVC: HomeShopWithCashbackDelegate {
 //MARK: - HomeSpecialAndVoucherDelegate
 extension HomeVC: HomeSpecialAndVoucherDelegate {
     func specialAndVoucher(_ arrData: [SpecialAndVoucherData]) {
-        print("SPECIAL VOUCHER DELEGATE: \(arrData.count)")
+       dPrint("SPECIAL VOUCHER DELEGATE: \(arrData.count)")
         self.arrVouchers = arrData
         if isHomeSucess {
             self.tblHome.reloadData()

@@ -121,7 +121,7 @@ class ReferalProgramContent {
                 arrHowItWorksItems.append(obj)
             }
         }
-        print("howItWorksItems: \(arrHowItWorksItems.count)")
+       dPrint("howItWorksItems: \(arrHowItWorksItems.count)")
         howItWorksItems = arrHowItWorksItems
         referralCode = jsonData["referral_code"] as? String ?? ""
     }

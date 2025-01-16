@@ -177,7 +177,7 @@ extension UITextField {
             {
                 propertyVal = value
             }
-            print("newValue == \(propertyVal)")
+           dPrint("newValue == \(propertyVal)")
             objc_setAssociatedObject(self, &AssociatedObjectKey.strDateSelected, propertyVal, .OBJC_ASSOCIATION_RETAIN)
         }
     }
@@ -579,8 +579,6 @@ extension UISearchBar {
 extension UITextField{
     
     func checkAmount(_ text:String,range:NSRange) -> Bool{
-//        guard let counter = self.text?.components(separatedBy: ".") else { return false }
-//        if (counter.count - 1 > 0 && text == ".")  { return false }
         
         let textFiled: NSString = self.text! as NSString
         let resultString = textFiled.replacingCharacters(in: range, with: text)
@@ -670,7 +668,6 @@ extension NSMutableAttributedString {
         //generate the bold font
         guard let textFont = textField.font else { return  NSMutableAttributedString(string: "") }
         let font: UIFont = UIFont(name: name , size: textFont.pointSize)!
-        //font = UIFont(descriptor: font.fontDescriptor.withSymbolicTraits(.traitBold) ?? font.fontDescriptor, size: font.pointSize)
 
         //generate attributes
         let attrs: [NSAttributedString.Key: Any] = [NSAttributedString.Key.font: font]

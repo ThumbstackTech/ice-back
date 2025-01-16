@@ -72,11 +72,7 @@ class ForceUpdateChecker {
 
         let remoteConfig = RemoteConfig.remoteConfig()
 
-        let defaults : [String : Any] = [
-//            ForceUpdateChecker.IS_FORCE_UPDATE_REQUIRED : false,
-            ForceUpdateChecker.FORCE_UPDATE_CURRENT_VERSION : "",
-//            ForceUpdateChecker.FORCE_UPDATE_STORE_URL : "https://itunes.apple.com/br/app/myapp/id6478161994"
-        ]
+        let defaults : [String : Any] = [ForceUpdateChecker.FORCE_UPDATE_CURRENT_VERSION : "",]
 
         let expirationDuration = 0
 
@@ -86,7 +82,7 @@ class ForceUpdateChecker {
             if status == .success {
                 remoteConfig.activate()
             } else {
-                print("Error: \(error?.localizedDescription ?? "No error available.")")
+               dPrint("Error: \(error?.localizedDescription ?? "No error available.")")
             }
         }
     }
