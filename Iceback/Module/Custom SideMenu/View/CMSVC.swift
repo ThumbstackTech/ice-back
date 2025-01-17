@@ -63,7 +63,7 @@ class CMSVC: UIViewController {
                 vc.strWebviewURL = linkRange.urlString
                 self.navigationController?.pushViewController(vc, animated: false)
             }else {
-                print("Tapped none")
+               dPrint("Tapped none")
             }
         }
     }
@@ -76,7 +76,7 @@ class CMSVC: UIViewController {
         for match in matches {
             guard let range = Range(match.range, in: description) else { continue }
             let url = description[range]
-            print("DETECTED LINK: \(url)")
+           dPrint("DETECTED LINK: \(url)")
             let strLink = String(url)
             let targetLink = description.nsRange(from: range)
             arrTargetLink.append(MultipleClickURL(targetLinkRange: targetLink, urlString: strLink))

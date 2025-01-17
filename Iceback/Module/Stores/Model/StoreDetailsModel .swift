@@ -115,7 +115,7 @@ class StoreDetailsModel  {
                 for dict in paymentOptionsData {
                     guard let id = dict["id"] as? Int, let name = dict["name"] as? nameData, let logo = dict["logo"] as? String, let german_logo = dict["german_logo"] as? String, let slug = dict["slug"] as? String, let created_at = dict["created_at"] as? String, let updated_at = dict["updated_at"] as? String else {
                         
-                        print("payment_options not well")
+                       dPrint("payment_options not well")
                         continue
                     }
                     let object = PaymentOptionsInfo(id: id, name: name, logo: logo, german_logo: german_logo, slug: slug, created_at: created_at, updated_at: updated_at)
@@ -126,7 +126,7 @@ class StoreDetailsModel  {
             if let similarStoresData = jsonDict["similar_stores"] as? [[String: Any]] {
                 for dict in similarStoresData {
                     guard let id = dict["id"] as? Int, let name = dict["name"] as? String, let category_id = dict["category_id"] as? String, let logo = dict["logo"] as? String, let cashback_percentage = dict["cashback_percentage"] as? Int, let max_cashback_percentage = dict["max_cashback_percentage"] as? Int, let min_cashback_amount = dict["min_cashback_amount"] as? Int, let max_cashback_amount = dict["max_cashback_amount"] as? Int, let donated = dict["donated"] as? String, let shipping = dict["shipping"] as? String, let delivery_time = dict["delivery_time"] as? String, let website = dict["website"] as? String, let clickThroughUrl = dict["clickThroughUrl"] as? String, let about = dict["about"] as? String, let terms_and_conditions = dict["terms_and_conditions"] as? String,  let awin_id = dict["awin_id"] as? Int, let awin_programmeInfo = dict["awin_programmeInfo"] as? String, let status = dict["status"] as? String, let affiliate_marketing = dict["affiliate_marketing"] as? String, let store_popularity = dict["store_popularity"] as? String, let redirectUrl = dict["redirectUrl"] as? String else {
-                        print("similar_stores not well")
+                       dPrint("similar_stores not well")
                         continue
                     }
                     let object = SimilarStoresInfo(id: id, name: name, category_id: category_id, logo: logo, cashback_percentage: cashback_percentage, max_cashback_percentage: max_cashback_percentage, min_cashback_amount: min_cashback_amount, max_cashback_amount: max_cashback_amount, donated: donated, shipping: shipping, delivery_time: delivery_time, website: website, clickThroughUrl: clickThroughUrl, about: about, terms_and_conditions: terms_and_conditions, awin_id: awin_id, awin_programmeInfo: awin_programmeInfo, status: status, affiliate_marketing: affiliate_marketing, store_popularity: store_popularity, redirectUrl: redirectUrl)
@@ -139,7 +139,7 @@ class StoreDetailsModel  {
                 for dict in categoriesData {
                     guard let id = dict["id"] as? Int, let name = dict["name"] as? String, let logo = dict["logo"] as? String, let created_at = dict["created_at"] as? String, let updated_at = dict["updated_at"] as? String, let pivot = dict["pivot"] as? pivotData else {
                         
-                        print("categories not well")
+                       dPrint("categories not well")
                         continue
                     }
                     let object = categoriesInfo(id: id, name: name, logo: logo, created_at: created_at, updated_at: updated_at, pivot: pivot)

@@ -54,17 +54,6 @@ class ParentViewController: UIViewController {
     }
     
     @objc func updateDateTime() {
-//        
-//        let dateTime = Date.dateFormatFromString(dateStr: Date.todayDate(), withDateFormat: "dd MMM, yyyy h:mm a")
-//        
-//        if lblUniversalDateTime == nil {
-//            NotificationCenter.default
-//            .post(name: NSNotification.Name(rawValue: CNotificationCurrentDateTime),
-//                  object: dateTime)
-//        }
-//        else{
-//            self.lblUniversalDateTime.text = dateTime
-//        }
     }
     
     @objc func backButtonClicked(_ sender: AnyObject) {

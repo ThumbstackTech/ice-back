@@ -39,16 +39,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         )
         
         application.registerForRemoteNotifications()
-        
-//        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
-//        
-//        GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
-//            if error != nil || user == nil {
-//                // Show the app's signed-out state.
-//            } else {
-//                // Show the app's signed-in state.
-//            }
-//        }
         awsCognitoInitialize()
         
         return true
@@ -68,26 +58,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func applicationWillEnterForeground(_ application: UIApplication){
-        print("Enter Foreground")
+        dPrint("Enter Foreground")
     }
     
     func applicationDidEnterBackground(_ application: UIApplication) {
-        print("Enter Background")
+        dPrint("Enter Background")
     }
     
     func applicationWillResignActive(_ application: UIApplication) {
-        print("Resign Active")
+       dPrint("Resign Active")
     }
     
     func applicationDidBecomeActive(_ application: UIApplication) {
-        print("Become Active")
+       dPrint("Become Active")
         //5
         verifyVersion()
         
     }
     
     func applicationWillTerminate(_ application: UIApplication) {
-        print("Will Terminate")
+       dPrint("Will Terminate")
     }
     
 }
@@ -126,9 +116,9 @@ extension AppDelegate {
         
         AWSMobileClient.default().initialize { (userState, error) in
             if let error = error {
-                print("Error initializing AWSMobileClient: \(error.localizedDescription)")
+               dPrint("Error initializing AWSMobileClient: \(error.localizedDescription)")
             } else if let userState = userState {
-                print("AWSMobileClient initialized with user state: \(userState)")
+               dPrint("AWSMobileClient initialized with user state: \(userState)")
             }
         }
     }
@@ -155,7 +145,7 @@ extension AppDelegate {
             if status == .success {
                 remoteConfig.activate()
             } else {
-                print("Error: \(error?.localizedDescription ?? "No error available.")")
+               dPrint("Error: \(error?.localizedDescription ?? "No error available.")")
             }
         }
     }
@@ -198,7 +188,7 @@ extension AppDelegate {
             UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
             UIApplication.shared.registerUserNotificationSettings(settings)
         }
-        //  print("Messaging Token \(Messaging.messaging().fcmToken ?? "")")
+        // dPrint("Messaging Token \(Messaging.messaging().fcmToken ?? "")")
         
         application.applicationIconBadgeNumber = 0
         application.registerForRemoteNotifications()
@@ -207,15 +197,15 @@ extension AppDelegate {
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         // Bring app to foreground
-        print("RECEIVED = \(userInfo)")
+       dPrint("RECEIVED = \(userInfo)")
         
         completionHandler(.newData)
     }
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        print("DEVICE TOKEN = \(deviceToken)")
+       dPrint("DEVICE TOKEN = \(deviceToken)")
         let strToken = deviceToken.map { String(format: "%02hhx", $0) }.joined()
-        print("DEVICE TOKEN string: \(strToken)")
+       dPrint("DEVICE TOKEN string: \(strToken)")
         Messaging.messaging().apnsToken = deviceToken
     }
 }
@@ -225,31 +215,26 @@ extension AppDelegate {
 extension AppDelegate: UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         
-        print("willPresentNotification Userinfo \(notification.request.content.userInfo)")
-        //        let data = notification.request.content.userInfo
-//        guard let userInfo = notification.request.content.userInfo as? [String: Any] else {
-//            completionHandler([])
-//            return
-//        }
+       dPrint("willPresentNotification Userinfo \(notification.request.content.userInfo)")
         completionHandler([.sound, .alert, .badge])
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        print("didReceiveNotificationResponse Userinfo \(response.notification.request.content.userInfo)")
+       dPrint("didReceiveNotificationResponse Userinfo \(response.notification.request.content.userInfo)")
         
         let userInfo = response.notification.request.content.userInfo
         
         guard let aps = userInfo["aps"] as? [String:Any] else {
             return
         }
-        print("aps",aps)
+       dPrint("aps",aps)
         
         
         if let notification = userInfo["message"] as? String,
                     let jsonData = notification.data(using: .utf8),
            let dict = try? JSONSerialization.jsonObject(with: jsonData, options: .allowFragments) as? NSDictionary {
             //This is the point where we need to save push notification
-            print("APS PAYLOAD DICTIONARY \(dict)")
+           dPrint("APS PAYLOAD DICTIONARY \(dict)")
             notificationType = dict["notification_type"] as? String ?? ""
             let voucherId = dict["voucher_id"] as? Int
             let storeId = dict["store_id"] as? Int
@@ -333,9 +318,9 @@ extension AppDelegate: MessagingDelegate {
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
         Messaging.messaging().token { token, error in
             if let error = error {
-                print("Error fetching FCM registration token: \(error)")
+               dPrint("Error fetching FCM registration token: \(error)")
             } else if let token = token {
-                print("FCM registration token: \(token)")
+               dPrint("FCM registration token: \(token)")
                 UserDefaultHelper.device_token = token
             }
         }

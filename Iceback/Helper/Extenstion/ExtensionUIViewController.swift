@@ -243,7 +243,7 @@ extension UIViewController: UIAlertViewDelegate
         if other != nil {
             for addButton in other! {
                 let OKAction = UIAlertAction(title: String(describing: addButton), style: .default) { (action) in
-//                    print(action.title!)
+//                   dPrint(action.title!)
                     let index  = other?.index(of: action.title!)
                     let wrapper = objc_getAssociatedObject(self, &AlertBlockKey) as! AlertBlockWrapper
                     wrapper.block(index!)
@@ -583,17 +583,19 @@ extension UIViewController {
                     
                 }
                 
-                print("Found \(arrAssets.count) assets")
+               dPrint("Found \(arrAssets.count) assets")
                 
                 if let phAssetControllerHandler = objc_getAssociatedObject(self, &AssociatedAssetKey.phAssetControllerHandler) as? phAssetControllerHandler {
                     phAssetControllerHandler(arrAssets)
                 }
                 
             case .denied, .restricted, .limited:
-                print("Not allowed")
+               dPrint("Not allowed")
             case .notDetermined:
                 // Should not see this when requesting
-                print("Not determined yet")
+               dPrint("Not determined yet")
+               @unknown default:
+               dPrint("Not determined yet")
             }
         }
         
@@ -615,7 +617,7 @@ extension UIViewController: UIGestureRecognizerDelegate {
     func sharePost(url: URL, str: String){
         
         let sharedText = "\(str) : \(url)"
-        print(sharedText)
+       dPrint(sharedText)
         
         let shareAll = [sharedText] as [Any]
         let activityViewController = UIActivityViewController(activityItems: shareAll, applicationActivities: nil)

@@ -18,13 +18,7 @@ extension UIImageView {
     func loadGif(name: String) {
         
         DispatchQueue.global().async {
-            
-//            if let image = UIImage.gif(name: name) {
-//                
-//                DispatchQueue.main.async {
-//                    self.image = image
-//                }
-//            }
+
         }
     }
     

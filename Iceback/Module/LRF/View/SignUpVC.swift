@@ -125,7 +125,7 @@ class SignUpVC: UIViewController {
     //MARK: - TapGesture Action
     @objc func tapLoginLabel(gesture: UITapGestureRecognizer) {
         if gesture.didTapAttributedTextInLabel(label: lblLogin, inRange: targetRangeLogin) {
-            print("Tapped Login")
+           dPrint("Tapped Login")
             if let viewControllers = self.navigationController?.viewControllers {
                 for viewController in viewControllers {
                     if let vc = viewController as? LoginVC {
@@ -135,7 +135,7 @@ class SignUpVC: UIViewController {
                 }
             }
         } else {
-            print("Tapped none")
+           dPrint("Tapped none")
         }
     }
     
@@ -144,9 +144,9 @@ class SignUpVC: UIViewController {
            let vc: CMSVC = CMSVC.instantiate(appStoryboard: .sideMenu)
            vc.slug = "terms-and-conditions"
            self.navigationController?.pushViewController(vc, animated: false)
-           print("Tapped Terms & Conditions")
+          dPrint("Tapped Terms & Conditions")
         } else {
-            print("Tapped none")
+           dPrint("Tapped none")
         }
         }
 }

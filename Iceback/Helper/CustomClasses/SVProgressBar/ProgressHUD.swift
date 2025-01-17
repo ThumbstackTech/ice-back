@@ -14,7 +14,6 @@ class SVProgress{
     }
     func show(){
         SVProgressHUD.setDefaultMaskType(.custom)
-//        SVProgressHUD.setBackgroundLayerColor(.app010101)
         SVProgressHUD.setBackgroundColor(.appEFF8FF)
         SVProgressHUD.setForegroundColor(.app1F8DFF)
         SVProgressHUD.show()

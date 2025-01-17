@@ -35,9 +35,6 @@ class GenericTextField: UITextField {
         
         self.placeholder = self.placeholder
         
-//        self.font = CFont(size: 15, type: .Regular).convertToAppFont()
-        //self.addLeftImageAsLeftView(strImgName: "", leftPadding: leftPadding)
-        
         self.font = self.font?.convertToAppFont()
     }
 }

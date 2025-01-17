@@ -78,11 +78,11 @@ class StoreDetailsNewModel {
                 let title = termsAndConditions.attributes.title
                 let content = termsAndConditions.attributes.content
                 termsAndCondition = termsAndConditions
-                print("Title: \(title)")
-                print("Content: \(content)")
+               dPrint("Title: \(title)")
+               dPrint("Content: \(content)")
             }
         } catch {
-            print("Error decoding JSON: \(error)")
+           dPrint("Error decoding JSON: \(error)")
         }
     }
 }

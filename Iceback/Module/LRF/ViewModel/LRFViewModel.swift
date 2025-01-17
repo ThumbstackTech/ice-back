@@ -42,7 +42,7 @@ class LRFViewModel {
             switch result {
             case .success(let user):
                 self.HUD.hide()
-                print("USER SIGNUP DATA>>",user)
+               dPrint("USER SIGNUP DATA>>",user)
                 self.signUpDelegate.signUpSuccess(true)
             case .failure(let error):
                 self.HUD.hide()
@@ -58,8 +58,7 @@ class LRFViewModel {
         LRFManager.sharedInstance.signIn(email: email, password: password) { result in
             switch result {
             case .success(let user):
-//                self.HUD.hide()
-                if let userData = user {
+                if user != nil {
                     
                 }else {
                     UserDefaultHelper.email = Common.shared.encrypt(str: email)
@@ -87,8 +86,6 @@ class LRFViewModel {
     }
     
     func identityProvider() {
-//        HUD.show()
-        
         LRFManager.sharedInstance.identityProvider() { result in
             switch result {
             case .success(let user):
@@ -168,7 +165,6 @@ class LRFViewModel {
         LRFManager.sharedInstance.showSignIn(navigationController: navigationController, hostedUIOptions: hostedUIOptions) { result in
             switch result {
             case .success(let user):
-//                self.HUD.hide()
                 self.socialSigInDelegate.socialSigInSuccess(user)
             case .failure(let error):
                 self.HUD.hide()
@@ -204,21 +200,17 @@ class LRFViewModel {
     
     //MARK: - Register Device Token
     func registerDeviceToken(fcmToken: String) {
-        LRFManager.sharedInstance.registerDeviceToken(fcmToken: fcmToken) { [self] response in
-//            mobileAwsTokensDelegate.mobileAwsTokensSuccess(true)
+        LRFManager.sharedInstance.registerDeviceToken(fcmToken: fcmToken) {  response in
         } errorCompletion: { [self] error in
             HUD.hide()
-//            PPAlerts().iOsAlert(title: AlertMsg.ALERT, withMessage: error, withDelegate: nil)
-            print("REGISTER DEVICE TOKEN ERROR: \(error)")
+           dPrint("REGISTER DEVICE TOKEN ERROR: \(error)")
         }
     }
     //MARK: - DeRegister Device Token
     func deRegisterDeviceToken() {
-        LRFManager.sharedInstance.deRegisterDeviceToken() { [self] response in
-//            mobileAwsTokensDelegate.mobileAwsTokensSuccess(true)
-        } errorCompletion: { [self] error in
-            print("DE REGISTER DEVICE TOKEN ERROR: \(error)")
-//            PPAlerts().iOsAlert(title: AlertMsg.ALERT, withMessage: error, withDelegate: nil)
+        LRFManager.sharedInstance.deRegisterDeviceToken() { response in
+        } errorCompletion: { error in
+           dPrint("DE REGISTER DEVICE TOKEN ERROR: \(error)")
         }
     }
     
@@ -239,7 +231,6 @@ class LRFViewModel {
         LRFManager.sharedInstance.welcomeMail(email: email) { [self] response in
             welcomeMailDelegate.welcomeMailSuccess(true)
         } errorCompletion: { [self] error in
-//            PPAlerts().iOsAlert(title: AlertMsg.ALERT, withMessage: error, withDelegate: nil)
             welcomeMailDelegate.welcomeMailSuccess(true)
         }
     }

@@ -23,7 +23,7 @@ class DocumentManager {
         if let url = URL(string: path){
             return url
         }
-        print("PATH>>>>>>>>>>>>> \(path)")
+       dPrint("PATH>>>>>>>>>>>>> \(path)")
         return nil
     }
     
@@ -106,7 +106,7 @@ class DocumentManager {
                 do {
                     try fileManager.removeItem(atPath: urlString)
                 } catch {
-                    print("Couldn't delete Image directory")
+                   dPrint("Couldn't delete Image directory")
                 }
             }
         }
@@ -118,10 +118,7 @@ class DocumentManager {
         let documentsDirectory = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! as NSString)
         let strDocumentsUrl = documentsDirectory.appendingPathComponent(videoName)
         return URL(fileURLWithPath: strDocumentsUrl)
-        
-//        let strDocumentsUrl = getDirectoryPath()!.absoluteString + videoName
-//        return URL(fileURLWithPath: strDocumentsUrl)
-    }
+   }
     
 // Delete All files
     func deleteAllFiles() {
@@ -134,7 +131,7 @@ class DocumentManager {
             for fileURL in fileURLs {
                 try FileManager.default.removeItem(at: fileURL)
             }
-        } catch  { print(error) }
+        } catch  {dPrint(error) }
     }
     
 }

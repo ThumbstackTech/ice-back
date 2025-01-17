@@ -79,7 +79,7 @@ class CouponDetailsVC: UIViewController {
                 vc.strWebviewURL = linkRange.urlString
                 self.navigationController?.pushViewController(vc, animated: false)
             }else {
-                print("Tapped none")
+               dPrint("Tapped none")
             }
         }
     }
@@ -150,7 +150,7 @@ class CouponDetailsVC: UIViewController {
         for match in matches {
             guard let range = Range(match.range, in: description) else { continue }
             let url = description[range]
-            print("DETECTED LINK: \(url)")
+           dPrint("DETECTED LINK: \(url)")
             let strLink = String(url)
             let targetLink = description.nsRange(from: range)
             arrTargetLink.append(MultipleClickURL(targetLinkRange: targetLink, urlString: strLink))
@@ -180,7 +180,6 @@ extension CouponDetailsVC {
     @IBAction func btnRegister(_ sender: UIButton) {
         if UserDefaultHelper.isLogin {
             let vc: WKWebViewVC = WKWebViewVC.instantiate(appStoryboard:.stores)
-//            vc.strWebviewURL = objStoreDetail?.clickThroughUrl ?? ""
             vc.strWebviewURL =  "\(objStoreDetail?.redirectUrl ?? "")?user=\(UserDefaultHelper.user_id)"
             vc.isCashbackBottomView = true
             vc.isCashbackStatusActive = true
@@ -283,11 +282,9 @@ extension CouponDetailsVC: StoreDetailsDelegate {
         
         //Terms & Conditions Hide Show Logic
         if objStoreDetail?.termsAndCondition == nil {
-//            viewTermsAndConditions.isHidden = true
-//            constTermsAndConditionTop.constant = 0
             lblTermsAndConditionTitle.text = "Terms and Conditions".localized()
             lblTermsAndCondition.text = "Not available".localized()
-            print("TERMS AND CONDITIONS>>",objStoreDetail?.termsAndCondition)
+           dPrint("TERMS AND CONDITIONS>>",objStoreDetail?.termsAndCondition ?? "")
         } else {
             viewTermsAndConditions.isHidden = false
             if UserDefaultHelper.selectedLanguage == "de" {
@@ -347,7 +344,7 @@ extension CouponDetailsVC : RegionListDelegate {
                 }
             }
         }
-        print("SHIPPING OBJECT ADDRESS: \(shippingAddress)")
+       dPrint("SHIPPING OBJECT ADDRESS: \(shippingAddress)")
         lblShippingDeliveryRegion.attributedText = Utility.couponShippingDetail(shippingAddress: shippingAddress.joined(separator: ", "))
         lblShippingDeliveryRegion.setLineSpacing(lineSpacing: 4)
     }

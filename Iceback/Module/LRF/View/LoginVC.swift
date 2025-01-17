@@ -146,11 +146,11 @@ class LoginVC: UIViewController {
     //MARK: - TapGesture Action
     @objc func tapSignUpLabel(gesture: UITapGestureRecognizer) {
         if gesture.didTapAttributedTextInLabel(label: lblSignup, inRange: targetSignUp) {
-            print("Tapped SIgn up")
+           dPrint("Tapped SIgn up")
             let vc: SignUpVC = SignUpVC.instantiate(appStoryboard: .main)
             self.navigationController?.pushViewController(vc, animated:true)
         } else {
-            print("Tapped none")
+           dPrint("Tapped none")
         }
     }
     
@@ -159,19 +159,19 @@ class LoginVC: UIViewController {
         authController.askBiometricAvailability { [self] passcode in
             switch authController.biometricType{
             case .touchID:
-                print("Finger Print")
+               dPrint("Finger Print")
                 lblBiometricTitle.text = BIOMETRICTYPE.FINGERPRINT.rawValue.localized()
                 imgBiometric.image = IMAGES.ICN_FINGERPRINT
                 UserDefaultHelper.selectedBiometric = BIOMETRICTYPE.FINGERPRINT.rawValue
                 
             case .faceID:
-                print("Face Id")
+               dPrint("Face Id")
                 lblBiometricTitle.text = BIOMETRICTYPE.FACEID.rawValue.localized()
                 imgBiometric.image = IMAGES.ICN_FACEID
                 UserDefaultHelper.selectedBiometric = BIOMETRICTYPE.FACEID.rawValue
                 
             case .none:
-                print("Passcode")
+               dPrint("Passcode")
                 lblBiometricTitle.text = BIOMETRICTYPE.PASSCODE.rawValue.localized()
                 imgBiometric.image = IMAGES.ICN_PASSCODE
                 UserDefaultHelper.selectedBiometric = BIOMETRICTYPE.PASSCODE.rawValue
@@ -183,7 +183,7 @@ class LoginVC: UIViewController {
             }
         } completion: { error in
             if error != nil{
-                print("LocalAuthentication", error?.localizedDescription ?? "")
+               dPrint("LocalAuthentication", error?.localizedDescription ?? "")
             }
         }
     }
@@ -227,7 +227,7 @@ extension LoginVC {
     }
     
     @IBAction func switchRememberChanged(_ sender: UISwitch) {
-        print("REMEMBER ME SWITCH>>",sender.isOn,switchRemember.isOn)
+       dPrint("REMEMBER ME SWITCH>>",sender.isOn,switchRemember.isOn)
     }
     
     @IBAction func btnContinueAsGuestAction(_ sender: UIButton) {
@@ -264,19 +264,19 @@ extension LoginVC: UICollectionViewDelegate {
         switch arrSocialLogin[indexPath.row].type {
             
         case .Google:
-            print("Google")
+           dPrint("Google")
             let hostedUIOptions = HostedUIOptions(scopes: ["openid", "email", "phone", "aws.cognito.signin.user.admin"], identityProvider: IdentityProvider.google.rawValue)
             lRFViewModel.socialSigInDelegate = self
             lRFViewModel.showSignIn(navigationController: navigationController!, hostedUIOptions: hostedUIOptions)
             
         case .Apple:
-            print("Apple")
+           dPrint("Apple")
             let hostedUIOptions = HostedUIOptions(scopes: ["openid", "email", "phone", "aws.cognito.signin.user.admin"], identityProvider: IdentityProvider.apple.rawValue)
             lRFViewModel.socialSigInDelegate = self
             lRFViewModel.showSignIn(navigationController: navigationController!, hostedUIOptions: hostedUIOptions)
          
         case .Facebook:
-            print("Facebook")
+           dPrint("Facebook")
             let hostedUIOptions = HostedUIOptions(scopes: ["openid", "email", "phone", "aws.cognito.signin.user.admin"], identityProvider: IdentityProvider.facebook.rawValue)
             lRFViewModel.socialSigInDelegate = self
             lRFViewModel.showSignIn(navigationController: navigationController!, hostedUIOptions: hostedUIOptions)
@@ -313,14 +313,14 @@ extension LoginVC {
                     guard let error = evaluateError else {
                         return
                     }
-                    print(error)
+                   dPrint(error)
                 }
             }
         } else {
             guard let error = authorizationError else {
                 return
             }
-            print(error)
+           dPrint(error)
         }
     }
     
@@ -347,11 +347,6 @@ extension LoginVC: UITextFieldDelegate {
 //MARK: - OTPSendDelegate
 extension LoginVC : OTPSendDelegate {
     func OTPSendSuccess(_ isSucess: Bool) {
-        
-//        let vc: VerificationVC = VerificationVC.instantiate(appStoryboard: .main)
-//        vc.strEmail = txtEmail.text!
-//        vc.isRememberMe = switchRemember.isOn
-//        self.navigationController?.pushViewController(vc, animated: true)
         lRFViewModel.signInAccessTokenDelegate = self
         lRFViewModel.identityProvider()
     }
@@ -385,8 +380,7 @@ extension LoginVC : SignInAccessTokenDelegate {
         UserDefaultHelper.isRememberMe = switchRemember.isOn
         lRFViewModel.mobileAwsTokensDelegate = self
         lRFViewModel.mobileAwsTokens(accessToken: strData)
-//        awsToken = strData
-        print("ACCESS TOKEN DETAILS>>", strData)
+       dPrint("ACCESS TOKEN DETAILS>>", strData)
     }
     
 }
