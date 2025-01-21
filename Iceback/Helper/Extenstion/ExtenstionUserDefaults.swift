@@ -189,9 +189,4 @@ class UserDefaultHelper {
     private static func _remove(valueForKay key: Defaults) {
         UserDefaults.standard.removeObject(forKey: key.rawValue)
     }
-    
-    //
-    //static func deleteUserLoginId() {
-    //    UserDefaults.standard.removeObject(forKey: Defaults.userloginId.rawValue)
-    // }
 }

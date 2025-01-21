@@ -18,7 +18,6 @@ class ParentViewController: UIViewController {
     //MARK:- View Controller Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         timerObj = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector:#selector(ParentViewController.updateDateTime) , userInfo: nil, repeats: true)
     }
     
@@ -26,7 +25,6 @@ class ParentViewController: UIViewController {
         super.viewWillAppear(animated)
         
         self.navigationController?.isNavigationBarHidden = true
-        
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
                 
@@ -39,8 +37,6 @@ class ParentViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
-        //self.navigationController?.navigationBar.barTintColor = navigationTintColor
     }
     
     override func viewDidDisappear(_ animated: Bool) {

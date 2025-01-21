@@ -31,7 +31,6 @@ class PurchaseHistoryTableViewCell: BaseTableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
     }
     
     override func layoutSubviews() {
@@ -52,7 +51,7 @@ class PurchaseHistoryTableViewCell: BaseTableViewCell {
      
         if let objTransaction = object as? TransactionList {
             //start- 19-4-24
-            lblDate.text =  Common.getDateFormattedFromString(dateStr: objTransaction.transaction_date, recievedDateFormat: "yyyy-MM-dd HH:mm:ss", convertedDateFormat: "dd/MM/yyyy - HH:mm")
+           lblDate.text =  Common.getDateFormattedFromString(dateStr: objTransaction.transaction_date, recievedDateFormat: DateFormat.FullDateHHMMSS, convertedDateFormat: DateFormat.FullDateHHMM)
             lblShopName.text = objTransaction.store_name
             lblInvoiceAmount.text = "\(objTransaction.amount) " + "\(objTransaction.currency)"
             
@@ -67,7 +66,7 @@ class PurchaseHistoryTableViewCell: BaseTableViewCell {
                 lblExpectedCashback.text = "-"
             }
             
-            if objTransaction.status == "approved" {
+           if objTransaction.status == TransactionStatus.Approved {
                 viewCashbackStatus.backgroundColor = UIColor.app008000
                 lblCashbackStatus.text = objTransaction.status.capitalizingFirstLetter()
             } else {

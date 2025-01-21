@@ -113,7 +113,6 @@ extension DealsAndVouchersDetailsVC {
     @IBAction func btnRegister(_ sender: UIButton) {
         if UserDefaultHelper.isLogin {
             let vc: WKWebViewVC = WKWebViewVC.instantiate(appStoryboard:.stores)
-            //            vc.strWebviewURL = objDealsAndVoucherDetailData?.clickThroughUrl ?? ""
             vc.isCashbackBottomView = true
             vc.isCashbackStatusActive = true
             vc.intStoreId = storeId
@@ -142,9 +141,7 @@ extension DealsAndVouchersDetailsVC : UICollectionViewDataSource {
         let cell = collectionView.dequeueCell(ofType: PaymentOptionsCollectionViewCell.self, indexPath: indexPath)
         cell.setup(objDealsAndVoucherDetailData?.paymentOptions[indexPath.row])
         return cell
-    }
-    
-    
+    }    
 }
 
 //MARK: - UICollectionViewDelegate

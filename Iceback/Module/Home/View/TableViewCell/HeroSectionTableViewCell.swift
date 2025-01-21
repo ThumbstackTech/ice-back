@@ -36,7 +36,6 @@ class HeroSectionTableViewCell: BaseTableViewCell {
             lblBannerDescription.text = objHeroSection.secondaryContent?.withoutHtml.replacingOccurrences(of: "\n", with: "")
             lblBannerDescription.setLineSpacing(lineSpacing: 3)
             btnSignUp.setTitle(BUTTONTITLE.GETMYCARD.localized(), for: .normal)
-//            btnSignUp.setTitle(objHeroSection.buttonText, for: .normal)
             if let imageUrl = URL(string: objHeroSection.image?.first?.url ?? ""){
                 imgBanner.sd_setImage(with:  imageUrl, placeholderImage: IMAGES.ICN_PLACEHOLDER_IMAGE)
             }

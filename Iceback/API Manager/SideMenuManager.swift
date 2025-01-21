@@ -14,14 +14,10 @@ class SideMenuManager {
     static let sharedInstance = SideMenuManager()
    
     private init() {
-        
     }
-    
-    
+        
     var isStoreTrending = false
-    
     var PassEndPont = ""
-    
     
     //MARK: - About-Us List API Call
     func aboutUsList(slug: String,  successCompletion:@escaping([PrivacyPolicyDataModel])->(),errorCompletion:@escaping(String)->()) {
@@ -42,10 +38,8 @@ class SideMenuManager {
             
             let aboutUsListData = responseData.map { PrivacyPolicyDataModel(jsonData: $0) }
             successCompletion(aboutUsListData)
-            
         } failureCallBack: { error in
             errorCompletion(error)
         }
     }
-     
 }

@@ -12,12 +12,10 @@ class MyProfileManager {
     
     static let sharedInstance = MyProfileManager()
     
-    
     private init() {
-        
     }
     
-    func getUserProfile(successCompletion:@escaping(UserProfile)->(),errorCompletion:@escaping(String)->()) {
+    func getUserProfile(successCompletion: @escaping(UserProfile)->(), errorCompletion: @escaping(String)->()) {
         
         let dataParam: [String : Any] = [:]
         
@@ -40,7 +38,7 @@ class MyProfileManager {
     }
 
     //MARK: - Profile PictureURL API call
-    func profilePictureURL(param:[String:Any], successCompletion:@escaping(EditProfile)->(),errorCompletion:@escaping(String)->()) {
+    func profilePictureURL(param:[String:Any], successCompletion: @escaping(EditProfile)->(), errorCompletion: @escaping(String)->()) {
         
         APIRequestManager.shared.POST(param: param, header: Global.sharedManager.headerParam, withTag: APIPoint().editProfilePicture) { response in
             
@@ -63,7 +61,7 @@ class MyProfileManager {
     }
     
     //MARK: - Edit Profile API call
-    func profileUpate(param:[String:Any], successCompletion:@escaping(String)->(),errorCompletion:@escaping(String)->()) {
+    func profileUpate(param:[String:Any], successCompletion: @escaping(String)->(), errorCompletion: @escaping(String)->()) {
         
         APIRequestManager.shared.POST(param: param, header: Global.sharedManager.headerParam, withTag: APIPoint().profileUpdate) { response in
             
@@ -85,7 +83,7 @@ class MyProfileManager {
     }
     
     func favouriteStores(intPage: Int,
-        successCompletion:@escaping([storeDataListObject])->(),errorCompletion:@escaping(String)->()) {
+        successCompletion: @escaping([storeDataListObject])->(), errorCompletion: @escaping(String)->()) {
         
         let dataParam: [String : Any] = ["page": intPage,"limit": Global.sharedManager.intStoreAndVouchersPageLimit]
         
@@ -96,7 +94,6 @@ class MyProfileManager {
                 return
             }
             
-            
             guard let status = jsonData[CJsonStatus] as? String, status == "OK" else{
                 errorCompletion(jsonData[CJsonMessage] as? String ?? "")
                 return
@@ -106,7 +103,6 @@ class MyProfileManager {
                 successCompletion([])
                 return
             }
-            
          
             let arrstores = Mapper<storeDataListObject>().mapArray(JSONObject: responseData)
             successCompletion(arrstores ?? [])
@@ -138,7 +134,6 @@ class MyProfileManager {
                 errorCompletion(jsonData[CJsonMessage] as? String ?? "")
                 return
             }
-            
            
             successCompletion(responseData)
         } failureCallBack: { error in
@@ -146,7 +141,7 @@ class MyProfileManager {
         }
     }
     
-    func notificationsList(intPageLimit: Int, successCompletion:@escaping([NotifcationData])->(),errorCompletion:@escaping(String)->()) {
+    func notificationsList(intPageLimit: Int, successCompletion: @escaping([NotifcationData])->(), errorCompletion: @escaping(String)->()) {
         
         let dataParam: [String : Any] = ["limit": Global.sharedManager.intStoreAndVouchersPageLimit,
                                          "page" : intPageLimit]
@@ -168,7 +163,6 @@ class MyProfileManager {
             errorCompletion(error.debugDescription)
         }
     }
-    
     
     func userActivitiesDelete(successCompletion:@escaping(Bool)->(),errorCompletion:@escaping(String)->()) {
         

@@ -16,10 +16,8 @@ class SelectLanguageVC: UIViewController {
     @IBOutlet weak var btnUpDate: UIButton!
     
     //MARK: - Constant & Variables
-    var arrSelectLanguage : [SelectLanguageModel] = [SelectLanguageModel(SelectLanguage: "English",langCode: "en",  isSelect: false),
-                                                     SelectLanguageModel(SelectLanguage: "German",langCode: "de",  isSelect: false)/*,
-                                                     SelectLanguageModel(SelectLanguage: "Italian",langCode: "it",  isSelect: false),
-                                                     SelectLanguageModel(SelectLanguage: "French",langCode: "fr",  isSelect: false)*/]
+   var arrSelectLanguage : [SelectLanguageModel] = [SelectLanguageModel(SelectLanguage: Language.Name.English,langCode: Language.Code.English,  isSelect: false),
+                                                    SelectLanguageModel(SelectLanguage: Language.Name.German,langCode: Language.Code.German,  isSelect: false)]
     
     var selectedRows : [IndexPath] = []
     private var intLanguageSelect = 0

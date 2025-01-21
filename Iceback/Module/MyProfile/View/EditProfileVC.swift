@@ -66,7 +66,6 @@ extension EditProfileVC {
         imagePicker.present(from:sender)
     }
     
-    
     @IBAction func btnUpdateClicked(_ sender: UIButton) {
         if isProfileImageUpdate {
             myProfileViewModel.HUD.show()
@@ -79,7 +78,6 @@ extension EditProfileVC {
             PPAlerts.sharedAlerts().ToastAlert(message: AlertMsg.PROFILEUPDATEDALREADY, withTimeoutImterval: 0.3)
         }
     }
-    
 }
 
 //MARK: - ImagePickerDelegate
@@ -99,8 +97,6 @@ extension EditProfileVC: UserProfileDelegate {
         txtFamilyName.text = objData.lastName
         imgProfile.sd_setImage(with: URL(string: objData.avatar), placeholderImage: UIImage(named: "icn_profile"))
     }
-    
-    
 }
 
 //MARK: - ProfilePictureProtocol

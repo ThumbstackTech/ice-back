@@ -19,13 +19,10 @@ class GenericButton: UIButton {
         self.initialize()
     }
     
-    // MARK:
     // MARK: initialize
     
     func initialize() {
-        
         self.titleLabel?.font =  self.titleLabel?.font.convertToAppFont()
-        
         self.setTitle(self.titleLabel?.text, for: .normal)
     }
     
@@ -55,14 +52,12 @@ class GenericButton: UIButton {
         if (activityIndicator == nil) {
             activityIndicator = createActivityIndicator()
         }
-        
         showSpinning()
     }
     
     func hideLoading() {
         
         if let indicator = activityIndicator {
-            
             indicator.stopAnimating()
         }
         
@@ -74,13 +69,10 @@ class GenericButton: UIButton {
     private func createActivityIndicator() -> UIActivityIndicatorView {
         let activityIndicator = UIActivityIndicatorView()
         activityIndicator.hidesWhenStopped = true
-        //  activityIndicator.color = UIColor.black
         
         if let color = color {
-            
             activityIndicator.color = color
-        }
-        else{
+        } else{
             activityIndicator.color = UIColor.black
         }
         
@@ -101,5 +93,4 @@ class GenericButton: UIButton {
         let yCenterConstraint = NSLayoutConstraint(item: self, attribute: .centerY, relatedBy: .equal, toItem: activityIndicator, attribute: .centerY, multiplier: 1, constant: 0)
         self.addConstraint(yCenterConstraint)
     }
-
 }

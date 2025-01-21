@@ -67,17 +67,17 @@ extension CustomSideMenuVC: UITableViewDelegate, UITableViewDataSource {
       
         case .aboutUs:
             let vc: CMSVC = CMSVC.instantiate(appStoryboard: .sideMenu)
-            vc.slug = "about-us"
+              vc.slug = CMSPageValue.AboutUs//"about-us"
             self.navigationController?.pushViewController(vc, animated: false)
             
         case .terms:
             let vc: CMSVC = CMSVC.instantiate(appStoryboard: .sideMenu)
-            vc.slug = "terms-and-conditions"
+              vc.slug = CMSPageValue.TermsConditions
             self.navigationController?.pushViewController(vc, animated: false)
             
         case .privacyPolicy:
             let vc: CMSVC = CMSVC.instantiate(appStoryboard: .sideMenu)
-            vc.slug = "privacy-policy"
+              vc.slug = CMSPageValue.PrivacyPolicy
             self.navigationController?.pushViewController(vc, animated: false)
             
         case .myProfile :

@@ -11,8 +11,7 @@ import UIKit
 
 var kActionHandler: UInt8 = 0
 
-extension UIButton
-{
+extension UIButton {
     typealias ClosureActionHandler = @convention(block) (_ sender: UIButton) -> Void
     
     func set(normalTitle nTitle:String) -> Void {
@@ -42,12 +41,7 @@ extension UIButton
         self.set(highlightedTitle: highlightedTitle)
         self.set(selectedTitle: selectedTitle)
     }
-    
-    
-    
-    
-    
-    
+
     func set(normalImage nImage:String) -> Void {
         self.setImage(UIImage(named: nImage), for: UIControl.State())
     }
@@ -75,21 +69,16 @@ extension UIButton
         self.set(highlightedImage: highlightedImage)
         self.set(selectedImage: selectedImage)
     }
-    
-    
-    
-    func touchUpInsideClicked(_ handler: @escaping ClosureActionHandler)
-    {
+
+    func touchUpInsideClicked(_ handler: @escaping ClosureActionHandler) {
         self.set(object: unsafeBitCast(handler, to: AnyObject.self), forKey: &kActionHandler)
         self.addTarget(self, action: #selector(touchUpInsideFired(_:)), for: .touchUpInside)
     }
     
-    @objc fileprivate func touchUpInsideFired(_ sender: UIButton)
-    {
+    @objc fileprivate func touchUpInsideFired(_ sender: UIButton) {
         let handler = unsafeBitCast(self.object(forKey: &kActionHandler), to: ClosureActionHandler.self)
         handler(sender)
     }
-    
     
     func addRightIcon(image: UIImage) {
         let imageView = UIImageView(image: image)
@@ -113,19 +102,16 @@ extension UIButton
 }
 
 
-extension UIBarButtonItem
-{
+extension UIBarButtonItem {
     typealias ClosureActionHandler = @convention(block) (_ sender: UIButton) -> Void
     
-    func touchUpInsideClicked(_ handler: @escaping ClosureActionHandler)
-    {
+    func touchUpInsideClicked(_ handler: @escaping ClosureActionHandler) {
         self.set(object: unsafeBitCast(handler, to: AnyObject.self), forKey: &kActionHandler)
         self.action = #selector(touchUpInsideFired(_:))
         self.target = self
     }
     
-    @objc fileprivate func touchUpInsideFired(_ sender: UIButton)
-    {
+    @objc fileprivate func touchUpInsideFired(_ sender: UIButton) {
         let handler = unsafeBitCast(self.object(forKey: &kActionHandler), to: ClosureActionHandler.self)
         handler(sender)
     }

@@ -118,9 +118,6 @@ extension HomeVC {
     }
     
     @objc func btnSignUpAction(_ sender: UIButton) {
-//        let vc: WKWebViewVC = WKWebViewVC.instantiate(appStoryboard:.stores)
-//        vc.strWebviewURL = REDIRECTIONURL.GETMYCARDURL.localized()
-//        self.navigationController?.pushViewController(vc, animated: false)
         PPAlerts.sharedAlerts().iOsAlert(title:"", withMessage: AlertMsg.GETMYCARD.localized() , withDelegate: nil)
     }
     
@@ -218,8 +215,6 @@ extension HomeVC: UITableViewDataSource {
             return cell
         }
     }
-    
-    
 }
 
 //MARK: - UITableViewDelegate
@@ -285,7 +280,6 @@ extension HomeVC: HomeDetailDelegate {
         homeViewModel.homeShopWithCashback()
       
     }
-    
 }
 
 //MARK: - HomeShopWithCashbackDelegate

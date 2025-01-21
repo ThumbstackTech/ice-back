@@ -133,7 +133,6 @@ class LRFManager {
         
         AWSMobileClient.default().forgotPassword(username: email) { result, error in
             GCDMainThread.async {
-                
                 if let error = error as? AWSMobileClientError  {
                     completion(.failure(AuthError.error(error)))
                 } else {
@@ -158,7 +157,6 @@ class LRFManager {
                     case .confirmationCodeSent:
                        dPrint("confirmationCodeSent")
                     }
-                    
                 } else if let error = error as? AWSMobileClientError {
                     // Handle login failure
                     if error.localizedDescription.contains("error 9") {
@@ -236,7 +234,6 @@ class LRFManager {
                 errorCompletion(AlertMsg.USEREXISTFAILURE)
                 return
             }
-            
             successCompletion(true)
             
         } failureCallBack: { error in
@@ -293,7 +290,7 @@ class LRFManager {
     }
     
     //MARK: - Deregister Device Token API Call
-    func deRegisterDeviceToken(successCompletion:@escaping(Bool)->(),errorCompletion:@escaping(String)->()) {
+    func deRegisterDeviceToken(successCompletion:@escaping(Bool)->(), errorCompletion: @escaping(String)->()) {
         
         let dataParam: [String: Any] = ["user_id": UserDefaultHelper.user_id]
         
@@ -317,7 +314,7 @@ class LRFManager {
     }
     
     //MARK: - Welcome Mail API Call
-    func welcomeMail(email: String, successCompletion:@escaping(Bool)->(),errorCompletion:@escaping(String)->()) {
+    func welcomeMail(email: String, successCompletion:@escaping(Bool)->(), errorCompletion: @escaping(String)->()) {
         
         let dataParam: [String: Any] = ["email": email]
         

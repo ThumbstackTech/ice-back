@@ -92,7 +92,6 @@ class NotificationMessage: Codable {
         expiryDate = jsonDic["expiry_date"] as? String ?? ""
         name = jsonDic["name"] as? String ?? ""
         intReportId = jsonDic["report_issue"] as? Int ?? 0
-        
     }
 }
 

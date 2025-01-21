@@ -15,7 +15,7 @@ class DealsAndVouchersManager {
     }
     
     //MARK: - Deals And Voucher Details API Call
-    func dealsAndVoucherDetails(storeId: Int, successCompletion:@escaping(DealsAndVoucherDetailData)->(),errorCompletion:@escaping(String)->()) {
+    func dealsAndVoucherDetails(storeId: Int, successCompletion: @escaping(DealsAndVoucherDetailData)->(), errorCompletion: @escaping(String)->()) {
         
         let dataParam: [String : Any] = [:]
         
@@ -41,7 +41,7 @@ class DealsAndVouchersManager {
     
     
     //MARK: - Region List API Call
-    func regionList(successCompletion:@escaping([RegionData])->(),errorCompletion:@escaping(String)->()) {
+    func regionList(successCompletion: @escaping([RegionData])->(), errorCompletion: @escaping(String)->()) {
         
         let dataParam: [String : Any] = [:]
         let headerParameter = ["Authorization": guestLoginBearerToken]
@@ -67,7 +67,7 @@ class DealsAndVouchersManager {
     }
     
     //MARK: - New Deals And Vouchers List API Call
-    func newDealsAndVouchers(categories: String, currentPage: Int, search: String, storeId: Int, successCompletion:@escaping([DealsAndVouchersData])->(),errorCompletion:@escaping(String)->()) {
+    func newDealsAndVouchers(categories: String, currentPage: Int, search: String, storeId: Int, successCompletion: @escaping([DealsAndVouchersData])->(), errorCompletion: @escaping(String)->()) {
         
         let dataParam: [String : Any] = ["categories": categories,
                                          "limit": Global.sharedManager.intStoreAndVouchersPageLimit,
@@ -94,7 +94,7 @@ class DealsAndVouchersManager {
     }
     
     //MARK: - Trending Deals And Vouchers List API Call
-    func trendingDealsAndVouchers(categories: String, currentPage: Int, search: String, storeId: Int, successCompletion:@escaping([DealsAndVouchersData])->(),errorCompletion:@escaping(String)->()) {
+    func trendingDealsAndVouchers(categories: String, currentPage: Int, search: String, storeId: Int, successCompletion: @escaping([DealsAndVouchersData])->(), errorCompletion: @escaping(String)->()) {
         
         let dataParam: [String : Any] = ["categories": categories,
                                          "limit": Global.sharedManager.intStoreAndVouchersPageLimit,

@@ -17,9 +17,7 @@ class StoresManager {
         
     }
     
-    
     var isStoreTrending = false
-    
     var PassEndPont = ""
     
     //MARK: - POST store List API call
@@ -43,17 +41,13 @@ class StoresManager {
                 successCompletion([])
                 return
             }
-            
          
             let arrstores = Mapper<storeDataListObject>().mapArray(JSONObject: responseData)
             successCompletion(arrstores ?? [])
             
-            
         } failureCallBack: { error in
             errorCompletion(error)
         }
-        
-        
     }
 
     
@@ -87,7 +81,6 @@ class StoresManager {
         successCompletion:@escaping([DealsAndVouchersData])->(),errorCompletion:@escaping(String)->()) {
         
         let dataParam: [String : Any] = ["filter[site]": UserDefaultHelper.selectedLanguage,"store_id": specialId,"limit": 50, "page": 1]
-        
       
         APIRequestManager.shared.POST(param: dataParam, header: Global.sharedManager.headerParam, withTag: APIPoint().getSimilarStoresDetails) { response in
             
@@ -153,5 +146,4 @@ class StoresManager {
             errorCompletion(error)
         }
     }
-    
 }

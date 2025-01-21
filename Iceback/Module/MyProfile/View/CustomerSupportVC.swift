@@ -46,7 +46,6 @@ class CustomerSupportVC: UIViewController {
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
     }
     
-    
     //MARK: - Language Localize
     func languageLocalize() {
         txtMessage.text = LABELTITLE.ENTERMESSAGETITLE.localized()
@@ -65,7 +64,6 @@ class CustomerSupportVC: UIViewController {
         navigationItem.hidesBackButton = true
         txtMessage.delegate = self
     }
-    
 }
 
 //MARK: - Button Action
@@ -97,9 +95,7 @@ extension CustomerSupportVC {
         
         myProfileViewModel.customerSupport(name: txtName.text!, email: txtEmailAddress.text!, message: txtMessage.text!)
         myProfileViewModel.customerSupportDelegate = self
-                
     }
-    
 }
 
 
@@ -123,7 +119,6 @@ extension CustomerSupportVC: UITextViewDelegate {
         if (range.location == 0 && (text .rangeOfCharacter(from: .whitespaces) != nil)) {
             return false
         }
-        
         return true
     }
 }
@@ -135,8 +130,6 @@ extension CustomerSupportVC: CustomerSupportDelegate {
             self.navigationController?.popViewController(animated: false)
         }
     }
-    
-    
 }
 
 
@@ -146,7 +139,6 @@ extension CustomerSupportVC:UITextFieldDelegate{
         if (range.location == 0 && (string.rangeOfCharacter(from: .whitespaces) != nil)) {
             return false
         }
-        
         return true
     }
 }

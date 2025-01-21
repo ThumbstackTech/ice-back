@@ -37,14 +37,13 @@ class CMSVC: UIViewController {
     //MARK: - Setup Controller
     func setUpController() {
         navigationItem.hidesBackButton = true
-        if slug == "about-us" {
+       if slug == CMSPageValue.AboutUs {
             self.lblTitle.text = CMSPAGES.aboutUs.rawValue.localized()
-        } else if slug == "terms-and-conditions" {
+       } else if slug == CMSPageValue.TermsConditions {
             self.lblTitle.text = CMSPAGES.terms.rawValue.localized()
-        } else if slug == "privacy-policy" {
+       } else if slug == CMSPageValue.PrivacyPolicy {
             self.lblTitle.text = CMSPAGES.privacy.rawValue.localized()
-        }
-        
+       }
         CustomerDetiallView.abourUsDelegate = self
         CustomerDetiallView.abousUs(slug: slug)
     }
@@ -81,10 +80,8 @@ class CMSVC: UIViewController {
             let targetLink = description.nsRange(from: range)
             arrTargetLink.append(MultipleClickURL(targetLinkRange: targetLink, urlString: strLink))
         }
-        
         setTapGesture()
     }
-    
 }
 
 //MARK: - Button Action
@@ -99,16 +96,14 @@ extension CMSVC: AboutUsDelegate {
     func aboutUsDelegate(_ arrData: [PrivacyPolicyDataModel]) {
         self.objAboutUs = arrData.first
         lblSubTitle.text = objAboutUs?.title
-        if slug == "terms-and-conditions" {
+       if slug == CMSPageValue.TermsConditions {
             lblContant.attributedText = objAboutUs?.content.first?.content.htmlAttributed(using: AFont(size: 11, type: .Roman), color: .app00000070)
-        } else if  slug == "privacy-policy" {
+       } else if  slug == CMSPageValue.PrivacyPolicy {
             lblContant.attributedText = objAboutUs?.content.first?.text.convertHtmlToAttributedStringWithCSS(using: AFont(size: 11, type: .Roman), color: .app00000070)
             checkStringContainURL(description: lblContant.text!)
         }else {
             lblContant.attributedText = objAboutUs?.content.first?.text.htmlAttributed(using: AFont(size: 11, type: .Roman), color: .app00000070)
         }
-        
-    
         lblContant.setLineSpacing(lineSpacing: lineSpacingBetweenText)
     }
 }

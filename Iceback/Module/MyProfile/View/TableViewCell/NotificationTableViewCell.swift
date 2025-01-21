@@ -30,7 +30,7 @@ class NotificationTableViewCell: BaseTableViewCell {
     override func setup<T>(_ object: T) {
         if let objNotificationDataModel = object as? NotifcationData {
             lblNotificationTitle.text = objNotificationDataModel.title
-            lblNotificationDate.text = Common.getDateFormattedFromString(dateStr: objNotificationDataModel.createdAt, recievedDateFormat: "yyyy-MM-dd'T'HH:mm:ss.SSSSSSz", convertedDateFormat: "dd-MMM-yyyy") 
+           lblNotificationDate.text = Common.getDateFormattedFromString(dateStr: objNotificationDataModel.createdAt, recievedDateFormat: DateFormat.FullDateHHMMSSZZZ, convertedDateFormat: DateFormat.DDMMYYYY) 
             lblNotificationDescription.text = objNotificationDataModel.description
         }
     }
