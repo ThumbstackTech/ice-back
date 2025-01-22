@@ -106,7 +106,7 @@ extension NotificationVC : UITableViewDataSource {
 //MARK: - UITableViewDelegate
 extension NotificationVC : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let cell = tableView.cellForRow(at: indexPath) as? NotificationTableViewCell else { return }
+       guard tableView.cellForRow(at: indexPath) is NotificationTableViewCell else { return }
         
         switch arrNotification[indexPath.row].notificationType {
       
@@ -166,7 +166,7 @@ extension NotificationVC: UIScrollViewDelegate {
                         tblNotificationList.showLoadingFooter()
                         intCurrentPage += 1
                         myProfileViewModel.notificationsList(intPageLimit: intCurrentPage)
-                        print("Works Notification Pagination")
+                       dPrint("Works Notification Pagination")
                     } else {
                         self.isLoadMore = arrNotification.isEmpty ? false : true
                     }

@@ -172,7 +172,7 @@ extension DealsAndVouchersDetailsVC : RegionListDelegate {
                 }
             }
         }
-        print("SHIPPING OBJECT ADDRESS: \(shippingAddress)")
+       dPrint("SHIPPING OBJECT ADDRESS: \(shippingAddress)")
         lblShippingDetail.attributedText = Utility.couponShippingDetail(shippingAddress: shippingAddress.joined(separator: ", "))
         lblShippingDetail.setLineSpacing(lineSpacing: 4)
     }

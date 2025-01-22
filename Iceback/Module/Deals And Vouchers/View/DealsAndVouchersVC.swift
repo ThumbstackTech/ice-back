@@ -127,7 +127,7 @@ class DealsAndVouchersVC: UIViewController {
     //MARK: - Search Text
     func searchText(){
         txtSearch.actionClosure = { [self] in
-            print("TEXT SEARCH",self.txtSearch.text ?? "EMPTY")
+           dPrint("TEXT SEARCH",self.txtSearch.text ?? "EMPTY")
             GCDMainThread.asyncAfter(deadline: .now() + 0.0) { [self] in
                 if isNewButtonClicked {
                     strNewSearch = txtSearch.text ?? ""
@@ -144,7 +144,7 @@ class DealsAndVouchersVC: UIViewController {
                     tblDealsAndVouchersLists.reloadData()
                     dealsAndVouchersViewModel.trendingDealsAndVouchers(categories: "\(arrTrendingCategorieId)", currentPage: intTrendingCurrentPage, search: strTrendingSearch, storeId: intTrendingStoreId)
                 }
-                print("api calling")
+               dPrint("api calling")
             }
         }
         
@@ -381,7 +381,7 @@ extension DealsAndVouchersVC: UIScrollViewDelegate {
                         tblDealsAndVouchersLists.showLoadingFooter()
                         intNewCurrentPage += 1
                         dealsAndVouchersViewModel.newDealsAndVouchers(categories: "\(arrNewCategorieId)", currentPage: intNewCurrentPage, search: strNewSearch, storeId: intNewStoreId)
-                        print("Works")
+                       dPrint("Works")
                     } else {
                         self.isNewLoadMore = arrNewDealsAndVouchers.isEmpty ? false : true
                     }
@@ -392,7 +392,7 @@ extension DealsAndVouchersVC: UIScrollViewDelegate {
                         tblDealsAndVouchersLists.showLoadingFooter()
                         intTrendingCurrentPage += 1
                         dealsAndVouchersViewModel.trendingDealsAndVouchers(categories: "\(arrTrendingCategorieId)", currentPage: intTrendingCurrentPage, search: strTrendingSearch, storeId: intTrendingStoreId)
-                        print("Works")
+                       dPrint("Works")
                     }else {
                         self.isTrendingLoadMore = arrTrendingDealsAndVouchers.isEmpty ? false : true
                     }
@@ -426,7 +426,7 @@ extension DealsAndVouchersVC: NewDealsAndVouchersSuccessDelegate {
         //        }
         //        arrNewStoreList = removeDuplicateElements(posts: arrNewStoreList)
         
-        print("NEW  STORE LIST COUNT: \(arrNewDealsAndVouchers.count)")
+       dPrint("NEW  STORE LIST COUNT: \(arrNewDealsAndVouchers.count)")
         lblEmptyMsg.isHidden = arrNewDealsAndVouchers.isEmpty ? false : true
         tblDealsAndVouchersLists.reloadData()
     }
@@ -456,7 +456,7 @@ extension DealsAndVouchersVC: TrendingDealsAndVouchersSuccessDelegate {
         //        }
         //        arrTrendingStoreList = removeDuplicateElements(posts: arrTrendingStoreList)
         
-        print("TRENDING STORE LIST COUNT: \(arrTrendingDealsAndVouchers.count)")
+       dPrint("TRENDING STORE LIST COUNT: \(arrTrendingDealsAndVouchers.count)")
         lblEmptyMsg.isHidden = arrTrendingDealsAndVouchers.isEmpty ? false : true
         tblDealsAndVouchersLists.reloadData()
     }

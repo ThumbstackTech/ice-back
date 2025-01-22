@@ -158,7 +158,7 @@ extension CreateReportIssueVC : CreateReportDelegate {
         let alert = UIAlertController(title: AlertMsg.SUCCESS, message: AlertMsg.DATASUCCESS, preferredStyle: .alert)
             let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) { [self]
                     UIAlertAction in
-                    NSLog("OK Pressed")
+                    dPrint("OK Pressed")
                 self.navigationController?.popViewController(animated: true)
                 }
             

@@ -20,11 +20,6 @@ class GenericLabel: UILabel {
     
     func initialize() {
         
-//        self.font = self.font.convertToAppFont()
-//        if self.tag == 11 {
-//            self.textColor = UIColor(hexString: "#0d344d")
-//        }
-        
         if self.tag == 12 { // Circular Label
             self.layer.cornerRadius = self.frame.size.width/2
             self.clipsToBounds = true

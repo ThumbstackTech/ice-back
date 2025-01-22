@@ -88,12 +88,9 @@ class ImagePicker: NSObject{
                     if result == .authorized {
                         GCDMainThread.async {
                             self.multiple(presentationController: self.presentationController!)
-//                            self.pickerController.sourceType = type
-//                            self.presentationController?.present(self.pickerController, animated: true)
                         }
                     } else {
                         let msg = "Enable permissions to access your photos for sending photos."
-//
                         GCDMainThread.async {
                             let alertController = UIAlertController(title: "Alert", message: msg, preferredStyle: .alert)
                             alertController.addAction(UIAlertAction(title: "Cancel", style: .default))
@@ -121,7 +118,6 @@ class ImagePicker: NSObject{
         if let action = self.action(for: .photoLibrary, title: "Photo Library") {
           //
             alertController.addAction(action)
-           // multiple(presentationController:presentationController!)
         }
        
        
@@ -144,7 +140,6 @@ class ImagePicker: NSObject{
 
         }
         
-        //self.delegate?.didSelect(image: image)
     }
 }
 
@@ -171,7 +166,7 @@ extension ImagePicker: PHPickerViewControllerDelegate {
                     } else if i.itemProvider.hasItemConformingToTypeIdentifier(UTType.image.identifier) {
                         
                         i.itemProvider.loadFileRepresentation(forTypeIdentifier: UTType.image.identifier) { imgUrl, error in
-                            print(imgUrl)
+                           dPrint("imgUrl = \(imgUrl as Any)")
                             
                             if let data = try? Data(contentsOf: imgUrl!){
                                 let image: UIImage = UIImage(data: data)!
@@ -217,7 +212,6 @@ extension ImagePicker: UIImagePickerControllerDelegate {
             }
         }
         
-        //self.pickerController(picker, didSelect: image)
     }
 }
 

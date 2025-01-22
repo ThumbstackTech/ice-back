@@ -48,7 +48,7 @@ class WKWebViewVC: UIViewController {
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        print("WEBVIEW VIEW DID DISAPPEAR")
+        dPrint("WEBVIEW VIEW DID DISAPPEAR")
         timer.invalidate()
         appDelegate.timeLeft = INTEGER.TIMEDURATION
     }
@@ -105,10 +105,10 @@ class WKWebViewVC: UIViewController {
     @objc func updateTime() {
         if appDelegate.timeLeft > 0 {
             appDelegate.timeLeft = endTime?.timeIntervalSinceNow ?? 0
-            print("TIME LEFT:",  appDelegate.timeLeft )
+           dPrint("TIME LEFT:",  appDelegate.timeLeft )
         } else {
             timer.invalidate()
-            print("CASHBACK API STATUS CALL")
+           dPrint("CASHBACK API STATUS CALL")
             if isStore {
                 storesViewModel.StoreDetailsData(storeId: intStoreId, isHideLoader: true)
                 storesViewModel.StoreDetailsDelegate = self
@@ -137,12 +137,11 @@ extension WKWebViewVC {
 //MARK: - WKNavigationDelegate
 extension WKWebViewVC: WKNavigationDelegate  {
     func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
-        print("WEBVIEW ERROR: \(error.localizedDescription)")
-//        alertWithTitle(AlertMsg.TITLE.localized() , message: error.localizedDescription)
+       dPrint("WEBVIEW ERROR: \(error.localizedDescription)")
     }
     
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
-        print("WEBVIEW LOAD START")
+       dPrint("WEBVIEW LOAD START")
         if !isFirstTimeLoad {
             HUD.show()
             isFirstTimeLoad = true

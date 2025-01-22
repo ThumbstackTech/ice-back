@@ -115,7 +115,7 @@ extension DonationProjectsVC: UIScrollViewDelegate {
                         tblDonation.showLoadingFooter()
                         intCurrentPage += 1
                         donationProjectsViewModel.donationProjectsList(pageCount: intCurrentPage, limitCount: Global.sharedManager.intPaginationLimit)
-                        print("Works Donation Pagination")
+                       dPrint("Works Donation Pagination")
                     }
                 }
         }

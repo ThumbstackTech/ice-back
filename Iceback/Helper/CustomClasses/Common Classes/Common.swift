@@ -18,8 +18,6 @@ let activityIndicator:UIActivityIndicatorView = UIActivityIndicatorView()
 class Common {
     
     static let shared = Common()
-    //    var headerView = NavigationHeader()
-    //    var headerViewBlue = NavigationHeaderBlue()
     var appName : String
     var preference : UserDefaults
     var screenWidth : CGFloat
@@ -165,10 +163,6 @@ class Common {
             completion()
         }
         alert.addAction(actionOk)
-        //
-        //        Common.appDelegate.window?.rootViewController?.present(alert, animated: true){
-        //
-        //        }
         vc.present(alert, animated: true) {
             
         }
@@ -186,12 +180,12 @@ class Common {
             do {
                 try FileManager.default.createDirectory(atPath: dataPath.absoluteString, withIntermediateDirectories: true, attributes: nil)
             } catch {
-                print(error.localizedDescription);
+               dPrint(error.localizedDescription);
             }
         } else {
-            print("Folder already exist")
+           dPrint("Folder already exist")
         }
-        print("Dir Path = \(dataPath)")
+       dPrint("Dir Path = \(dataPath)")
     }
     
     
@@ -223,7 +217,7 @@ class Common {
         do {
             let aes = try AES256(key: ke.data(using: .utf8)!, iv: iv.data(using: .utf8)!)
             let encrypted = try aes.encrypt(str.data(using: .utf8)!)
-            print("encrypted --> ", encrypted.base64EncodedString())
+           dPrint("encrypted --> ", encrypted.base64EncodedString())
             strTemp = encrypted.base64EncodedString()
         } catch {
             
@@ -241,7 +235,7 @@ class Common {
             let decrptedData = NSData(base64Encoded: str)
             let decrypted = try aes.decrypt(decrptedData! as Data)
             strTemp = String(decoding: decrypted, as: UTF8.self)
-            print("decrypted --> ", str)
+           dPrint("decrypted --> ", str)
         } catch {
             
         }
@@ -277,19 +271,6 @@ class Common {
             appDelegate.window?.rootViewController = navController
             appDelegate.window?.makeKeyAndVisible()
         }
-    }
-    
-    
-    
-    //MARK: - Activity Indicator in status bar -
-    
-    func showActivityIdicatonInStatusBar()  {
-        
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
-    }
-    func hideActivityIdicatonInStatusBar()  {
-        
-        UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
     
     //MARK: - Time stamp to date string -
@@ -341,11 +322,11 @@ class Common {
             imgGenerator.appliesPreferredTrackTransform = true
             let cgImage = try imgGenerator.copyCGImage(at: CMTimeMake(value: 0, timescale: 1), actualTime: nil)
             let thumbnail = UIImage(cgImage: cgImage)
-            print(thumbnail.size.width)
-            print(thumbnail.size.height)
+           dPrint(thumbnail.size.width)
+           dPrint(thumbnail.size.height)
             return thumbnail.getThumbnailFromVideo(size: thumbnail.size.height)
         } catch let error {
-            print("*** Error generating thumbnail: \(error.localizedDescription)")
+           dPrint("*** Error generating thumbnail: \(error.localizedDescription)")
             return nil
         }
     }
@@ -366,7 +347,7 @@ class Common {
     
     //MARK:- get formated duration from seconds.
     func hmsFrom(seconds: Int, completion: @escaping (_ hours: Int, _ minutes: Int, _ seconds: Int)->()) {
-        print(seconds / 3600, (seconds % 3600) / 60, (seconds % 3600) % 60)
+       dPrint(seconds / 3600, (seconds % 3600) / 60, (seconds % 3600) % 60)
         completion(seconds / 3600, (seconds % 3600) / 60, (seconds % 3600) % 60)
     }
     
@@ -386,7 +367,7 @@ class Common {
     
     func UTCToLocal(dateInput:String) -> String? {
         
-        print("Input Time ----> \(dateInput)")
+       dPrint("Input Time ----> \(dateInput)")
         
         let dateFormatter = ISO8601DateFormatter()
         dateFormatter.formatOptions =  [.withInternetDateTime, .withFractionalSeconds]
@@ -394,16 +375,13 @@ class Common {
         
         if let dateISO = dateFormatter.date(from: dateInput){
             
-            print(dateISO)
-            //          dateFormatter.locale = Locale.current
-            //          dateFormatter.timeZone = TimeZone.current
+           dPrint("dateISO = \(dateISO)")
             let formatter = DateFormatter()
             formatter.dateFormat = "yyyy-MM-dd HH:mm:ss Z"
             formatter.timeZone = TimeZone.current
-            //formatter.timeZone = NSTimeZone.local
             formatter.string(from: dateISO)
             
-            print("Local Time ----> \(formatter.string(from: dateISO))")
+           dPrint("Local Time ----> \(formatter.string(from: dateISO))")
             
             return formatter.string(from: dateISO)
             
@@ -468,7 +446,7 @@ extension UIViewController{
      */
     
     var topbarHeight: CGFloat {
-        return UIApplication.shared.statusBarFrame.size.height +
+       return (view.window?.windowScene?.statusBarManager?.statusBarFrame.size.height ?? 20.0) +
         (self.navigationController?.navigationBar.frame.height ?? 0.0)
     }
     
@@ -593,7 +571,6 @@ extension String {
         
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
-        // formatter.locale = Locale(identifier: "en_US")
         formatter.locale = Locale.current
         
         return formatter.string(from: number! as NSNumber)!
@@ -605,7 +582,6 @@ extension String {
         
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
-        // formatter.locale = Locale(identifier: "en_US")
         formatter.locale = Locale.current
         
         let number = formatter.number(from: self)
@@ -615,4 +591,8 @@ extension String {
     
 }
 
-
+func dPrint(_ items: Any..., separator: String = " ", terminator: String = "\n") {
+    #if DEBUG
+    Swift.print(items, separator: separator, terminator: terminator)
+    #endif
+}

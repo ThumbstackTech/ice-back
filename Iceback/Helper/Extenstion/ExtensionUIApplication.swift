@@ -16,14 +16,8 @@ extension UIApplication {
     /// A Computed Property (only getter) of UIViewController For getting the TopMostViewController(UIViewController) of Application. For using this property you must have instance of UIApplication Like this:(UIApplication.shared).
     var topMostViewController:UIViewController {
         
-//        var topViewController = self.keyWindow?.rootViewController
-//        
-//        while topViewController?.presentedViewController != nil {
-//            topViewController = topViewController?.presentedViewController
-//        }
         
-        
-        var top = self.keyWindow!.rootViewController
+       var top = appDelegate.window!.rootViewController
         while true {
             if let presented = top?.presentedViewController {
                 top = presented
@@ -37,7 +31,6 @@ extension UIApplication {
         }
         return top!
         
-//        return topViewController!
     }
     
 }

@@ -33,7 +33,7 @@ class LRFManager {
                     case .unconfirmed:
                         completion(.success(true))
                     case .unknown:
-                        print("unknown")
+                       dPrint("unknown")
                     }
                 }else if let error = error as? AWSMobileClientError {
                     // Handle login failure
@@ -55,17 +55,17 @@ class LRFManager {
                     switch (signInResult.signInState) {
                     case .signedIn:
                         // User signed in successfully
-                        print("SIGN IN")
+                       dPrint("SIGN IN")
                         completion(.success(nil))
                     case .smsMFA:
                         // Additional authentication step required (e.g., MFA)
-                        print("SMSMFA")
+                       dPrint("SMSMFA")
                         completion(.success(nil))
                     case .newPasswordRequired:
-                        print("New Password")
+                       dPrint("New Password")
                     default:
                         // Handle other cases (e.g., user needs to confirm account)
-                        print("DEFAULT")
+                       dPrint("DEFAULT")
                     }
                 } else if let error = error as? AWSMobileClientError {
                     // Handle login failure
@@ -85,28 +85,28 @@ class LRFManager {
                         
                         
                     case .unknown:
-                        print("unknown")
+                       dPrint("unknown")
                     case .smsMFA:
-                        print("smsMFA")
+                       dPrint("smsMFA")
                     case .passwordVerifier:
-                        print("passwordVerifier")
+                       dPrint("passwordVerifier")
                     case .customChallenge:
-                        print("customChallenge")
+                       dPrint("customChallenge")
                     case .deviceSRPAuth:
-                        print("deviceSRPAuth")
+                       dPrint("deviceSRPAuth")
                     case .devicePasswordVerifier:
-                        print("devicePasswordVerifier")
+                       dPrint("devicePasswordVerifier")
                     case .adminNoSRPAuth:
-                        print("adminNoSRPAuth")
+                       dPrint("adminNoSRPAuth")
                     case .newPasswordRequired:
-                        print("newPasswordRequired")
+                       dPrint("newPasswordRequired")
                     case .signedIn:
                         completion(.success(AuthUser(username: "username", claims: signInResult.parameters)))
                     }
                     
                 } else if let error = error as? AWSMobileClientError  {
                     // Handle login failure
-                    print("ERROR>>",error)
+                   dPrint("ERROR>>",error)
                     completion(.failure(AuthError.error(error)))
                 }
             }
@@ -153,10 +153,10 @@ class LRFManager {
                 if let signInResult = result {
                     switch (signInResult.forgotPasswordState) {
                     case .done:
-                        print("done")
+                       dPrint("done")
                         completion(.success(true))
                     case .confirmationCodeSent:
-                        print("confirmationCodeSent")
+                       dPrint("confirmationCodeSent")
                     }
                     
                 } else if let error = error as? AWSMobileClientError {
@@ -211,6 +211,7 @@ class LRFManager {
         AWSMobileClient.default().signOut()
         AWSMobileClient.default().showSignIn(navigationController: navigationController, hostedUIOptions: hostedUIOptions) { (userState, error) in
             if let signInResult = userState {
+               dPrint("showSignIn signInResult = \(signInResult)")
                 completion(.success(true))
             } else if let error = error as? NSError  {
                 completion(.failure(error))

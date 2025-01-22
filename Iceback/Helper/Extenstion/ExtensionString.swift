@@ -71,7 +71,7 @@ extension String {
                 attributedString.addAttributes(replacementAttribute, range: range)
             }
         } catch let e {
-            print(e.localizedDescription)
+           dPrint(e.localizedDescription)
         }
         return attributedString
     }
@@ -95,7 +95,7 @@ extension String {
                                                        .characterEncoding: String.Encoding.utf8.rawValue],
                                              documentAttributes: nil)
            } catch {
-               print("error: ", error)
+              dPrint("error: ", error)
                return nil
            }
        }
@@ -119,7 +119,7 @@ extension String {
                                                     .characterEncoding: String.Encoding.utf8.rawValue],
                                           documentAttributes: nil)
         } catch {
-            print("error: ", error)
+           dPrint("error: ", error)
             return nil
         }
     }

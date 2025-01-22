@@ -91,45 +91,6 @@ extension UITextView:UITextViewDelegate
         }
     }
     
-//    open override func draw(_ rect: CGRect)
-//    {
-//        super.draw(rect)
-//        
-//        let phString = self.object(forKey: &kPlaceHolderString)
-//        if (phString == nil) {
-//            return
-//        }
-//        
-//        var phColor = self.object(forKey: &kPlaceHolderColor) as? UIColor
-//        if (phColor == nil) {
-//            phColor = (self.textColor != nil) ? self.textColor : UIColor.lightGray
-//        }
-//        
-//        let phInter = self.object(forKey: &kPlaceHolderInternal) as? NSString
-//        if (phInter != nil && phInter?.length > 0)
-//        {
-//            if (self.responds(to: #selector(UIView.snapshotView(afterScreenUpdates:))))
-//            {
-//                let paragraph = NSMutableParagraphStyle()
-//                paragraph.alignment = self.textAlignment
-//                let width = CViewWidth(self)
-//                let rect = CGRect(x: 5, y: 8 + self.contentInset.top, width: width - self.contentInset.left, height: CViewHeight(self) - self.contentInset.top)
-//                
-//                phInter?.draw(in: rect, withAttributes: [NSAttributedStringKey.font:self.font!, NSAttributedStringKey.foregroundColor:phColor!, NSAttributedStringKey.paragraphStyle:paragraph])
-//            }
-//            else
-//            {
-//                phColor?.set()
-//                
-//                let rect = CGRect(x: 8.0, y: 8.0, width: CViewWidth(self) - 16.0, height: CViewHeight(self) - 16.0)
-//                phInter?.draw(in: rect, withAttributes: [NSAttributedStringKey.font:self.font!])
-//            }
-//        }
-//        
-//    }
-    
-    
-    
     
     //MARK:-
     //MARK:- ObserveValueForKeyPath

@@ -63,7 +63,6 @@ class AuthenticationCodeBox: UIStackView {
     
     //Customisation and setting OTPTextFields
     private final func setupTextField(_ textField: AuthenticationCodeTextField){
-//        let getValue = (Int(UIScreen.main.bounds.width) - (2*40))
         let width = 56//(getValue -  20 * 3)/numberOfFields
         textField.delegate = self
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -83,7 +82,6 @@ class AuthenticationCodeBox: UIStackView {
         textField.layer.shadowRadius = 1.0
         textField.layer.shadowColor = UIColor.clear.cgColor
         textField.layer.shadowOffset = CGSize(width: 0, height: 0)
-//        textField.layer.borderColor = textfieldTextColor.cgColor
         textField.layer.shadowOpacity = 0.0
         textField.layer.cornerRadius = 15
         textField.backgroundColor = textfieldTextColor

@@ -60,23 +60,23 @@ class ImageUpload: NSObject {
         let expression = AWSS3TransferUtilityUploadExpression()
         
         expression.progressBlock = { (task: AWSS3TransferUtilityTask,progress: Progress) -> Void in
-            print(progress.fractionCompleted)   //2
+           dPrint(progress.fractionCompleted)   //2
             if progress.isFinished{           //3
-                print("Upload Finished...")
+               dPrint("Upload Finished...")
                 //do any task here.
             }
         }
 
         
         self.progressBlock = {(task, progress) in
-            print(progress)
+           dPrint(progress)
         }
         
         self.completionHandler = { (task, error) -> Void in
             
             DispatchQueue.main.async(execute: {
                 if let error = error {
-                    print("Failed with error: \(error)")
+                   dPrint("Failed with error: \(error)")
                     if showLoader {
                       //  GFunction.shared.removeLoader()
                     }
@@ -85,7 +85,7 @@ class ImageUpload: NSObject {
                     }
                 }
                 else{
-                    print(kAWSPath + remotePath)
+                   dPrint(kAWSPath + remotePath)
                     if let completion = completion {
                         completion(kAWSPath + remotePath, remotePath, index)
                     }
@@ -109,11 +109,11 @@ class ImageUpload: NSObject {
                 expression: expression,
                 completionHandler: completionHandler).continueWith { (task) -> AnyObject? in
                     if let error = task.error {
-                        print("Error: \(error.localizedDescription)")
+                       dPrint("Error: \(error.localizedDescription)")
                     }
                     
                     if let result = task.result {
-                        print(result)
+                       dPrint(result)
                     }
                     
                     return nil;
@@ -132,7 +132,7 @@ class ImageUpload: NSObject {
         bcf.allowedUnits = [.useMB] // optional: restricts the units to MB only
         bcf.countStyle = .file
         let string = bcf.string(fromByteCount: Int64(byteCount))
-        print(string)
+       dPrint(string)
         if byteCount == 0 {
             return "0"
         }

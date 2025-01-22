@@ -11,13 +11,13 @@ import UIKit
 import MobileCoreServices
 import QuickLook
 
-public protocol FileAttachmentDelegate: class {
+public protocol FileAttachmentDelegate: AnyObject {
   func didSelect(file: URL?)
 }
 
 class FileAttachment: NSObject {
     private var pickerController: CustomDocumentPickerViewController = CustomDocumentPickerViewController(documentTypes: [kUTTypePDF as String, kUTTypeText as String, kUTTypeContent as String], in: .import)
-    private var quickViewController = QLPreviewController()
+    private var quickViewController: QLPreviewController? = QLPreviewController()
     private weak var presentationController: UIViewController?
     private weak var delegate: FileAttachmentDelegate?
     private var files:[URL] = []
@@ -40,10 +40,12 @@ class FileAttachment: NSObject {
         if let attachFiles = data {
             files = attachFiles
         }
-        quickViewController.dataSource = self
-        quickViewController.reloadData()
+        quickViewController?.dataSource = self
+        quickViewController?.reloadData()
         DispatchQueue.main.async {
-            self.presentationController!.present(self.quickViewController, animated: true, completion: nil)
+           if let quickVC = self.quickViewController {
+              self.presentationController!.present(quickVC, animated: true, completion: nil)
+           }
         }
     }
     
@@ -86,7 +88,7 @@ class FileAttachment: NSObject {
                 try FileManager.default.removeItem(at: destinationUrl)
             }
             catch {
-                print("Error while removing file from directory")
+               dPrint("Error while removing file from directory")
             }
         }
         
@@ -99,10 +101,10 @@ class FileAttachment: NSObject {
             do {
                 // after downloading your file you need to move it to your destination url
                 try FileManager.default.moveItem(at: tempLocation, to: destinationUrl)
-                print("File moved to documents folder")
+               dPrint("File moved to documents folder")
                 completion(true, destinationUrl, nil)
             } catch let error as NSError {
-                print(error.localizedDescription)
+               dPrint(error.localizedDescription)
                 completion(false, nil, error.localizedDescription)
             }
         }).resume()
@@ -119,7 +121,7 @@ extension FileAttachment {
             if let url = URL(string: path){
                 return url
             }
-            print("PATH>>>>>>>>>>>>> \(path)")
+           dPrint("PATH>>>>>>>>>>>>> \(path)")
             return nil
         }
         
@@ -200,7 +202,7 @@ extension FileAttachment {
                     do {
                         try fileManager.removeItem(atPath: urlString)
                     } catch {
-                        print("Couldn't delete Image directory")
+                       dPrint("Couldn't delete Image directory")
                     }
                 }
             }
@@ -225,7 +227,7 @@ extension FileAttachment {
                 for fileURL in fileURLs {
                     try FileManager.default.removeItem(at: fileURL)
                 }
-            } catch  { print(error) }
+            } catch  {dPrint(error) }
         }
     }
 }
@@ -241,7 +243,7 @@ extension FileAttachment: UIDocumentPickerDelegate {
         let url = URL(fileURLWithPath: path)
         let sandboxFileUrl = url.appendingPathComponent(fileUrl.lastPathComponent)
         if FileManager.default.fileExists(atPath: sandboxFileUrl.path) {
-            print("Already Exists Do nothing")
+           dPrint("Already Exists Do nothing")
             self.pickerController(controller, didSelect: sandboxFileUrl)
         } else {
             do {
@@ -271,8 +273,8 @@ extension FileAttachment:QLPreviewControllerDataSource {
 
 extension FileAttachment: QLPreviewControllerDelegate {
     func previewControllerWillDismiss(_ controller: QLPreviewController) {
-        if quickViewController != nil {
-            quickViewController.dismiss(animated: true, completion: nil)
+        if let quickVC = quickViewController {
+            quickVC.dismiss(animated: true, completion: nil)
         }
     }
 }

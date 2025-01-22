@@ -56,7 +56,7 @@ class HowItWorksTableViewCell: BaseTableViewCell {
                 if let newValue = change?[.newKey]{
                     let newSize = newValue as! CGSize
                     constTableViewStepsHeight.constant = newSize.height
-                    print("CONTENT SIZE Height: \(newSize.height)")
+                   dPrint("CONTENT SIZE Height: \(newSize.height)")
                     tableViewReloadDelegate.reloadTableView()
                 }
             }

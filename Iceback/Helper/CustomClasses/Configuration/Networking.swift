@@ -41,7 +41,7 @@ class Networking {
             if (req?.request != nil) {
                 let printableString = "\(req!.request!.httpMethod!) '\(req!.request!.url!.absoluteString)': \(String(describing: req!.request!.allHTTPHeaderFields)) \(body) [\(length) bytes]"
 
-                print("API Request: \(printableString)")
+               dPrint("API Request: \(printableString)")
             }
         }
     }
@@ -57,7 +57,7 @@ class Networking {
             
             guard let dataResponse = response.data ,
                 response.error == nil else {
-                    print(response.error?.localizedDescription ?? "Response Error")
+                   dPrint(response.error?.localizedDescription ?? "Response Error")
                     failure!(uRequest.task!, response.error as NSError?)
                     return
             }
@@ -69,30 +69,30 @@ class Networking {
                 do {
                     let jsonResponse = try JSONSerialization.jsonObject(with:
                         dataResponse, options: [])
-                    print(jsonResponse)
+                   dPrint(jsonResponse)
                     success!(uRequest.task!, jsonResponse as AnyObject, self.statusCode)
                 } catch let parsingError {
-                    print("Error", parsingError)
+                   dPrint("Error", parsingError)
                     failure!(uRequest.task!, response.error as NSError?)
                 }
             } else if self.statusCode == 401 {
                 PPAlerts.sharedAlerts().ToastAlert(message: AlertMsg.SESSIONEXPIREMESSAGE.localized(), withTimeoutImterval: 0.2)
-                print("STAGE BASE 401,\(self.StageBaseURL + tag!)")
+               dPrint("STAGE BASE 401,\(self.StageBaseURL + tag!)")
                 Common.shared.doLogoutFromApp()
             } else if self.statusCode == 404 {
                 PPAlerts.sharedAlerts().ToastAlert(message: AlertMsg.SESSIONEXPIREMESSAGE.localized(), withTimeoutImterval: 0.2)
-                print("STAGE BASE 404,\(self.StageBaseURL + tag!)")
+               dPrint("STAGE BASE 404,\(self.StageBaseURL + tag!)")
                 Common.shared.doLogoutFromApp()
             } else {
                 do {
                     let jsonResponse = try JSONSerialization.jsonObject(with:
                         dataResponse, options: [])
-                    print(jsonResponse)
+                   dPrint(jsonResponse)
 
                     let dictResponse = jsonResponse
                     success!(uRequest.task!, dictResponse as AnyObject, self.statusCode)
                 } catch let parsingError {
-                    print("Error", parsingError)
+                   dPrint("Error", parsingError)
                     failure!(uRequest.task!, response.error as NSError?)
                 }
             }
@@ -112,7 +112,7 @@ class Networking {
             
             guard let dataResponse = response.data ,
                 response.error == nil else {
-                    print(response.error?.localizedDescription ?? "Response Error")
+                   dPrint(response.error?.localizedDescription ?? "Response Error")
                     failure!(uRequest.task!, response.error as NSError?)
                     return
             }
@@ -125,34 +125,34 @@ class Networking {
                     if dataResponse.count > 0 {
                         let jsonResponse = try JSONSerialization.jsonObject(with:
                             dataResponse, options: [])
-                        print(jsonResponse)
+                       dPrint(jsonResponse)
                         success!(uRequest.task!, jsonResponse as AnyObject, self.statusCode)
                     } else {
                         let jsonResponse = [CJsonMessage: "Success"]
                         success!(uRequest.task!, jsonResponse as AnyObject, self.statusCode)
                     }
                 } catch let parsingError {
-                    print("Error", parsingError)
+                   dPrint("Error", parsingError)
                     failure!(uRequest.task!, parsingError as NSError)
                 }
             } else if self.statusCode == 401 {
                 PPAlerts.sharedAlerts().ToastAlert(message: AlertMsg.SESSIONEXPIREMESSAGE.localized(), withTimeoutImterval: 0.2)
-                print("STAGE BASE 401,\(self.StageBaseURL + tag!)")
+               dPrint("STAGE BASE 401,\(self.StageBaseURL + tag!)")
                 Common.shared.doLogoutFromApp()
             } else if self.statusCode == 404 {
                 PPAlerts.sharedAlerts().ToastAlert(message: AlertMsg.SESSIONEXPIREMESSAGE.localized(), withTimeoutImterval: 0.2)
-                print("STAGE BASE 404,\(self.StageBaseURL + tag!)")
+               dPrint("STAGE BASE 404,\(self.StageBaseURL + tag!)")
                 Common.shared.doLogoutFromApp()
             }  else {
                 do {
                     let jsonResponse = try JSONSerialization.jsonObject(with:
                         dataResponse, options: [])
-                    print(jsonResponse)
+                   dPrint(jsonResponse)
 
                     let dictResponse = jsonResponse
                     success!(uRequest.task!, dictResponse as AnyObject, self.statusCode)
                 } catch let parsingError {
-                    print("Error", parsingError)
+                   dPrint("Error", parsingError)
                     failure!(uRequest.task!, parsingError as NSError)
                 }
             }
@@ -171,7 +171,7 @@ class Networking {
             
             guard let dataResponse = response.data ,
                 response.error == nil else {
-                    print(response.error?.localizedDescription ?? "Response Error")
+                   dPrint(response.error?.localizedDescription ?? "Response Error")
                     failure!(uRequest.task!, response.error as NSError?)
                     return
             }
@@ -184,34 +184,34 @@ class Networking {
                     if dataResponse.count > 0 {
                         let jsonResponse = try JSONSerialization.jsonObject(with:
                             dataResponse, options: [])
-                        print(jsonResponse)
+                       dPrint(jsonResponse)
                         success!(uRequest.task!, jsonResponse as AnyObject, self.statusCode)
                     } else {
                         let jsonResponse = [CJsonMessage: "Success"]
                         success!(uRequest.task!, jsonResponse as AnyObject, self.statusCode)
                     }
                 } catch let parsingError {
-                    print("Error", parsingError)
+                   dPrint("Error", parsingError)
                     failure!(uRequest.task!, parsingError as NSError)
                 }
             } else if self.statusCode == 401 {
                 PPAlerts.sharedAlerts().ToastAlert(message: AlertMsg.SESSIONEXPIREMESSAGE.localized(), withTimeoutImterval: 0.2)
-                print("STAGE BASE 401,\(self.StageBaseURL + tag!)")
+               dPrint("STAGE BASE 401,\(self.StageBaseURL + tag!)")
                 Common.shared.doLogoutFromApp()
             } else if self.statusCode == 404 {
                 PPAlerts.sharedAlerts().ToastAlert(message: AlertMsg.SESSIONEXPIREMESSAGE.localized(), withTimeoutImterval: 0.2)
-                print("STAGE BASE 404,\(self.StageBaseURL + tag!)")
+               dPrint("STAGE BASE 404,\(self.StageBaseURL + tag!)")
                 Common.shared.doLogoutFromApp()
             } else {
                 do {
                     let jsonResponse = try JSONSerialization.jsonObject(with:
                         dataResponse, options: [])
-                    print(jsonResponse)
+                   dPrint(jsonResponse)
 
                     let dictResponse = jsonResponse
                     success!(uRequest.task!, dictResponse as AnyObject, self.statusCode)
                 } catch let parsingError {
-                    print("Error", parsingError)
+                   dPrint("Error", parsingError)
                     failure!(uRequest.task!, parsingError as NSError)
                 }
             }
@@ -249,7 +249,7 @@ class Networking {
                 }
             }
             
-            print(multipart)
+           dPrint("multipart = \(multipart)")
         }, to: (StageBaseURL + tag!), method: HTTPMethod.post, headers: headers) { (encodingResult) in
             
             switch encodingResult {
@@ -257,11 +257,11 @@ class Networking {
                 self.logging(request: uRequest)
                 
                 uRequest.uploadProgress(closure: { (progress) in
-                    print("Progress for uploading pages \(progress.fractionCompleted)")
+                   dPrint("Progress for uploading pages \(progress.fractionCompleted)")
                 })
                 
                 uRequest.responseJSON { (response) in
-                    print(response)
+                   dPrint(response)
                     self.statusCode = (response.response?.statusCode) ?? 0
                     
                     if(response.result.error == nil) {
@@ -277,90 +277,12 @@ class Networking {
                 
                 break
             case .failure(let encodingError):
-                print(encodingError)
+               dPrint(encodingError)
                 break
             }
         }
     }
     
-    
-    
-    //MARK: -Multiple doc and Image
-//    func requstPOSTMedia(param parameters: [String: Any]?, tag: String?, mediaData: [String: [Data]]?, headers : HTTPHeaders,mediaExtension:[SelectedMediaExtension], multipartFormData: @escaping (MultipartFormData) -> Void, success: ClosureSuccess?, failure: ClosureError?)  -> Void{
-//        SessionSharedManager.shared.upload(multipartFormData: { (multipart) in
-//            multipartFormData(multipart)
-//
-//            for (key, value) in parameters! {
-//                if let value = value as? String {
-//                    multipart.append(value.data(using: String.Encoding(rawValue: String.Encoding.utf8.rawValue))!, withName: key)
-//                }
-//                else if let value = value as? Int {
-//                    let strValue = String(value)
-//                    multipart.append(strValue.data(using: String.Encoding(rawValue: String.Encoding.utf8.rawValue))!, withName: key)
-//                }
-//
-//                if let arryReq = value as? Array<[String: AnyObject]> {
-//                    let str = self.notPrettyString(from: arryReq)!
-//                    multipart.append(str.data(using: String.Encoding(rawValue: String.Encoding.utf8.rawValue))!, withName: key)
-//                }
-//            }
-//
-//            let currentTimeStamp = String(Int(NSDate().timeIntervalSince1970))
-////            if let dataImage = imgData {
-////                for (key, value) in dataImage {
-////                    multipart.append(value, withName: key, fileName: "\(currentTimeStamp).jpeg", mimeType: "image/jpeg")
-////                }
-////            }
-//            if let dataMedia = mediaData{
-//
-//                dataMedia.forEach { i in
-//                    for k in 0..<i.value.count{
-//                        print("SELECTED..FILE NAME\(mediaExtension[k].fileName)")
-//                        print("SELECTED..FILE TYPE\(mediaExtension[k].mimeType)")
-//                        multipart.append(i.value[k], withName:i.key, fileName: "\(currentTimeStamp).\(mediaExtension[k].fileName)", mimeType: mediaExtension[k].mimeType)
-//                    }
-////                    i.value.forEach { k in
-////                        print("kop..Va\(k)")
-////                        //multipart.append(k, withName:i.key, fileName: "\(currentTimeStamp)", mimeType: <#T##String#>)
-////                    }
-//                }
-//            }
-//
-//            print(multipart)
-//            print(parameters)
-//        }, to: (StageBaseURL + tag!), method: HTTPMethod.post, headers: headers) { (encodingResult) in
-//
-//            switch encodingResult {
-//            case .success(let uRequest, _, _):
-//                self.logging(request: uRequest)
-//
-//                uRequest.uploadProgress(closure: { (progress) in
-//                    print("Progress for uploading pages \(progress.fractionCompleted)")
-//                })
-//
-//                uRequest.responseJSON { (response) in
-//                    print(response)
-//                    self.statusCode = (response.response?.statusCode) ?? 0
-//
-//                    if(response.result.error == nil) {
-//                        if(success != nil) {
-//                            success!(uRequest.task!, response.result.value as AnyObject, self.statusCode)
-//                        }
-//                    } else {
-//                        if(failure != nil) {
-//                            failure!(uRequest.task!, response.result.error as NSError?)
-//                        }
-//                    }
-//                }
-//
-//                break
-//            case .failure(let encodingError):
-//                print(encodingError)
-//                break
-//            }
-//        }
-//    }
-//
     func notPrettyString(from object: Any) -> String? {
         if let objectData = try? JSONSerialization.data(withJSONObject: object, options: JSONSerialization.WritingOptions(rawValue: 0)) {
             let objectString = String(data: objectData, encoding: .utf8)
@@ -397,7 +319,7 @@ class Networking {
                 }
             }
             
-            print(multipart)
+           dPrint(multipart)
         }, to: (StageBaseURL + tag!), method: HTTPMethod.post, headers: headers) { (encodingResult) in
             
             switch encodingResult {
@@ -405,11 +327,11 @@ class Networking {
                 self.logging(request: uRequest)
                 
                 uRequest.uploadProgress(closure: { (progress) in
-                    print("Progress for uploading pages \(progress.fractionCompleted)")
+                   dPrint("Progress for uploading pages \(progress.fractionCompleted)")
                 })
                 
                 uRequest.responseJSON { (response) in
-                    print(response)
+                   dPrint(response)
                     self.statusCode = (response.response?.statusCode) ?? 0
                     
                     if(response.result.error == nil) {
@@ -425,7 +347,7 @@ class Networking {
                 
                 break
             case .failure(let encodingError):
-                print(encodingError)
+               dPrint(encodingError)
                 break
             }
         }
