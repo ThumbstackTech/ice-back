@@ -51,15 +51,12 @@ let CNotificationCurrentDateTime = "CurrentDateTimeUpdate"
 let AppThemePopUpShadow = UIColor.init(hexString: "#257FA8")
 let AppThemeGray = UIColor.init(hexString: "#AEAEAE")
 let AppThemeOutline = UIColor.init(hexString: "#D4D3D3")
-
 let selectedUnderLineColor = UIColor.init(hexString: "#C6DEF1")
 let unSelectedColor = AppThemeOutline
 let textfieldTextColor = UIColor.app00000010
 
-
 let CTermsOfUseURL = ""
 let CPrivacyPolicyURL = ""
-
 
 let kDeviceTypeIOS = "1"
 
@@ -172,12 +169,10 @@ func AFont(size: CGFloat, type: AFontType) -> UIFont {
 //Notifications
 let kNotificationReachabilityLost = "ReachabilityLostNotification"
 
-
-
 //MARK: - Cognito Credentails
 struct CognitoCredentails {
     static let clientID = "4q3r4u9jopobn6v50a4baucp2k"//"6gq5ccnfrh2om7r0it5aac9hvb"
-    static let clientSecret = "1eihfpcu66h2jebdgt0aq6pc7o5vbea0ha3inujhps7akirfa919" //"ah1m9rdktsr4ci61hqspuh4a6ggl1g6q1ivsudptc36au51q39c"
+    static let clientSecret = "1eihfpcu66h2jebdgt0aq6pc7o5vbea0ha3inujhps7akirfa919"
     static let poolId = "eu-central-1_ITiEFa6mr"//"eu-central-1_NLHbPxh4l"
     static let identityPoolId = "eu-central-1:3be57398-dc99-47c5-b13a-00e13935a622"
     static let userPool = "UserPool"

@@ -77,8 +77,6 @@ extension HowItWorksTableViewCell: UITableViewDataSource {
         cell.setup(arrHowItWorks[indexPath.row])
         return cell
     }
-    
-    
 }
 
 //MARK: - UITableViewDelegate

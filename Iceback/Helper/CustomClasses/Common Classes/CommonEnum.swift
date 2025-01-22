@@ -151,6 +151,12 @@ enum CMSPAGES: String {
     case privacy  = "Privacy Policy"
 }
 
+enum CMSPageValue {
+   static let AboutUs = "about-us"
+   static let TermsConditions = "terms-and-conditions"
+   static let PrivacyPolicy = "privacy-policy"
+}
+
 
 enum SIDEMENU: String,CaseIterable {
     case myProfile         = "My Profile"

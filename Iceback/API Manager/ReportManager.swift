@@ -68,7 +68,7 @@ class ReportManager {
     } // end - 19-4-24
     
     //MARK: - reportView Api call
-    func reportView(param:[String:Any], successCompletion:@escaping([ReportListData])->(),errorCompletion:@escaping(String)->()) {
+    func reportView(param:[String:Any], successCompletion: @escaping([ReportListData])->(), errorCompletion: @escaping(String)->()) {
 
             APIRequestManager.shared.POST(param: param, header: Global.sharedManager.headerParam, withTag: APIPoint().viewReport) { response in
             

@@ -25,8 +25,6 @@ class LogoutPopupVC: UIViewController {
     //MARK: - View Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-       
         setUpController()
         languageLocalize()
     }
@@ -44,7 +42,6 @@ class LogoutPopupVC: UIViewController {
         btnNo.setTitle(BUTTONTITLE.No.localized(), for: .normal)
     }
     
-    
     //MARK: - Setup Controller
     func setUpController() {
         navigationItem.hidesBackButton = true
@@ -55,7 +52,6 @@ class LogoutPopupVC: UIViewController {
     func navigateToLoginScreen() {
         GCDMainThread.async {
             Common.shared.doLogoutFromApp()
-
         }
     }
 }
@@ -90,8 +86,6 @@ extension LogoutPopupVC : SignOutDelegate {
     func signOutSuccess(_ isSucess: Bool) {
        navigateToLoginScreen()
     }
-    
-    
 }
 
 //MARK: - DeleteUserDelegate
@@ -100,9 +94,7 @@ extension LogoutPopupVC : DeleteUserDelegate {
         myProfileViewModel.userAccountDeleteDelegate = self
         myProfileViewModel.userDeleteAccount()
     }
-    
 }
-
 
 extension LogoutPopupVC : UserAccountDeleteDelegate {
     func userAccountDeleteSuccess(isSucess: Bool) {

@@ -10,11 +10,9 @@ import Foundation
 class CustomSideMenuViewModel {
     
     private var HUD = SVProgress()
-    
-  
+
     var abourUsDelegate : AboutUsDelegate!
 
-    
     //MARK: - AboutUs
     func abousUs(slug: String) {
         HUD.show()
@@ -26,7 +24,5 @@ class CustomSideMenuViewModel {
             PPAlerts.sharedAlerts().iOsAlert(title: AlertMsg.TITLE, withMessage: error , withDelegate: nil)
         }
     }
-    
-    
 }
 

@@ -75,10 +75,8 @@ extension MyProfileVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueCell(ofType: MyProfileMenuCell.self)
-        
         cell.switchEnable.isHidden = true
         cell.imgNxt.isHidden = false
-        
         cell.setup(arrMenu[indexPath.row].rawValue)
         
         if arrMenu[indexPath.row] == MyProfileMenu.biometricLogin {
@@ -116,7 +114,6 @@ extension MyProfileVC: UITableViewDelegate {
         case .purchaseHistory:
             let vc: PurchaseHistoryVC = PurchaseHistoryVC.instantiate(appStoryboard: .profile)
             self.navigationController?.pushViewController(vc, animated: false)
-
 
         case .biometricLogin:
             break

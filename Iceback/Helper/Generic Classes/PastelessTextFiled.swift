@@ -25,7 +25,6 @@ class PastelessTextFiled: UITextField {
     // MARK: initialize
     func initialize() {
         self.placeholder = self.placeholder
-        //self.font = self.font?.convertToAppFont()
     }
     
     override func textRect(forBounds bounds: CGRect) -> CGRect {

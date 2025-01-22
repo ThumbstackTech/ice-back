@@ -79,8 +79,6 @@ extension ShopsOrVochersTableViewCell: UICollectionViewDataSource {
             return cell
         }
     }
-    
-    
 }
 
 

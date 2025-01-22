@@ -38,72 +38,53 @@ private var kPlaceHolderColor           : UInt8 = 0
 private var kPlaceHolderInternal        : UInt8 = 0
 private var kPlaceHolderAlignment       : UInt8 = 0
 
-extension UITextView:UITextViewDelegate
-{
-    func set(placeholder ph:String) -> Void
-    {
+extension UITextView:UITextViewDelegate {
+    func set(placeholder ph:String) -> Void {
         self.set(object: ph as AnyObject, forKey: &kPlaceHolderString)
         self.delegate = self
         self.addObserver()
         self.updatePlaceholder()
     }
     
-    func set(placeholder ph:String, color:UIColor) -> Void
-    {
+    func set(placeholder ph:String, color:UIColor) -> Void {
         self.set(object: color, forKey: &kPlaceHolderColor)
         self.set(placeholder: ph)
     }
     
-    fileprivate func addObserver() -> Void
-    {
-//        self.removeObserver(self, forKeyPath: "text")
+    fileprivate func addObserver() -> Void {
         self.addObserver(self, forKeyPath: "text", options: .new, context: nil)
-
     }
 
     // MARK: - Deinitialization
-    
-
-    fileprivate func removeObserver() -> Void
-    {
-        if (self.observationInfo != nil)
-        {
+    fileprivate func removeObserver() -> Void {
+        if (self.observationInfo != nil) {
             removeObserver(self, forKeyPath: "text")
         }
     }
     
-    func updatePlaceholder() -> Void
-    {
+    func updatePlaceholder() -> Void {
         if (self.text.count == 0) {
             self.set(object: self.object(forKey: &kPlaceHolderString), forKey: &kPlaceHolderInternal)
         } else {
             self.set(object: "" as AnyObject, forKey: &kPlaceHolderInternal)
         }
-        
         self.setNeedsDisplay()
     }
     
-    open override func willMove(toSuperview newSuperview: UIView?)
-    {
+    open override func willMove(toSuperview newSuperview: UIView?) {
         super.willMove(toSuperview: newSuperview)
         if (newSuperview == nil) {
             self.removeObserver()
         }
     }
-    
-    
-    //MARK:-
+
     //MARK:- ObserveValueForKeyPath
-    
-    open override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?)
-    {
+    open override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if ((object as? UITextView) == self) {
             self.updatePlaceholder()
         }
     }
-    
-    
-    
+
     //MARK:-
     //MARK:- UITextViewDelegate
     

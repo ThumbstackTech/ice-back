@@ -87,7 +87,6 @@ extension FavouritesVC {
         let vc: CouponDetailsVC = CouponDetailsVC.instantiate(appStoryboard:.stores)
         vc.intStoreId = arrFavourite[sender.tag].storeId
         self.navigationController?.pushViewController(vc, animated: false)
-        
     }
     
     @objc func btnFavouriteAction(_ sender: UIButton) {
@@ -119,7 +118,6 @@ extension FavouritesVC : UITableViewDataSource {
             return cell
         }
     }
-    
 }
 
 //MARK: - UITableViewDelegate
@@ -135,21 +133,21 @@ extension FavouritesVC : UITableViewDelegate {
 //MARK: - UIScrollViewDelegate
 extension FavouritesVC: UIScrollViewDelegate {
     
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        
-        if scrollView == tblFavouritesList {
-                if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= scrollView.contentSize.height) {
-                    if (arrFavourite.count/Global.sharedManager.intStoreAndVouchersPageLimit) == intCurrentPage {
-                        tblFavouritesList.showLoadingFooter()
-                        intCurrentPage += 1
-                        myProfileViewModel.favouriteStores(intPage: intCurrentPage)
-                       dPrint("Works Favourite Pagination")
-                    } else {
-                        self.isLoadMore = arrFavourite.isEmpty ? false : true
-                    }
-                }
-        }
-    }
+   func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+      
+      if scrollView == tblFavouritesList {
+         if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= scrollView.contentSize.height) {
+            if (arrFavourite.count/Global.sharedManager.intStoreAndVouchersPageLimit) == intCurrentPage {
+               tblFavouritesList.showLoadingFooter()
+               intCurrentPage += 1
+               myProfileViewModel.favouriteStores(intPage: intCurrentPage)
+               dPrint("Works Favourite Pagination")
+            } else {
+               self.isLoadMore = arrFavourite.isEmpty ? false : true
+            }
+         }
+      }
+   }
 }
 
 //MARK: - FavouriteStoresDelegate
@@ -185,6 +183,5 @@ extension FavouritesVC: FavouriteStoreRemoveDelegate {
         lblNoDataAvailableMsg.isHidden = arrFavourite.isEmpty ? false : true
         tblFavouritesList.reloadData()
     }
-    
 }
 

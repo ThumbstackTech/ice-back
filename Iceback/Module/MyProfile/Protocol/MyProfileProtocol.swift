@@ -12,12 +12,10 @@ protocol UserProfileDelegate{
 }
 
 protocol ProfilePictureProtocol {
-    
     func profilePictureDelegate(response : EditProfile)
 }
 
 protocol UpdateProfileProtocol {
-    
     func editAvatarDelegate(_ strMessage : String)
 }
 
@@ -33,11 +31,9 @@ protocol NotificationsDelegate{
     func getNotifications(_ arrData: [NotifcationData])
 }
 
-
 protocol UserActivitiesDeleteDelegate {
     func userActivitiesDeleteSuccess(isSucess : Bool)
 }
-
 
 protocol UserAccountDeleteDelegate {
     func userAccountDeleteSuccess(isSucess : Bool)

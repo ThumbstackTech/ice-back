@@ -16,9 +16,7 @@ class DonationProjectsManager {
     
     //MARK: - Donation Projects API Call
     func donationProjects(pageCount: Int, limit: Int, successCompletion:@escaping(DonationProjectsModel)->(),errorCompletion:@escaping(String)->()) {
-        
-      
-        
+                
         let dataParam: [String : Any] = ["filter[site]": UserDefaultHelper.selectedLanguage,
                                          "page": pageCount, "limit": limit]
         

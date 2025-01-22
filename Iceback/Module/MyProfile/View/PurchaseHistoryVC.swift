@@ -93,7 +93,6 @@ extension PurchaseHistoryVC: UITableViewDelegate {
         vc.intStoreId = arrUserProfile?.transactions[indexPath.row].storeId ?? 0
         self.navigationController?.pushViewController(vc, animated: false)
     }
-    
 }
 
 //MARK: - UserProfileDelegate
@@ -108,7 +107,5 @@ extension PurchaseHistoryVC: UserProfileDelegate {
         }
         tblPurchaseHistoty.reloadData()
         lblNoDataFound.isHidden = objData.transactions.isEmpty ? false : true
-        
-    }
-    
+    }    
 }
