@@ -72,7 +72,6 @@ class NotificationVC: UIViewController {
         tblNotificationList.registerCell(ofType: BottomEmptyTableViewCell.self)
         tblNotificationList.contentInset = UIEdgeInsets(top: 15, left: 0, bottom: 0, right: 0)
     }
-    
 }
 
 
@@ -100,7 +99,6 @@ extension NotificationVC : UITableViewDataSource {
             return cell
         }
     }
-    
 }
 
 //MARK: - UITableViewDelegate
@@ -157,22 +155,22 @@ extension NotificationVC : UITableViewDelegate {
 
 //MARK: - UIScrollViewDelegate
 extension NotificationVC: UIScrollViewDelegate {
-    
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        
-        if scrollView == tblNotificationList {
-                if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= scrollView.contentSize.height) {
-                    if (arrNotification.count/Global.sharedManager.intStoreAndVouchersPageLimit) == intCurrentPage {
-                        tblNotificationList.showLoadingFooter()
-                        intCurrentPage += 1
-                        myProfileViewModel.notificationsList(intPageLimit: intCurrentPage)
-                       dPrint("Works Notification Pagination")
-                    } else {
-                        self.isLoadMore = arrNotification.isEmpty ? false : true
-                    }
-                }
-        }
-    }
+   
+   func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+      
+      if scrollView == tblNotificationList {
+         if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= scrollView.contentSize.height) {
+            if (arrNotification.count/Global.sharedManager.intStoreAndVouchersPageLimit) == intCurrentPage {
+               tblNotificationList.showLoadingFooter()
+               intCurrentPage += 1
+               myProfileViewModel.notificationsList(intPageLimit: intCurrentPage)
+               dPrint("Works Notification Pagination")
+            } else {
+               self.isLoadMore = arrNotification.isEmpty ? false : true
+            }
+         }
+      }
+   }
 }
 
 
@@ -194,7 +192,5 @@ extension NotificationVC : NotificationsDelegate {
       
         lblNoDataAvailable.isHidden = arrNotification.isEmpty ? false : true
         tblNotificationList.reloadData()
-    }
-    
-    
+    }    
 }

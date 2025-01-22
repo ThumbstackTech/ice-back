@@ -8,221 +8,165 @@
 
 import Foundation
 
-class MultiCastDelegate: NSObject
-{
-    var _delegates = NSMutableArray()
-    
-    func add(delegate:AnyObject) -> Void
-    {
-        if (!_delegates.contains(delegate)) {
-            _delegates.add(delegate)
-        }
+class MultiCastDelegate: NSObject {
+  var _delegates = NSMutableArray()
+  
+  func add(delegate:AnyObject) -> Void {
+    if (!_delegates.contains(delegate)) {
+      _delegates.add(delegate)
+    }
+  }
+  
+  func remove(delegate:AnyObject) -> Void {
+    if (_delegates.contains(delegate)) {
+      _delegates.remove(delegate)
+    }
+  }
+  
+  override func responds(to aSelector: Selector) -> Bool {
+    if (super.responds(to: aSelector)) {
+      return true
     }
     
-    func remove(delegate:AnyObject) -> Void
-    {
-        if (_delegates.contains(delegate)) {
-            _delegates.remove(delegate)
-        }
+    for delegate in _delegates {
+      if ((delegate as AnyObject).responds(to: aSelector)) {
+        return true
+      }
     }
-    
-    override func responds(to aSelector: Selector) -> Bool
-    {
-        if (super.responds(to: aSelector)) {
-            return true
-        }
-        
-        for delegate in _delegates
-        {
-            if ((delegate as AnyObject).responds(to: aSelector)) {
-                return true
-            }
-        }
-        
-        return false
-    }
-    
+    return false
+  }
 }
 
 
-extension NSObject
-{
-    // MARK:
-    // MARK:- Property
-    
-    func isNull() -> Bool
-    {
-        if (self.isEqual(NSNull()) || self is NSNull) {
-            return true
-        }
-        
-        if (self is String) {
-            if ((self as! String).count == 0) {
-                return true
-            }
-        }
-        
-        if (self is NSArray) {
-            if ((self as! NSArray).count == 0) {
-                return true
-            }
-        }
-        
-        if (self is NSDictionary) {
-            if ((self as! NSDictionary).count == 0) {
-                return true
-            }
-        }
-        
-        return false
+extension NSObject {
+  // MARK:- Property
+  
+  func isNull() -> Bool {
+    if (self.isEqual(NSNull()) || self is NSNull) {
+      return true
     }
     
-    
-    
-    
-    /**
-        Method from NSObject Extension
-     */
-    
-    func set(object anObj:AnyObject?, forKey:UnsafeRawPointer) -> Void
-    {
-        objc_setAssociatedObject(self, forKey, anObj, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+    if (self is String) {
+      if ((self as! String).count == 0) {
+        return true
+      }
     }
     
-    
-    /**
-        Method from NSObject Extension
-     */
-    
-    func object(forKey key:UnsafeRawPointer) -> AnyObject?
-    {
-        return objc_getAssociatedObject(self, key) as AnyObject?
+    if (self is NSArray) {
+      if ((self as! NSArray).count == 0) {
+        return true
+      }
     }
     
+    if (self is NSDictionary) {
+      if ((self as! NSDictionary).count == 0) {
+        return true
+      }
+    }
+    return false
+  }
+  
+  /**
+   Method from NSObject Extension
+   */
+  
+  func set(object anObj:AnyObject?, forKey:UnsafeRawPointer) -> Void {
+    objc_setAssociatedObject(self, forKey, anObj, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+  }
+  
+  /**
+   Method from NSObject Extension
+   */
+  
+  func object(forKey key:UnsafeRawPointer) -> AnyObject? {
+    return objc_getAssociatedObject(self, key) as AnyObject?
+  }
+  
+  func set(Int integerValue:Int, key:UnsafeRawPointer) -> Void {
+    self.set(object: NSNumber(value: integerValue as Int), forKey: key)
+  }
+  
+  func int(forKey key:String) -> Int {
+    return self.object(forKey: key)!.intValue
+  }
+  
+  
+  func set(Float floatValue:Float, key:UnsafeRawPointer) -> Void {
+    self.set(object: NSNumber(value: floatValue as Float), forKey: key)
+  }
+  
+  func float(forKey key:String) -> Float {
+    return self.object(forKey: key)!.floatValue
+  }
+  
+  
+  func set(Double doubleValue:Double, key:UnsafeRawPointer) -> Void {
+    self.set(object: NSNumber(value: doubleValue as Double), forKey: key)
+  }
+  
+  func double(forKey key:String) -> Double {
+    return self.object(forKey: key)!.doubleValue
+  }
+  
+  func set(Bool boolValue:Bool, key:UnsafeRawPointer) -> Void{
+    self.set(object: NSNumber(value: boolValue as Bool), forKey: key)
+  }
+  
+  func bool(forKey key:String) -> Bool {
+    return self.object(forKey: key)!.boolValue
+  }
+  
+  func stringValue(forJSON key: String) -> String {
+    var value = self.value(forKey: key)
     
-    
-    // (Int)integer
-    
-    func set(Int integerValue:Int, key:UnsafeRawPointer) -> Void
-    {
-        self.set(object: NSNumber(value: integerValue as Int), forKey: key)
+    if value == nil {
+      return ""
     }
     
-    func int(forKey key:String) -> Int
-    {
-        return self.object(forKey: key)!.intValue
+    if value as AnyObject? === NSNull() {
+      value = nil
     }
     
-    
-    
-    
-    
-    // (float)floatValue
-    
-    func set(Float floatValue:Float, key:UnsafeRawPointer) -> Void
-    {
-        self.set(object: NSNumber(value: floatValue as Float), forKey: key)
+    if !(value is String) {
+      value = "\(value!)"
     }
-    
-    func float(forKey key:String) -> Float
-    {
-        return self.object(forKey: key)!.floatValue
+    return value as? String ?? ""
+  }
+  
+  // MARK:- Perform Block
+  func performBlock(block: @escaping BlockVoid) -> Void {
+    GCDBackgroundThread.async {
+      block()
     }
-    
-    
-    
-    
-    
-    // (double)doubleValue
-    
-    func set(Double doubleValue:Double, key:UnsafeRawPointer) -> Void
-    {
-        self.set(object: NSNumber(value: doubleValue as Double), forKey: key)
+  }
+  
+  func performBlockOnMainThread(block:@escaping BlockVoid) -> Void {
+    GCDMainThread.async {
+      block()
     }
-    
-    func double(forKey key:String) -> Double
-    {
-        return self.object(forKey: key)!.doubleValue
+  }
+  
+  func performBlockOnMainThread(block:@escaping BlockVoid, afterDelay:UInt64) -> Void {
+    GCDMainThread.asyncAfter(deadline: DispatchTime.now() + Double(Int64(afterDelay * NSEC_PER_SEC)) / Double(NSEC_PER_SEC), execute: {
+      block()
+    })
+  }
+  
+  func performBlockOnBackgroundThread(block:@escaping BlockVoid, afterDelay:UInt64) -> Void {
+    GCDBackgroundThread.asyncAfter(deadline: DispatchTime.now() + Double(Int64(afterDelay * NSEC_PER_SEC)) / Double(NSEC_PER_SEC), execute: {
+      block()
+    })
+  }
+  
+  func performBlockWithHighPriority(block:@escaping BlockVoid) -> Void {
+    GCDBackgroundThreadHighPriority.async {
+      block()
     }
-    
-    
-    
-    
-    
-    // (BOOL)boolean
-    
-    func set(Bool boolValue:Bool, key:UnsafeRawPointer) -> Void
-    {
-        self.set(object: NSNumber(value: boolValue as Bool), forKey: key)
+  }
+  
+  func performBlockWithLowPriority(block:@escaping BlockVoid) -> Void {
+    GCDBackgroundThreadLowPriority.async {
+      block()
     }
-    
-    func bool(forKey key:String) -> Bool
-    {
-        return self.object(forKey: key)!.boolValue
-    }
-    
-    func stringValue(forJSON key: String) -> String {
-        var value = self.value(forKey: key)
-        
-        if value == nil
-        {
-            return ""
-        }
-        if value as AnyObject? === NSNull()
-        {
-            value = nil
-        }
-        
-        if !(value is String) {
-            value = "\(value!)"
-        }
-        return value as? String ?? ""
-    }
-    
-    
-    
-    // MARK:
-    // MARK:- Perform Block
-    
-    func performBlock(block: @escaping BlockVoid) -> Void
-    {
-        GCDBackgroundThread.async {
-            block()
-        }
-    }
-    
-    func performBlockOnMainThread(block:@escaping BlockVoid) -> Void
-    {
-        GCDMainThread.async {
-            block()
-        }
-    }
-    
-    func performBlockOnMainThread(block:@escaping BlockVoid, afterDelay:UInt64) -> Void
-    {
-        GCDMainThread.asyncAfter(deadline: DispatchTime.now() + Double(Int64(afterDelay * NSEC_PER_SEC)) / Double(NSEC_PER_SEC), execute: {
-            block()
-        })
-    }
-    
-    func performBlockOnBackgroundThread(block:@escaping BlockVoid, afterDelay:UInt64) -> Void
-    {
-        GCDBackgroundThread.asyncAfter(deadline: DispatchTime.now() + Double(Int64(afterDelay * NSEC_PER_SEC)) / Double(NSEC_PER_SEC), execute: {
-            block()
-        })
-    }
-    
-    func performBlockWithHighPriority(block:@escaping BlockVoid) -> Void
-    {
-        GCDBackgroundThreadHighPriority.async {
-            block()
-        }
-    }
-    
-    func performBlockWithLowPriority(block:@escaping BlockVoid) -> Void
-    {
-        GCDBackgroundThreadLowPriority.async {
-            block()
-        }
-    }
+  }
 }

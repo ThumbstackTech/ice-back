@@ -33,25 +33,25 @@ extension UIView {
 
 // MARK: - Extension of UIView For NSLayoutConstraint.
 extension UIView {
-
-var heightOFConstraint: NSLayoutConstraint? {
+  
+  var heightOFConstraint: NSLayoutConstraint? {
     get {
-        return constraints.first(where: {
-            $0.firstAttribute == .height && $0.relation == .equal
-        })
+      return constraints.first(where: {
+        $0.firstAttribute == .height && $0.relation == .equal
+      })
     }
     set { setNeedsLayout() }
-}
-
-var widthOFConstraint: NSLayoutConstraint? {
+  }
+  
+  var widthOFConstraint: NSLayoutConstraint? {
     get {
-        return constraints.first(where: {
-            $0.firstAttribute == .width && $0.relation == .equal
-        })
+      return constraints.first(where: {
+        $0.firstAttribute == .width && $0.relation == .equal
+      })
     }
     set { setNeedsLayout() }
-}
-
+  }
+  
 }
 // MARK: - Extension of UIView For getting any UIView from XIB.
 extension UIView {
@@ -201,7 +201,6 @@ extension UIView {
     func removeAllSubviewsOfTag(tag:Int) {
         
         for subview in self.subviews {
-            
             if subview.tag == tag {
                 subview.removeFromSuperview()
             }
@@ -220,8 +219,7 @@ extension UIView {
     ///   - shadowOffset: Pass the CGSize value for how much far you want shadowView from parentView.
     ///   - shadowRadius: Pass the CGFloat value for how much length(Blur Spreadness) you want in shadowView.
     func shadow(color:UIColor , shadowOffset:CGSize , shadowRadius:CGFloat, isAspect: Bool = false) {
-        
-//        self.layer.masksToBounds = false
+
         self.layer.shadowColor = color.cgColor
         self.layer.shadowOffset = shadowOffset
         self.layer.shadowRadius = shadowRadius
@@ -288,7 +286,6 @@ extension UIView {
         
         self.layer.addSublayer(borderLayer)
     }
-    
 }
 
 typealias tapInsideViewHandler = (() -> ())
@@ -321,29 +318,29 @@ extension UIView {
             tapInsideViewHandler()
         }
     }
-    
 }
 
 extension UIView {
-    
-    var snapshotImage : UIImage? {
-        
-        var snapShotImage:UIImage?
-        
-        UIGraphicsBeginImageContext(self.CViewSize)
-        
-        if let context = UIGraphicsGetCurrentContext() {
-            
-            self.layer.render(in: context)
-            
-            if let image = UIGraphicsGetImageFromCurrentImageContext() {
-                UIGraphicsEndImageContext()
-                snapShotImage = image
-            }
-        }
-        return snapShotImage
+
+  var snapshotImage : UIImage? {
+
+    var snapShotImage:UIImage?
+
+    UIGraphicsBeginImageContext(self.CViewSize)
+
+    if let context = UIGraphicsGetCurrentContext() {
+
+      self.layer.render(in: context)
+
+      if let image = UIGraphicsGetImageFromCurrentImageContext() {
+        UIGraphicsEndImageContext()
+        snapShotImage = image
+      }
     }
+    return snapShotImage
+  }
 }
+
 extension UIView {
 
     func addTopBorder(_ color: UIColor, height: CGFloat) {
@@ -479,83 +476,45 @@ extension UIView {
             multiplier: 1, constant: 0))
     }
 }
+
 extension UIView {
-    enum dashedOrientation {
-        case horizontal
-        case vertical
-    }
-    
-    func makeDashedBorderLine(strokeColor: CGColor, lineWidth: Int, spacing: Int) {
-        let orientation: dashedOrientation
-        let path = CGMutablePath()
-        let shapeLayer = CAShapeLayer()
-        shapeLayer.lineWidth = 1
-        shapeLayer.strokeColor = strokeColor
-        shapeLayer.lineDashPattern = [NSNumber(value: lineWidth), NSNumber(value: spacing)]
-        orientation = .horizontal
-        if orientation == .vertical {
-            path.addLines(between: [CGPoint(x: bounds.midX, y: bounds.minY),
-                                    CGPoint(x: bounds.midX, y: bounds.maxY)])
-        } else if orientation == .horizontal {
-            path.addLines(between: [CGPoint(x: bounds.minX, y: bounds.midY),
-                                    CGPoint(x: bounds.maxX, y: bounds.midY)])
-        }
-        shapeLayer.path = path
-        layer.addSublayer(shapeLayer)
-    }
-    
-    func addLineDashedStroke(radius: CGFloat) -> CALayer {
-            let borderLayer = CAShapeLayer()
+  enum dashedOrientation {
+    case horizontal
+    case vertical
+  }
 
-            borderLayer.strokeColor = UIColor.appBorder.cgColor
-            borderLayer.lineDashPattern = [4, 4]
-            borderLayer.frame = bounds
-        borderLayer.fillColor = UIColor(red: 64/255, green: 197/255, blue: 229/255, alpha: 0.1).cgColor
-            borderLayer.path = UIBezierPath(roundedRect: bounds, byRoundingCorners: .allCorners, cornerRadii: CGSize(width: radius, height: radius)).cgPath
+  func makeDashedBorderLine(strokeColor: CGColor, lineWidth: Int, spacing: Int) {
+    let orientation: dashedOrientation
+    let path = CGMutablePath()
+    let shapeLayer = CAShapeLayer()
+    shapeLayer.lineWidth = 1
+    shapeLayer.strokeColor = strokeColor
+    shapeLayer.lineDashPattern = [NSNumber(value: lineWidth), NSNumber(value: spacing)]
+    orientation = .horizontal
+    if orientation == .vertical {
+      path.addLines(between: [CGPoint(x: bounds.midX, y: bounds.minY),
+                              CGPoint(x: bounds.midX, y: bounds.maxY)])
+    } else if orientation == .horizontal {
+      path.addLines(between: [CGPoint(x: bounds.minX, y: bounds.midY),
+                              CGPoint(x: bounds.maxX, y: bounds.midY)])
+    }
+    shapeLayer.path = path
+    layer.addSublayer(shapeLayer)
+  }
 
-            layer.addSublayer(borderLayer)
-            return borderLayer
-        }
+  func addLineDashedStroke(radius: CGFloat) -> CALayer {
+    let borderLayer = CAShapeLayer()
+
+    borderLayer.strokeColor = UIColor.appBorder.cgColor
+    borderLayer.lineDashPattern = [4, 4]
+    borderLayer.frame = bounds
+    borderLayer.fillColor = UIColor(red: 64/255, green: 197/255, blue: 229/255, alpha: 0.1).cgColor
+    borderLayer.path = UIBezierPath(roundedRect: bounds, byRoundingCorners: .allCorners, cornerRadii: CGSize(width: radius, height: radius)).cgPath
+
+    layer.addSublayer(borderLayer)
+    return borderLayer
+  }
 }
-//extension UIView {
-//
-//    var CViewSize:CGSize {
-//        return self.frame.size
-//    }
-//
-//    var CViewOrigin:CGPoint {
-//        return self.frame.origin
-//    }
-//
-//    var CViewWidth:CGFloat {
-//        return self.CViewSize.width
-//    }
-//
-//    var CViewHeight:CGFloat {
-//        return self.CViewSize.height
-//    }
-//
-//    var CViewX:CGFloat {
-//        return self.CViewOrigin.x
-//    }
-//
-//    var CViewY:CGFloat {
-//        return self.CViewOrigin.y
-//    }
-//
-//    var CViewCenter:CGPoint {
-//        return CGPoint(x: self.CViewWidth/2.0, y: self.CViewHeight/2.0)
-//    }
-//
-//    var CViewCenterX:CGFloat {
-//        return CViewCenter.x
-//    }
-//
-//    var CViewCenterY:CGFloat {
-//        return CViewCenter.y
-//    }
-//
-//}
 
 extension UIView {
 
@@ -601,33 +560,9 @@ extension UIView {
     func CViewSetCenterY(y:CGFloat) {
         self.center.y = y
     }
-
 }
 
 extension UIView {
-    
-//    func dropShadowWithCornerRadius(_ color: UIColor = AppThemeBlue, shadowColor: UIColor = .lightGray, isAspectRatio: Bool = true) {
-//
-//        let height = isAspectRatio ? CScreenWidth * CViewHeight(self) / 375 : CViewHeight(self)
-//        let width =  isAspectRatio ? CScreenWidth * CViewWidth(self) / 375 : CViewWidth(self)
-//
-//        let shadowLayer = CAShapeLayer()
-//        let bounds = CGRect(x: 0, y: 0, width: width, height: height)
-//        shadowLayer.path = UIBezierPath(roundedRect: bounds, cornerRadius: height/2).cgPath
-//        shadowLayer.fillColor = color.cgColor
-//
-//        shadowLayer.shadowColor = shadowColor.cgColor
-//        shadowLayer.shadowPath = shadowLayer.path
-//        shadowLayer.shadowOffset = CGSize(width: 0.0, height: 3.0)
-//        shadowLayer.shadowOpacity = 0.8
-//        shadowLayer.shadowRadius = 3
-//
-//        if self.isKind(of: UIButton.classForCoder()) {
-//            self.layer.insertSublayer(shadowLayer, below: (self as! UIButton).titleLabel?.layer)
-//        } else {
-//            self.layer.insertSublayer(shadowLayer, at: 0)
-//        }
-//    }
     
     func setupGradientLayer(_ height: CGFloat = CScreenHeight, _ width: CGFloat = CScreenWidth) {
         // Initialize Gradient Layer
@@ -641,8 +576,6 @@ extension UIView {
         self.layer.addSublayer(gradientLayer)
     }
 }
-
-
 
 extension UIView {
     
@@ -745,8 +678,6 @@ class CardView: UIView {
     
     @IBInspectable var shadowOffsetWidth: Int = 0
     @IBInspectable var shadowOffsetHeight: Int = 3
-  
-    
     @IBInspectable var cardView: Bool = true
     
     override func layoutSubviews() {
@@ -783,13 +714,6 @@ class CardView: UIView {
         }
     }
     
-//    @IBInspectable var therdColor: UIColor = UIColor.white {
-//        didSet {
-//            updateView()
-//        }
-//    }
-    
-    
     @IBInspectable var isDigonal: Bool = false {
         didSet {
             updateView()
@@ -810,7 +734,6 @@ class CardView: UIView {
     }
     
     func updateView() {
-        
         let layer = self.layer as! CAGradientLayer
         layer.colors = [ firstColor.cgColor, secondColor.cgColor ] //, therdColor.cgColor
         
@@ -832,9 +755,7 @@ class CardView: UIView {
         if cardView {
             layer.cornerRadius = cornerRadius
         }
-        
     }
-    
 }
 
 extension UIView{

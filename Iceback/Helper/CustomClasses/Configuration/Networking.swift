@@ -97,10 +97,8 @@ class Networking {
                 }
             }
         }
-        
         return uRequest.task
     }
-
     
     func requestPOSTURL(param parameters: [String: Any]?, header: [String: String], tag: String?, success: ClosureSuccess?, failure: ClosureError?) -> URLSessionTask? {
         let uRequest = SessionSharedManager.shared.request((StageBaseURL + tag!), method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: header)
@@ -157,7 +155,6 @@ class Networking {
                 }
             }
         }
-        
         return uRequest.task
     }
     
@@ -219,10 +216,8 @@ class Networking {
         
         return uRequest.task
     }
-    
-    
-    //MARK: Upload image
-    
+
+    //MARK: Upload image    
     func requestPOSTImage(param parameters: [String: Any]?, tag: String?, imgData: [String: Data]?, headers : HTTPHeaders, multipartFormData: @escaping (MultipartFormData) -> Void, success: ClosureSuccess?, failure: ClosureError?) -> Void {
         SessionSharedManager.shared.upload(multipartFormData: { (multipart) in
             multipartFormData(multipart)

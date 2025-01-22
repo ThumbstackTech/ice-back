@@ -22,7 +22,6 @@ class UserActivitiesVC: UIViewController {
     //MARK: - View Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         languageLocalize()
         setUpController()
     }
@@ -44,9 +43,7 @@ class UserActivitiesVC: UIViewController {
         btnClearActivitiesHistory.setTitle(BUTTONTITLE.CLEARACTIVITIESHISTORY.localized(), for: .normal)
         lblNoDataAvailable.text = lblNoDataAvailable.text?.localized()
     }
-    
-    
-    
+        
     //MARK: - XIB Register
     func xibRegister() {
         tblUserActivities.delegate = self
@@ -54,7 +51,6 @@ class UserActivitiesVC: UIViewController {
         tblUserActivities.registerCell(ofType: UserActivitiesTableViewCell.self)
         tblUserActivities.contentInset = UIEdgeInsets(top: 15, left: 0, bottom: 100, right: 0)
     }
-   
 }
 
 
@@ -88,7 +84,6 @@ extension UserActivitiesVC : UITableViewDataSource {
 extension UserActivitiesVC : UITableViewDelegate {
 }
 
-
 //MARK: - UserProfileDelegate
 extension UserActivitiesVC : UserProfileDelegate {
     func getUserProfileDetails(_ objData: UserProfile) {
@@ -96,8 +91,7 @@ extension UserActivitiesVC : UserProfileDelegate {
         btnClearActivitiesHistory.isHidden = objData.activities.isEmpty ?  true : false
         arrActivities = objData.activities
         xibRegister()
-    }
-    
+    }    
 }
 
 //MARK: - UserActivitiesDeleteDelegate
@@ -108,5 +102,4 @@ extension UserActivitiesVC : UserActivitiesDeleteDelegate {
         lblNoDataAvailable.isHidden = false
         btnClearActivitiesHistory.isHidden = true
     }
-    
 }

@@ -25,7 +25,6 @@ protocol SocialSigInDelegate{
     func socialSigInFailure(_ strError: String  )
 }
 
-
 protocol OTPSendDelegate{
     func OTPSendSuccess(_ isSucess: Bool )
 }
@@ -54,7 +53,6 @@ protocol AlreadyMemberDelegate{
 protocol MobileAwsTokensDelegate{
     func mobileAwsTokensSuccess(_ isSucess: Bool)
 }
-
 
 protocol WelcomeMailDelegate{
     func welcomeMailSuccess(_ isSucess: Bool)

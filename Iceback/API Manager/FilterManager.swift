@@ -11,11 +11,9 @@ import ObjectMapper
 
 class FilterManager {
     
-    
     static let sharedInstance = FilterManager()
     
     private init(){
-        
     }
     
     let headerParam = ["Authorization": guestLoginBearerToken,
@@ -43,9 +41,6 @@ class FilterManager {
 
             let arrRegionLists = Mapper<FilterRegionDataObject>().mapArray(JSONObject: responseData)
             successCompletion(arrRegionLists ?? [])
-            
-            
-          
         } failureCallBack: { error in
             errorCompletion(error)
         }
@@ -88,7 +83,6 @@ class FilterManager {
             
             guard let jsonData = response else{
                 return
-                
             }
             
             guard let status = jsonData[CJsonStatus] as? String, status == "OK" else{
@@ -100,17 +94,13 @@ class FilterManager {
                 successCompletion([])
                 return
             }
-            
          
             let arrGetAllStoreName = responseData.map {AllStoreData(jsonData: $0)}
             successCompletion(arrGetAllStoreName)
             
-            
         } failureCallBack: { error in
             errorCompletion(error)
         }
-        
-        
     }
 }
 

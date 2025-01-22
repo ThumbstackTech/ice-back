@@ -7,17 +7,16 @@
 
 import UIKit
 import Foundation
+
 private var sharedAlert : PPAlerts? = nil
 enum AlertType : Int {
     case adefault = 0
     case toast
 }
 
-
 class PPAlerts: NSObject {
     
-    class func sharedAlerts() -> PPAlerts
-    {
+    class func sharedAlerts() -> PPAlerts {
         if sharedAlert == nil {
             sharedAlert = PPAlerts()
         }
@@ -39,16 +38,11 @@ class PPAlerts: NSObject {
     
     func showAlert(with alertType: AlertType, withMessage message:String, withTitle title:String?, withTimeoutInterval interval:TimeInterval){
         var strmsg : String = ""
-        
         if ((title as String?) ?? "").isEmpty {
             strmsg = message
-        }
-        else if ((message as String?) ?? "").isEmpty
-        {
+        } else if ((message as String?) ?? "").isEmpty {
             strmsg = title!
-        }
-        else
-        {
+        } else {
             strmsg = "\(String(describing: title)) \n \(message)"
         }
         
@@ -76,14 +70,15 @@ class PPAlerts: NSObject {
         alert.addAction(OkAction)
         self.topMostViewController().present(alert, animated: true, completion: nil)
     }
+
     func alertOneButton(title: String?, withMessage message:String,_ btnOneTapped:alertActionHandler){
         let alertController = UIAlertController(title: title ?? "", message: message , preferredStyle: .alert)
         
         alertController.addAction(UIAlertAction(title:BUTTONTITLE.OK, style: .default, handler: btnOneTapped))
         self.topMostViewController().present(alertController, animated: true, completion: nil)
     }
+
     func ToastAlert(message: String, withTimeoutImterval interval:TimeInterval) {    
         appDelegate.window?.makeToast(message, duration: interval, position: .bottom)
     }
-
 }

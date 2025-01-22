@@ -5,12 +5,6 @@
 //  Created by apple on 06/05/24.
 //
 
-//
-//  EditProfileData.swift
-//  Iceback
-//
-//  Created by apple on 03/05/24.
-//
 
 import Foundation
 

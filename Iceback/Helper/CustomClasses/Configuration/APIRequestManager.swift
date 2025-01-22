@@ -139,7 +139,6 @@ class APIRequestManager {
             
             if let error = error {
                 failureCallBack(error.localizedDescription)
-//                failureCallBack(error)
             } else {
                 failureCallBack(kSomethingWrongAlert)
             }
@@ -150,9 +149,6 @@ class APIRequestManager {
         
         if Reachability.isConnectedToNetwork() == false {
             PPAlerts().showAlert(with: .adefault, withMessage: KNoInternet)
-            GCDMainThread.async {
-              //  LoadingOverlay.shared.hideOverlayView()
-            }
             return
         }
         
@@ -181,8 +177,6 @@ class APIRequestManager {
         
         if Reachability.isConnectedToNetwork() == false {
             PPAlerts().showAlert(with: .adefault, withMessage: KNoInternet)
-            GCDMainThread.async {
-            }
             return
         }
         
@@ -206,6 +200,5 @@ class APIRequestManager {
             }
         }
     }
-
 }
 

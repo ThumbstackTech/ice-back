@@ -9,43 +9,31 @@
 import Foundation
 import UIKit
 
-extension UIFont
-{
+extension UIFont {
     func convertToAppFont() -> UIFont {
         
         let pointSize: CGFloat = IS_IPAD_AIR ? +0 : IS_IPAD_PRO ? +5 : 0
-        // : IS_IPHONE_5_Landscape ? -6 : IS_IPHONE_6_Landscape ? -3 : IS_IPHONE_X_Landscape ? -2 : 0
         
         let fontSize = (self.pointSize) + (pointSize)
         var type = CFontType.Light
         
         if(self.fontName.uppercased().contains("BLACK")) {
             type = CFontType.Black
-        }
-        else if(self.fontName == "Nunito-BoldItalic") {
+        } else if(self.fontName == "Nunito-BoldItalic") {
             type = CFontType.BoldItalic
-        }
-        else if(self.fontName == "Nunito-ExtraBold") {
+        } else if(self.fontName == "Nunito-ExtraBold") {
             type = CFontType.ExtraBold
-        }
-        else if(self.fontName.uppercased().contains("BOLD")) {
+        } else if(self.fontName.uppercased().contains("BOLD")) {
             type = CFontType.Bold
-        }
-        else if(self.fontName.uppercased().contains("LIGHT")) {
+        } else if(self.fontName.uppercased().contains("LIGHT")) {
             type = CFontType.Light
-        } /*else if(self.fontName.uppercased().contains("THIN")) {
-             type = CFontType.Thin
-             }*/
-        else if(self.fontName.uppercased().contains("REGULAR")) {
+        } else if(self.fontName.uppercased().contains("REGULAR")) {
             type = CFontType.Regular
-        }
-        else if(self.fontName.uppercased().contains("SEMIBOLD")) {
+        } else if(self.fontName.uppercased().contains("SEMIBOLD")) {
             type = CFontType.SemiBold
-        }
-        else if(self.fontName.uppercased().contains("ITALIC")) {
+        } else if(self.fontName.uppercased().contains("ITALIC")) {
             type = CFontType.Italic
-        }
-        else {
+        } else {
             type = CFontType.Light
         }
         return  CFont(size: fontSize, type: type)
@@ -57,7 +45,6 @@ extension UIFont
         let fontSize = (self.pointSize) + (pointSize)
         return  UIFont.init(name: self.fontName, size: fontSize)!
     }
-    
 }
 
 extension Int {

@@ -109,11 +109,8 @@ let DEVICE_MODEL    = CURRENT_DEVICE.model
 let IS_SIMULATOR    = (TARGET_IPHONE_SIMULATOR == 1)
 
 let IS_IPHONE       = DEVICE_MODEL.range(of: "iPhone") != nil
-
 let IS_IPOD         = DEVICE_MODEL.range(of: "iPod") != nil
-
 let IS_IPAD         = DEVICE_MODEL.range(of: "iPad") != nil
-
 
 let IS_IPHONE_4     = IS_IPHONE && CScreenHeight == 480
 let IS_IPHONE_5     = IS_IPHONE && CScreenHeight == 568
@@ -136,22 +133,16 @@ let CAppVersion             = CBundleInfo!["CFBundleShortVersionString"]
 let CAppBuild               = CBundleInfo!["CFBundleVersion"]
 let CAppName : String       = CBundleInfo!["CFBundleName"] as! String
 
-//
-
 let CCacheDirectory         = NSHomeDirectory() + "/Library/Caches"
 let CDocumentDirectory      = NSHomeDirectory() + "/Documents"
 let CLimit                  = "20" as AnyObject
 
-
-
-func IS_IPHONE_SIMULATOR() -> Bool
-{
+func IS_IPHONE_SIMULATOR() -> Bool {
     #if (arch(i386) || arch(x86_64))
         return true
     #else
         return false
     #endif
-    
 }
 
 func SYSTEM_VERSION_LESS_THAN(v: String) -> Any {
@@ -265,14 +256,10 @@ struct AlertMsg{
     static let USEREXISTSUCCESS               = "The admin will contact you soon!."
     static let USEREXISTFAILURE               = "User is not exists."
     static let CAMERAPERMISION                = "Enable permissions to access your camera for QR code scan."
-    
     static let BIOMETRICSUCCESSMSG            = "Successful login."
-    
     static let AUTHENTICATIORESONMSG          = "Authentication required to access the secure data."
-    
     static let BIOMETRICON                    = "Please enable switch for biometric login."
     static let BIOMETRICOPTIONSELECT          = "Please select any biometric option."
-    
     static let EMAILADDRESS                   = "Please enter email address."
     static let EMAILVALIDMSG                  = "Please enter a valid email address."
     static let PASSWORDVALIDMSG               = "Please enter password."
@@ -280,7 +267,6 @@ struct AlertMsg{
     static let CONFIRMPASSWORDMSG             = "Please enter confirm password."
     static let CONFIRMVALIDPASSWORDMSG        = "Password and confirm password does not match."
     static let NEWPASSCONFIRMVALIDPASSWORDMSG = "New password and confirm password does not match."
-    
     static let TERMSCONDIATIONMSG             = "Please accept terms & conditions and privacy policy."
     
     static let OLDPASSWORDMSG                 = "Please enter old password."
@@ -288,8 +274,6 @@ struct AlertMsg{
     
     static let OTPEMPTY                       = "Please enter OTP."
     static let OTPVALIDMSG                    = "Please enter valid OTP."
-    
-    
     static let RESETPASSSUCESSMSG             = "Your password has been reset successfully."
 
     static let BANKNAME                       = "Please enter bank name."
@@ -298,7 +282,6 @@ struct AlertMsg{
     static let FULLNAME                       = "Please enter your full name."
 
     static let LOGOUTMSG                      = "Are you sure you want to logout?"
-    
     static let DELETEACCOUNTMSG               = "You will lose your all data."
    
     static let FIRSTNAME                      = "Please enter first name."

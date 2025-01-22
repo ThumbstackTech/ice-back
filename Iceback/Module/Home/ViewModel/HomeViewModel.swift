@@ -31,26 +31,19 @@ class HomeViewModel {
     
     //MARK: - Home Shop With Cashback API
     func homeShopWithCashback() {
-//        HUD.show()
-        
         HomeManager.sharedInstance.homeShopCashback() { [self] success in
-//            self.HUD.hide()
             homeShopWithCashbackDelegate.shopWithCashback(success)
-        } errorCompletion: { [self] error in
-//            self.HUD.hide()
+        } errorCompletion: { error in
             PPAlerts.sharedAlerts().iOsAlert(title: AlertMsg.TITLE, withMessage: error , withDelegate: nil)
         }
     }
     
     //MARK: - Home Special And Voucher API
     func homeSpecialAndVoucher() {
-//        HUD.show()
-        
         HomeManager.sharedInstance.homeSpecialVouchers() { [self] success in
             self.HUD.hide()
             homeSpecialAndVoucherDelegate.specialAndVoucher(success)
-        } errorCompletion: { [self] error in
-//            self.HUD.hide()
+        } errorCompletion: { error in
             PPAlerts.sharedAlerts().iOsAlert(title: AlertMsg.TITLE, withMessage: error , withDelegate: nil)
         }
     }

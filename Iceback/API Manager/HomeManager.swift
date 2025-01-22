@@ -13,12 +13,10 @@ class HomeManager {
     let noOfData = 2
     
     private init(){
-       
     }
-    
-    
+        
     //MARK: - Home Detail API Call
-    func homeDetails(successCompletion:@escaping(HomeModel)->(),errorCompletion:@escaping(String)->()) {
+    func homeDetails(successCompletion: @escaping(HomeModel)->(), errorCompletion: @escaping(String)->()) {
                 
         let dataParam: [String : Any] = ["filter[site]": UserDefaultHelper.selectedLanguage,
                          "filter[slug]": "home-page"]
@@ -45,7 +43,7 @@ class HomeManager {
     
     
     //MARK: - Home Shop With Cashback List API Call
-    func homeShopCashback(successCompletion:@escaping([ShopWithCashbackData])->(),errorCompletion:@escaping(String)->()) {
+    func homeShopCashback(successCompletion: @escaping([ShopWithCashbackData])->(), errorCompletion: @escaping(String)->()) {
                 
         let dataParam: [String : Any] = ["filter[site]": UserDefaultHelper.selectedLanguage,
                          "limit": noOfData]
@@ -69,7 +67,7 @@ class HomeManager {
     }
     
     //MARK: - Home Special Vouchers List API Call
-    func homeSpecialVouchers(successCompletion:@escaping([SpecialAndVoucherData])->(),errorCompletion:@escaping(String)->()) {
+    func homeSpecialVouchers(successCompletion: @escaping([SpecialAndVoucherData])->(), errorCompletion: @escaping(String)->()) {
                 
         let dataParam: [String : Any] = ["filter[site]": UserDefaultHelper.selectedLanguage,
                          "limit": noOfData]
@@ -95,7 +93,7 @@ class HomeManager {
     }
     
     //MARK: - Referal Program API Call
-    func referalProgram(successCompletion:@escaping(ReferalProgramModel)->(),errorCompletion:@escaping(String)->()) {
+    func referalProgram(successCompletion: @escaping(ReferalProgramModel)->(), errorCompletion: @escaping(String)->()) {
                 
         let dataParam: [String : Any] = ["filter[site]": UserDefaultHelper.selectedLanguage,
                          "filter[slug]": "referral-program"]
@@ -121,7 +119,7 @@ class HomeManager {
     }
     
     //MARK: - Cashback Program API Call
-    func cashbackProgram(successCompletion:@escaping(ReferalProgramModel)->(),errorCompletion:@escaping(String)->()) {
+    func cashbackProgram(successCompletion: @escaping(ReferalProgramModel)->(), errorCompletion: @escaping(String)->()) {
                 
         let dataParam: [String : Any] = ["filter[site]": UserDefaultHelper.selectedLanguage,
                          "filter[slug:is]": "was-ist-cashback"]

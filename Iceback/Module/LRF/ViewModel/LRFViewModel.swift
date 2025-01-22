@@ -34,9 +34,7 @@ class LRFViewModel {
                                                  "phone_number" : phoneNumber,
                                                  "given_name" : givenName,
                                                  "family_name" : familyName,
-                                                 "custom:locale": UserDefaultHelper.selectedLanguage/*,
-                                                 "custom:registerAtShop": "true",
-                                                 "name": givenName*/]
+                                                 "custom:locale": UserDefaultHelper.selectedLanguage]
         
         LRFManager.sharedInstance.signUp(email: email, password: password, userAttributes: userAttributes) { result in
             switch result {

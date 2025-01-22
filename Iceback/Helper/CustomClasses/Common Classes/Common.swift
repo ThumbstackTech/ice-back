@@ -100,9 +100,7 @@ class Common {
     }
     //start - 19-4-24
     class func getDateFormattedFromString(dateStr: String, recievedDateFormat: String, convertedDateFormat: String) -> String? {
-        //            let strDate: String = dateStr.replacingOccurrences(of: "T", with: " ")
         let dateFormatter = DateFormatter()
-        //            dateFormatter.locale = Locale.current
         dateFormatter.dateFormat = recievedDateFormat
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         if !dateStr.isEmpty, let date = dateFormatter.date(from: dateStr) {

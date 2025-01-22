@@ -113,7 +113,6 @@ extension CreateReportIssueVC {
         viewReportImage.isHidden = true
         btnRemoveImage.isHidden = true
     }
-    
 }
 
 //MARK: - UITextViewDelegate
@@ -134,7 +133,6 @@ extension CreateReportIssueVC: UITextViewDelegate {
         if (range.location == 0 && (text.rangeOfCharacter(from: .whitespaces) != nil)) {
             return false
         }
-        
         return true
     }
 }

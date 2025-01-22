@@ -17,13 +17,6 @@ class MyProfileMenuCell:BaseTableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
-      //  imgNxt.rotate(radians: .pi/2)
-//        let image = UIImage(named: "ic_back_black")!
-//        let newImage = image.rotate(radians: .pi/2) // Rotate 90 degrees
-//
-//        imgNxt.image = newImage
-        
         vieWContent.layer.cornerRadius = 10.0
         vieWContent.clipsToBounds = true
         
@@ -31,7 +24,6 @@ class MyProfileMenuCell:BaseTableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
     
