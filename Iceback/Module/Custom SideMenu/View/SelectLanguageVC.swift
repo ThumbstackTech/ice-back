@@ -28,6 +28,9 @@ class SelectLanguageVC: UIViewController {
         super.viewDidLoad()
         setUpController()
         xibRegister()
+       lblTitle.textColor = AppThemeManager.shared.titleColor
+       btnUpDate.backgroundColor = AppThemeManager.shared.primaryColor
+       btnUpDate.setTitleColor(AppThemeManager.shared.buttonTitleColor, for: .normal)
     }
     
     override func viewDidAppear(_ animated: Bool) {

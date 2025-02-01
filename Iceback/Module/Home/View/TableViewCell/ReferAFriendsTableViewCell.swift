@@ -14,10 +14,12 @@ class ReferAFriendsTableViewCell: BaseTableViewCell {
     @IBOutlet weak var btnIWantToKnowMore: UIButton!
     @IBOutlet weak var imgReferAFriend: UIImageView!
     @IBOutlet weak var lblReferAFriendDescription: UILabel!
+   @IBOutlet weak var viewBackground: UIView!
     
     //MARK: - Awake From Nib
     override func awakeFromNib() {
         super.awakeFromNib()
+       initializeSetUp()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -39,4 +41,11 @@ class ReferAFriendsTableViewCell: BaseTableViewCell {
                 imgReferAFriend.sd_setImage(with: URL(string: objReferFriend.image?.first?.url ?? "" ), placeholderImage: IMAGES.ICN_PLACEHOLDER_IMAGE)
         }
     }
+
+   func initializeSetUp() {
+      lblReferAFriendDescription.textColor = AppThemeManager.shared.labelColor
+      btnIWantToKnowMore.backgroundColor = AppThemeManager.shared.primaryColor
+      viewBackground.backgroundColor = AppThemeManager.shared.backgroundColor
+      btnIWantToKnowMore.setTitleColor(AppThemeManager.shared.buttonTitleColor, for: .normal)
+   }
 }

@@ -93,6 +93,7 @@
                 <outlet property="btnIWantToKnowMore" destination="5Jb-Jx-rpH" id="Mlm-fG-5FC"/>
                 <outlet property="imgReferAFriend" destination="fWN-wq-9PV" id="F4I-dc-tby"/>
                 <outlet property="lblReferAFriendDescription" destination="GCU-ZF-D4Q" id="krh-K7-eVV"/>
+                <outlet property="viewBackground" destination="Abt-cd-VAc" id="pcp-eF-2DC"/>
             </connections>
             <point key="canvasLocation" x="5.343511450381679" y="94.014084507042256"/>
         </tableViewCell>

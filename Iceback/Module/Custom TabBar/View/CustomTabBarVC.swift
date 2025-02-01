@@ -24,6 +24,7 @@ class CustomTabBarVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(manageTabSelection), name: NSNotification.Name.init(rawValue: "tabChanged"), object: nil)
+       initializeSetUp()
     }
     
     override func viewDidLayoutSubviews() {
@@ -32,7 +33,24 @@ class CustomTabBarVC: UIViewController {
             viewBg.roundCorners(corners: [.topLeft, .topRight], radius: 30)
         }
     }
-    
+
+   func initializeSetUp() {
+      lblHome.textColor = AppThemeManager.shared.labelColor
+      lblDonation.textColor = AppThemeManager.shared.labelColor
+      lblVoucher.textColor = AppThemeManager.shared.labelColor
+      lblStore.textColor = AppThemeManager.shared.labelColor
+
+//      imgHome.tintColor = AppThemeManager.shared.primaryColor
+//      imgStore.tintColor = AppThemeManager.shared.primaryColor
+//      imgVoucher.tintColor = AppThemeManager.shared.primaryColor
+//      imgDonation.tintColor = AppThemeManager.shared.primaryColor
+//
+//      imgHome.image = imgHome.image?.withRenderingMode(.alwaysTemplate)
+//      imgStore.image = imgStore.image?.withRenderingMode(.alwaysTemplate)
+//      imgVoucher.image = imgVoucher.image?.withRenderingMode(.alwaysTemplate)
+//      imgDonation.image = imgDonation.image?.withRenderingMode(.alwaysTemplate)
+   }
+
     //MARK: - Manage Tab Deselection
     func manageTabDeSelection() {
         if UserDefaultHelper.selectedPreviousTabIndex == 0 {
@@ -99,7 +117,9 @@ class CustomTabBarVC: UIViewController {
             
             UIView.animate(withDuration: 1.0, delay: 0.0,options: .curveEaseInOut) { [self] in
                 lblHome.alpha = 0.1
+               imgHome.image = imgHome.image?.withRenderingMode(.alwaysTemplate)
                 imgHome.image = IMAGES.ICN_HOME_SELECTED
+               imgHome.tintColor = AppThemeManager.shared.primaryColor
                 imgHome.alpha = 1.0
                 UIView.animate(withDuration: 0.8, delay: 0.1) { [self] in
                     lblHome.alpha = 1
@@ -112,6 +132,7 @@ class CustomTabBarVC: UIViewController {
             
             UIView.animate(withDuration: 1.0, delay: 0.0,options: .curveEaseInOut) { [self] in
                 lblStore.alpha = 0.1
+               imgStore.image = imgStore.image?.withRenderingMode(.alwaysTemplate)
                 imgStore.image = IMAGES.ICN_STORE_SELECTED
                 imgStore.alpha = 1.0
                 UIView.animate(withDuration: 0.8, delay: 0.1) { [self] in

@@ -13,11 +13,13 @@ class SpecialDealsAndVouchersCollectionViewCell: BaseCollectionViewCell {
     @IBOutlet weak var imgVoucher: UIImageView!
     @IBOutlet weak var lblVoucherTitle: UILabel!
     @IBOutlet weak var lblVoucherDetail: UILabel!
+   @IBOutlet weak var viewBackground: UIView!
     
     //MARK: - Awake From Nib
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+       initializeSetUp()
     }
     
     //MARK: - Setup Data
@@ -29,4 +31,10 @@ class SpecialDealsAndVouchersCollectionViewCell: BaseCollectionViewCell {
             lblVoucherDetail.text = "\(objVoucher.name)"
         }
     }
+
+   func initializeSetUp() {
+      lblVoucherTitle.textColor = AppThemeManager.shared.labelColor
+      lblVoucherDetail.textColor = AppThemeManager.shared.labelColor
+      viewBackground.backgroundColor = AppThemeManager.shared.backgroundColor
+   }
 }

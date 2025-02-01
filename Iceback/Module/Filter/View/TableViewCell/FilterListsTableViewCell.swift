@@ -17,6 +17,7 @@ class FilterListsTableViewCell: BaseTableViewCell {
   override func awakeFromNib() {
     super.awakeFromNib()
     // Initialization code
+     lblFilterName.textColor = AppThemeManager.shared.labelColor
   }
   
   override func setSelected(_ selected: Bool, animated: Bool) {

@@ -28,6 +28,7 @@ class DealsAndVouchersDetailsVC: UIViewController {
     @IBOutlet weak var lblShippingDeliveryTitle: UILabel!
     @IBOutlet weak var lblShippingDetail: UILabel!
     @IBOutlet weak var lblNoDataAvailable: UILabel!
+    @IBOutlet weak var viewBackground: UIView!
     
     //MARK: - Constant & Variables
     var dealsAndVouchersViewModel = DealsAndVouchersViewModel()
@@ -46,6 +47,7 @@ class DealsAndVouchersDetailsVC: UIViewController {
         super.viewDidLoad()
         languageLocalize()
         setUpController()
+       initializeSetUp()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -90,6 +92,24 @@ class DealsAndVouchersDetailsVC: UIViewController {
         collPaymentOption.dataSource = self
         collPaymentOption.register(nibWithCellClass: PaymentOptionsCollectionViewCell.self)
     }
+
+   func initializeSetUp() {
+      setLabelTextColor(labelColor: AppThemeManager.shared.labelColor)
+      btnRegister.backgroundColor = AppThemeManager.shared.primaryColor
+      btnRegister.setTitleColor(AppThemeManager.shared.buttonTitleColor, for: .normal)
+      viewBackground.backgroundColor = AppThemeManager.shared.backgroundColor
+
+      func setLabelTextColor(labelColor: UIColor) {
+         lblExpiryDate.textColor = labelColor
+         lblPaymentOptionsTitle.textColor = labelColor
+         lblShippingDeliveryTitle.textColor = labelColor
+         lblPaymentOptionsTitle.textColor = labelColor
+         lblCouponCode.textColor = labelColor
+         lblShippingDetail.textColor = labelColor
+         lblNoDataAvailable.textColor = labelColor
+         lblDealAndVouchersDetail.textColor = labelColor
+      }
+   }
 }
 
 //MARK: - Button Action

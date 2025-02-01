@@ -44,12 +44,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rxz-KE-vhV">
-                                <rect key="frame" x="9" y="104" width="158" height="63"/>
+                                <rect key="frame" x="9" y="104" width="158" height="72.333333333333314"/>
                                 <attributedString key="attributedText">
                                     <fragment content="123% OFF on NITECORE NWL20 600 Lumens Rechargeable COB Outdoor Tool Light Multi-fu">
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="12" name="AvenirLTStd-Roman"/>
+                                            <font key="NSFont" metaFont="cellTitle"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -90,6 +90,7 @@
                 <outlet property="imgVoucher" destination="Kuf-x5-7Le" id="zTb-6v-Aho"/>
                 <outlet property="lblVoucherDetail" destination="Rxz-KE-vhV" id="g0e-T0-8f8"/>
                 <outlet property="lblVoucherTitle" destination="A0h-Ah-4kA" id="cqR-PZ-kqo"/>
+                <outlet property="viewBackground" destination="YaG-s5-Yid" id="0TQ-ch-AgC"/>
             </connections>
             <point key="canvasLocation" x="119.08396946564885" y="49.647887323943664"/>
         </collectionViewCell>

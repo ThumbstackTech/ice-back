@@ -41,6 +41,7 @@ class DealsAndVouchersFilterVC: UIViewController {
     xibRegister()
     tblFilterLists.rowHeight = UITableView.automaticDimension
     tblFilterLists.estimatedRowHeight = 60
+     initializeSetUp()
   }
 
   override func viewWillAppear(_ animated: Bool) {
@@ -85,6 +86,15 @@ class DealsAndVouchersFilterVC: UIViewController {
     btnApply.setTitle(BUTTONTITLE.APPLY.localized(), for: .normal)
     btnCancel.setTitle(BUTTONTITLE.CANCEL.localized(), for: .normal)
   }
+
+   func initializeSetUp() {
+      setLabelTextColor(labelColor: AppThemeManager.shared.labelColor)
+
+      func setLabelTextColor(labelColor: UIColor) {
+         lblFilterTitle.textColor = AppThemeManager.shared.tertiaryColor
+         lblEmptyMsg.textColor = labelColor
+      }
+   }
 }
 
 //MARK: - Button Action

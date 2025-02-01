@@ -58,6 +58,7 @@
             <connections>
                 <outlet property="lblTitle" destination="ItK-fF-GTP" id="3TM-6j-LDY"/>
                 <outlet property="switchEnable" destination="V0B-9v-00U" id="C6T-9e-T0R"/>
+                <outlet property="viewBackground" destination="H2p-sc-9uM" id="YtI-Vu-ua2"/>
             </connections>
             <point key="canvasLocation" x="19.847328244274809" y="-16.549295774647888"/>
         </tableViewCell>

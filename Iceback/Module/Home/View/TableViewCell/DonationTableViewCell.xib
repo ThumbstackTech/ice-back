@@ -119,6 +119,7 @@
                 <outlet property="lblDonationDescription" destination="XH7-18-bAX" id="fOB-Rf-lpL"/>
                 <outlet property="lblDonationTitle" destination="USu-kC-A3a" id="GTX-f6-q0R"/>
                 <outlet property="lblMoreInformation" destination="N9o-kg-Pwm" id="rph-wr-0zY"/>
+                <outlet property="viewBackground" destination="k7p-xh-ONm" id="jnR-iQ-9g6"/>
                 <outlet property="viewMore" destination="4mi-cj-YKp" id="q4t-h1-y7M"/>
             </connections>
             <point key="canvasLocation" x="60.14492753623189" y="140.95982142857142"/>

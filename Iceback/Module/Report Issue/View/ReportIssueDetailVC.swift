@@ -34,6 +34,7 @@ class ReportIssueDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpController()
+       initialSetUp()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -47,7 +48,19 @@ class ReportIssueDetailVC: UIViewController {
         reportViewModel.reportDetailDelegate = self
         reportViewModel.viewReport(id: intReportId )
     }
-    
+
+   func initialSetUp() {
+      setLabelTextColor(labelColor: AppThemeManager.shared.labelColor)
+
+      func setLabelTextColor(labelColor: UIColor) {
+
+         lblReportTitle.textColor = AppThemeManager.shared.secondaryColor
+         lblIssueDescription.textColor = labelColor
+         lblAdminReplyDate.textColor = labelColor
+         lblReportIssueDate.textColor = labelColor
+         lblAdminReplyDescription.textColor = labelColor
+      }
+   }
 }
 
 //MARK: - Button Actions
@@ -63,6 +76,7 @@ extension ReportIssueDetailVC : ReportDetailDelegate {
         if !arrData.isEmpty {
             lblReportTitle.text = LABELTITLE.REPORTDETAIL.localized() + "\(arrData.first?.issueNumber ?? 0)"
             arrViewReport = arrData
+           lblIssueSubject.setColorOnAttributedString(fullText: arrData.first?.issueSubject ?? "", changeText: LABELTITLE.SUBJECT, labelColor: AppThemeManager.shared.labelColor)
             lblIssueSubject.attributedText = Utility.userActivitiesDescription(str: arrData.first?.issueSubject ?? "", title: LABELTITLE.SUBJECT)
             lblIssueSubject.setLineSpacing(lineSpacing: 4)
             let objUserData = arrData.filter({$0.issue_type == "user"}).first

@@ -34,6 +34,7 @@ class IWantToKnowMoreVC: UIViewController {
         super.viewDidLoad()
         setUpController()
         xibRegister()
+       initializeSetUp()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -49,7 +50,27 @@ class IWantToKnowMoreVC: UIViewController {
             
         }
     }
-    
+
+   func initializeSetUp() {
+      setLabelTextColor(labelColor: AppThemeManager.shared.labelColor)
+
+      func setLabelTextColor(labelColor: UIColor) {
+         lblReferralBonusTitle.textColor = labelColor
+         lblReferralBonusValue.textColor = labelColor
+         lblFriendsRegisteredTitle.textColor = labelColor
+         lblFriendsRegisteredValue.textColor = labelColor
+         lblReferralDonationsTitle.textColor = labelColor
+         lblReferralDonationsValue.textColor = labelColor
+         lblFriendsRegisteredSubTitle.textColor = labelColor
+         lblReferralBonusValue.textColor = labelColor
+         lblReferralBonusTitle.textColor = labelColor
+         lblReferralDonationsTitle.textColor = labelColor
+         lblReferralDonationsValue.textColor = labelColor
+         lblIWantToKnowMoreTitle.textColor = labelColor
+         lblIWantToKnowMoreDescription.textColor = labelColor
+      }
+   }
+
     //MARK: - Observe Value Of Tableview Content Size
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if(keyPath == "contentSize"){

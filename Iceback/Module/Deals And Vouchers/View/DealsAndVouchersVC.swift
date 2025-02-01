@@ -75,6 +75,7 @@ class DealsAndVouchersVC: UIViewController {
     setUpController()
     xibRegister()
     searchText()
+     initializeSetUp()
   }
 
   override func viewWillAppear(_ animated: Bool) {
@@ -113,6 +114,14 @@ class DealsAndVouchersVC: UIViewController {
     dealsAndVouchersViewModel.newDealsAndVouchersFailureDelegate = self
     self.tblDealsAndVouchersLists.addSubview(self.refreshControl)
   }
+
+   func initializeSetUp() {
+      setLabelTextColor(labelColor: AppThemeManager.shared.labelColor)
+
+      func setLabelTextColor(labelColor: UIColor) {
+         lblDealsAndVoucherTitle.textColor = labelColor
+      }
+   }
 
   func removeDuplicateElements(posts: [StoreData]) -> [StoreData] {
     var uniquePosts = [StoreData]()

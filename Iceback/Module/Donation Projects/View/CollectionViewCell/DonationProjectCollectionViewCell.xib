@@ -118,6 +118,8 @@
                 <outlet property="imgDonationProject" destination="zkZ-Xe-xod" id="BxU-Nq-Dur"/>
                 <outlet property="lblDonationProjectDescription" destination="jXV-0f-CXx" id="mZP-mZ-Ogh"/>
                 <outlet property="lblDonationProjectTitle" destination="rTW-I2-fZp" id="O9a-XD-rDs"/>
+                <outlet property="viewBackground" destination="Vbw-5W-fUm" id="Uil-JP-BNg"/>
+                <outlet property="viewMore" destination="GEK-lq-74l" id="y8C-bL-qgz"/>
             </connections>
             <point key="canvasLocation" x="117.55725190839694" y="54.577464788732399"/>
         </collectionViewCell>

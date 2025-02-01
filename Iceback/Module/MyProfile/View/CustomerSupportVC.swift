@@ -29,6 +29,10 @@ class CustomerSupportVC: UIViewController {
     @IBOutlet weak var lblMessageTitle: UILabel!
     @IBOutlet weak var lblSubjectTitle: UILabel!
     @IBOutlet weak var btnSubmit: UIButton!
+   @IBOutlet weak var viewBackground1: UIView!
+   @IBOutlet weak var viewBackground2: UIView!
+   @IBOutlet weak var viewBackground3: UIView!
+
     
     //MARK: - Constant & Variables
     var myProfileViewModel = MyProfileViewModel()
@@ -38,6 +42,7 @@ class CustomerSupportVC: UIViewController {
         super.viewDidLoad()        
         setUpController()
         languageLocalize()
+       initializeSetUp()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -64,6 +69,32 @@ class CustomerSupportVC: UIViewController {
         navigationItem.hidesBackButton = true
         txtMessage.delegate = self
     }
+
+   func initializeSetUp() {
+      setLabelTextColor(labelColor: AppThemeManager.shared.labelColor)
+      setPlaceholderTextColor(placeholderColor: AppThemeManager.shared.placeholderTextColor)
+      setTextColor(textColor: AppThemeManager.shared.textColor)
+      btnSubmit.backgroundColor = AppThemeManager.shared.primaryColor
+      btnSubmit.setTitleColor(AppThemeManager.shared.buttonTitleColor, for: .normal)
+
+      func setLabelTextColor(labelColor: UIColor) {
+         lblTitle.textColor = AppThemeManager.shared.titleColor
+         lblEmailTitle.textColor = labelColor
+         lblNameTitle.textColor = labelColor
+         lblMessageTitle.textColor = labelColor
+      }
+
+      func setPlaceholderTextColor(placeholderColor: UIColor) {
+         txtName.placeholderColor = placeholderColor
+         txtEmailAddress.placeholderColor = placeholderColor
+      }
+
+      func setTextColor(textColor: UIColor) {
+         txtName.textColor = textColor
+         txtMessage.textColor = textColor
+         txtEmailAddress.textColor = textColor
+      }
+   }
 }
 
 //MARK: - Button Action

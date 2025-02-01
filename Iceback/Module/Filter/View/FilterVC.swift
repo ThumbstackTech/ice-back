@@ -89,7 +89,7 @@ class FilterVC: UIViewController {
     xibRegister()
     tblFilterLists.rowHeight = UITableView.automaticDimension
     tblFilterLists.estimatedRowHeight = 60
-
+     initializeSetUp()
   }
 
   //MARK: - XIB Register
@@ -129,6 +129,13 @@ class FilterVC: UIViewController {
       }
     }
   }
+
+   func initializeSetUp() {
+      lblFilterTitle.textColor = AppThemeManager.shared.labelColor
+      btnClearAll.setTitleColor(AppThemeManager.shared.labelColor, for: .normal)
+      btnCancel.setTitleColor(AppThemeManager.shared.tertiaryColor, for: .normal)
+      btnApply.setTitleColor(AppThemeManager.shared.labelColor, for: .normal)
+   }
 }
 
 //MARK: - Button Action
@@ -558,8 +565,8 @@ extension FilterVC : UITableViewDataSource {
 
       if UpdateIndex == indexPath.row {
         FilterByCell.lblName.font = AFont(size: 14, type: .Heavy)
-        FilterByCell.lblName.textColor = .app000000
-        FilterByCell.bgView.backgroundColor = .appFFFFFF
+         FilterByCell.lblName.textColor = AppThemeManager.shared.labelColor
+         FilterByCell.bgView.backgroundColor = AppThemeManager.shared.backgroundColor
         FilterByCell.bottomView.isHidden = false
 
       } else {

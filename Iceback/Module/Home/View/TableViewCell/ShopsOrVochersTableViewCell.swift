@@ -34,6 +34,7 @@ class ShopsOrVochersTableViewCell: BaseTableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         xibRegister()
+       lblEmptyMsg.textColor = AppThemeManager.shared.labelColor
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -35,6 +35,7 @@ class VerificationVC: UIViewController {
     super.viewDidLoad()
     languageLocalize()
     setUpController()
+    initialSetUp()
   }
 
   override func viewDidAppear(_ animated: Bool) {
@@ -55,6 +56,13 @@ class VerificationVC: UIViewController {
     lblResend.text = lblResend.text?.localized()
     btnVerify.setTitle(BUTTONTITLE.Verify.localized(), for: .normal)
   }
+
+   func initialSetUp() {
+     // UILabel.appearance().textColor = AppThemeManager.shared.textColor
+     // UILabel.appearance().font = AppThemeManager.shared.setTextFont()
+      btnVerify.backgroundColor = AppThemeManager.shared.primaryColor
+      btnVerify.setTitleColor(AppThemeManager.shared.buttonTitleColor, for: .normal)
+   }
 
   //MARK: - Setup Controller
   func setUpController() {

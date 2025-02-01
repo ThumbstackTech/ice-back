@@ -1,0 +1,327 @@
+{
+   "brand": {
+      "name": "IceBack",
+      "logoPrimary": "https://example.com/assets/logo-primary.png",
+      "logoSecondary": "https://example.com/assets/logo-secondary.png"
+   },
+   "platform": [
+      {
+         "type": "ios",
+         "content": {
+            "appColor" : {
+               "primaryLight": {
+                  "value": "#FF5623",
+                  "type": "color"
+               },
+               "primaryDark": {
+                  "value": "#FF5623",
+                  "type": "color"
+               },
+               "secondaryDark": {
+                  "value": "#ffffff",
+                  "type": "color"
+               },
+               "secondaryLight": {
+                  "value": "#ffffff",
+                  "type": "color"
+               },
+               "tertiaryDark": {
+                  "value": "#666666",
+                  "type": "color"
+               },
+               "tertiaryLight": {
+                  "value": "#666666",
+                  "type": "color"
+               },
+               "backgroundDark": {
+                  "value": "#EFC8FA",
+                  "type": "color"
+               },
+               "backgroundLight": {
+                  "value": "#EFC8FA",
+                  "type": "color"
+               },
+               "foregroundDark":  {
+                  "value": "#a1a2a3",
+                  "type": "color"
+               },
+               "foregroundLight":  {
+                  "value": "#a1a2a3",
+                  "type": "color"
+               },
+               "textColorDark": {
+                  "value": "#0B2FE4",
+                  "type": "color"
+               },
+               "textColorLight": {
+                  "value": "#0B2FE4",
+                  "type": "color"
+               },
+               "labelColorDark": {
+                  "value": "#664744",
+                  "type": "color"
+               },
+               "labelColorLight": {
+                  "value": "#664744",
+                  "type": "color"
+               },
+               "titleColorDark": {
+                  "value": "#ffffff",
+                  "type": "color"
+               },
+               "titleColorLight": {
+                  "value": "#ffffff",
+                  "type": "color"
+               },
+               "buttonTitleDark": {
+                  "value": "#ffffff",
+                  "type": "color"
+               },
+               "buttonTitleLight": {
+                  "value": "#ffffff",
+                  "type": "color"
+               },
+               "placeholderTextColorDark": {
+                  "value": "#a1a2a3",
+                  "type": "color"
+               },
+               "placeholderTextColorLight": {
+                  "value": "#a1a2a3",
+                  "type": "color"
+               },
+               "borderColorDark": {
+                  "value": "#ffffff",
+                  "type": "color"
+               },
+               "borderColorLight": {
+                  "value": "#ffffff",
+                  "type": "color"
+               },
+               "gradientDark": [
+                  "#FF5733",
+                  "#96E6A5",
+                  "#0B2FE4"
+               ],
+               "gradientLight": [
+                  "#FF5733",
+                  "#96E6A5",
+                  "#0B2FE4"
+               ]
+            }
+         }
+      },
+      {
+         "type": "android",
+         "content": {
+            "appColor" : {
+               "primaryLight": {
+                  "value": "#FF5623",
+                  "type": "color"
+               },
+               "primaryDark": {
+                  "value": "#FF5623",
+                  "type": "color"
+               },
+               "secondaryDark": {
+                  "value": "#ffffff",
+                  "type": "color"
+               },
+               "secondaryLight": {
+                  "value": "#ffffff",
+                  "type": "color"
+               },
+               "tertiaryDark": {
+                  "value": "#666666",
+                  "type": "color"
+               },
+               "tertiaryLight": {
+                  "value": "#666666",
+                  "type": "color"
+               },
+               "backgroundDark": {
+                  "value": "#EFC8FA",
+                  "type": "color"
+               },
+               "backgroundLight": {
+                  "value": "#EFC8FA",
+                  "type": "color"
+               },
+               "foregroundDark":  {
+                  "value": "#a1a2a3",
+                  "type": "color"
+               },
+               "foregroundLight":  {
+                  "value": "#a1a2a3",
+                  "type": "color"
+               },
+               "textColorDark": {
+                  "value": "#0B2FE4",
+                  "type": "color"
+               },
+               "textColorLight": {
+                  "value": "#0B2FE4",
+                  "type": "color"
+               },
+               "labelColorDark": {
+                  "value": "#664744",
+                  "type": "color"
+               },
+               "labelColorLight": {
+                  "value": "#664744",
+                  "type": "color"
+               },
+               "titleColorDark": {
+                  "value": "#ffffff",
+                  "type": "color"
+               },
+               "titleColorLight": {
+                  "value": "#ffffff",
+                  "type": "color"
+               },
+               "buttonTitleDark": {
+                  "value": "#ffffff",
+                  "type": "color"
+               },
+               "buttonTitleLight": {
+                  "value": "#ffffff",
+                  "type": "color"
+               },
+               "placeholderTextColorDark": {
+                  "value": "#a1a2a3",
+                  "type": "color"
+               },
+               "placeholderTextColorLight": {
+                  "value": "#a1a2a3",
+                  "type": "color"
+               },
+               "borderColorDark": {
+                  "value": "#ffffff",
+                  "type": "color"
+               },
+               "borderColorLight": {
+                  "value": "#ffffff",
+                  "type": "color"
+               },
+               "gradientDark": [
+                  "#FF5733",
+                  "#96E6A5",
+                  "#0B2FE4"
+               ],
+               "gradientLight": [
+                  "#FF5733",
+                  "#96E6A5",
+                  "#0B2FE4"
+               ]
+            }
+         }
+      }
+   ],
+   "mode" : [
+      {
+         "theme":"light",
+         "backgroundColor": "#ffffff",
+         "textColor": "#96E6A5"
+      },
+      {
+         "theme":"dark",
+         "backgroundColor": "#ffffff",
+         "textColor": "#96E6B2"
+      }
+   ],
+   "font" : {
+      "family": "Roboto",
+      "size": 15.0,
+      "weight": [
+         "regular",
+         "bold",
+         "medium",
+         "semi-bold",
+         "italic"
+      ]
+   },
+   "typography" : [
+      {
+         "type": "headingLarge",
+         "fontSize": 32,
+         "lineHeight": 1.5,
+         "fontWeight": "bold"
+      },
+      {
+         "type": "headingMedium",
+         "fontSize": 24,
+         "lineHeight": 1.5,
+         "fontWeight": "medium"
+      },
+      {
+         "type": "body",
+         "fontSize": 15,
+         "lineHeight": 1.5,
+         "fontWeight": "regular"
+      },
+      {
+         "type": "caption",
+         "fontSize": 12,
+         "lineHeight": 1.5,
+         "fontWeight": "regular"
+      }
+   ],
+   "shadow" : [
+      {
+         "size": "small",
+         "value" : "0 1px 3px rgba(0,0,0,0.12)"
+      },
+      {
+         "size": "medium",
+         "value" : "0 4px 6px rgba(0,0,0,0.16)"
+      },
+      {
+         "size": "large",
+         "value" : "0 10px 15px rgba(0,0,0,0.20)"
+      }
+   ],
+
+   "borderRadius" : [
+      {
+         "border": "none",
+         "value": 0
+      },
+      {
+         "border": "small",
+         "value": 4
+      },
+      {
+         "border": "medium",
+         "value": 8
+      },
+      {
+         "border": "large",
+         "value": 16
+      }
+   ],
+   "baseUrl": [
+      {
+         "server": "stage",
+         "url": "https://api-staging.ice-back.com"
+      },
+      {
+         "server": "live",
+         "url": "https://api.ice-back.com"
+      }
+   ],
+   "referralUrl": [
+      {
+      "server": "stage",
+      "url": "https://staging.ice-back.com/referral?referralCode"
+      },
+      {
+         "server": "stage",
+         "url": "https://staging.ice-back.com/referral?referralCode"
+      }
+   ],
+   "webSupport": {
+      "aboutUs": "https://www.google.com",
+      "privacyPolicy": "https://www.google.com",
+      "termsAndConditions": "https://www.google.com"
+   }
+}
+

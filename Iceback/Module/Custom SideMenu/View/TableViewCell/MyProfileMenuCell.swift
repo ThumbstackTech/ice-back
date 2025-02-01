@@ -19,6 +19,9 @@ class MyProfileMenuCell:BaseTableViewCell {
         // Initialization code
         vieWContent.layer.cornerRadius = 10.0
         vieWContent.clipsToBounds = true
+       lblTitle.textColor = AppThemeManager.shared.labelColor
+       vieWContent.backgroundColor = AppThemeManager.shared.backgroundColor
+       switchEnable.thumbTintColor = AppThemeManager.shared.primaryColor
         
     }
 

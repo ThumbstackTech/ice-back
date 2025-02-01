@@ -96,6 +96,7 @@ class APIRequestManager {
             }
             return
         }
+       dPrint("apiPoint = \(apiPoint)")
         
         _ = Networking.sharedInstance.GET(param: param, header: header, tag: apiPoint, success: { (task, response, statusCode) in
             if let dictResponse = response {

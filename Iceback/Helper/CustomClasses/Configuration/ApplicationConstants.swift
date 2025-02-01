@@ -53,7 +53,7 @@ let AppThemeGray = UIColor.init(hexString: "#AEAEAE")
 let AppThemeOutline = UIColor.init(hexString: "#D4D3D3")
 let selectedUnderLineColor = UIColor.init(hexString: "#C6DEF1")
 let unSelectedColor = AppThemeOutline
-let textfieldTextColor = UIColor.app00000010
+let textfieldTextColor = AppThemeManager.shared.textColor//UIColor.app00000010
 
 let CTermsOfUseURL = ""
 let CPrivacyPolicyURL = ""

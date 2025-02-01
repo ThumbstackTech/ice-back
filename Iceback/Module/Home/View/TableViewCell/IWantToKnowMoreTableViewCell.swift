@@ -13,11 +13,13 @@ class IWantToKnowMoreTableViewCell: BaseTableViewCell {
     @IBOutlet weak var lblStepDescription: UILabel!
     @IBOutlet weak var lblStepTitle: UILabel!
     @IBOutlet weak var lblStepNo: UILabel!
+   @IBOutlet weak var viewBackground: UIView!
     
     //MARK: - Awake From Nib
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+       initializeSetUp()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -41,5 +43,11 @@ class IWantToKnowMoreTableViewCell: BaseTableViewCell {
             lblStepDescription.text = objHowItWorksItem.subtitle
         }
     }
-    
+
+   func initializeSetUp() {
+      lblStepNo.textColor = AppThemeManager.shared.labelColor
+      lblStepTitle.textColor = AppThemeManager.shared.labelColor
+      lblStepDescription.textColor = AppThemeManager.shared.labelColor
+      viewBackground.backgroundColor = AppThemeManager.shared.backgroundColor
+   }
 }

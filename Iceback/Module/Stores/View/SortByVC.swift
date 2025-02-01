@@ -25,6 +25,7 @@ class SortByVC: UIViewController {
         super.viewDidLoad()
         setupController()
         xibRegister()
+       lblSortByTitle.textColor = AppThemeManager.shared.labelColor
     }
     
     override func viewDidLayoutSubviews() {

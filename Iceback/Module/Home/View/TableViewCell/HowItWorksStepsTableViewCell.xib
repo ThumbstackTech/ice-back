@@ -75,6 +75,7 @@
             <connections>
                 <outlet property="lblStepNo" destination="eDk-ed-zMg" id="1bu-D5-uCY"/>
                 <outlet property="lblStepTitle" destination="7y0-Pv-DSt" id="SiB-VR-ajR"/>
+                <outlet property="viewBackground" destination="l0P-zg-AgD" id="eaT-SF-wkw"/>
             </connections>
             <point key="canvasLocation" x="22.900763358778626" y="-13.732394366197184"/>
         </tableViewCell>

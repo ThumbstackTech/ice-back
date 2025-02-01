@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -382,6 +382,9 @@
                         <outlet property="txtEmail" destination="hgA-YY-gmQ" id="Gza-f1-uq4"/>
                         <outlet property="txtFamilyName" destination="A84-sL-X99" id="yFv-yB-pCO"/>
                         <outlet property="txtGivenName" destination="5DW-sd-aMN" id="ld8-JL-mPu"/>
+                        <outlet property="viewBackground1" destination="NFC-Ua-qET" id="5Tb-un-MVx"/>
+                        <outlet property="viewBackground2" destination="2d1-c4-LI0" id="oYX-oV-5yM"/>
+                        <outlet property="viewBackground3" destination="24m-Yb-k5J" id="oOm-id-CMC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gLY-nd-W3N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -898,6 +901,9 @@
                         <outlet property="txtEmailAddress" destination="rZf-ac-Ye2" id="qI5-GS-Ct3"/>
                         <outlet property="txtMessage" destination="7DY-oO-WTC" id="QBl-xI-YQE"/>
                         <outlet property="txtName" destination="7gl-vY-J1A" id="vf1-aK-VVT"/>
+                        <outlet property="viewBackground1" destination="LNA-Vr-VtA" id="yGH-RV-IWq"/>
+                        <outlet property="viewBackground2" destination="CeW-dO-RO8" id="E1A-Eq-y4E"/>
+                        <outlet property="viewBackground3" destination="hUg-0q-R5j" id="A5x-vR-u2N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VT1-OY-6zq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

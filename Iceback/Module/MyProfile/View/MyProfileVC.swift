@@ -22,6 +22,7 @@ class MyProfileVC: UIViewController {
         languageLocalize()
         setUpController()
         xibRegister()
+       initializeSetUp()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -48,7 +49,10 @@ class MyProfileVC: UIViewController {
     func languageLocalize() {
         lblMyProfileTitle.text = lblMyProfileTitle.text?.localized()
     }   
-    
+
+   func initializeSetUp() {
+      lblMyProfileTitle.textColor = AppThemeManager.shared.secondaryColor
+   }
 }
 
 //MARK: - Button Actions

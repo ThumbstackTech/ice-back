@@ -47,6 +47,10 @@ class SignUpVC: UIViewController {
       languageLocalize()
       setUpController()
       setTabGesture()
+    //  UILabel.appearance().textColor = AppThemeManager.shared.textColor
+      //UITextField.appearance().textColor = AppThemeManager.shared.textColor
+      //UITextField.appearance().font = AppThemeManager.shared.setTextFont()
+      initialSetUp()
    }
    
    override func viewDidAppear(_ animated: Bool) {
@@ -86,7 +90,45 @@ class SignUpVC: UIViewController {
       txtFamilyName.placeholder = txtFamilyName.placeholder?.localized()
       txtConfirmPassword.placeholder = txtConfirmPassword.placeholder?.localized()
    }
-   
+
+   func initialSetUp() {
+      btnRegister.backgroundColor = AppThemeManager.shared.primaryColor
+      btnRegister.setTitleColor(AppThemeManager.shared.buttonTitleColor, for: .normal)
+      setLabelTextColor(labelColor: AppThemeManager.shared.labelColor)
+      setTextColor(textColor: AppThemeManager.shared.textColor)
+      setPlaceholderTextColor(placeholderColor: AppThemeManager.shared.placeholderTextColor)
+      
+      func setTextColor(textColor: UIColor) {
+         txtGivenName.textColor = textColor
+         txtEmail.textColor = textColor
+         txtPassword.textColor = textColor
+         txtFamilyName.textColor = textColor
+         txtPhoneNumber.textColor = textColor
+         txtConfirmPassword.textColor = textColor
+      }
+
+      func setLabelTextColor(labelColor: UIColor) {
+         lblEmailTitle.textColor = labelColor
+         lblWelcomeTitle.textColor = labelColor
+         lblPasswordTitle.textColor = labelColor
+         lblLogin.textColor = labelColor
+         lblCountryCode.textColor = labelColor
+         lblGivenNameTitle.textColor = labelColor
+         lblFamilyNameTitle.textColor = labelColor
+         lblPhoneNumberTitle.textColor = labelColor
+         lblTermsAndConditions.textColor = labelColor
+         lblConfirmPasswordTitle.textColor = labelColor
+      }
+
+      func setPlaceholderTextColor(placeholderColor: UIColor) {
+         txtEmail.placeholderColor = placeholderColor
+         txtPassword.placeholderColor = placeholderColor
+         txtPhoneNumber.placeholderColor = placeholderColor
+         txtGivenName.placeholderColor = placeholderColor
+         txtFamilyName.placeholderColor = placeholderColor
+         txtConfirmPassword.placeholderColor = placeholderColor
+      }
+   }
    
       //MARK: - Setup Controller
    func setUpController() {

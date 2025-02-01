@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FOD-EJ-CjN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FOD-EJ-CjN">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -352,6 +352,8 @@
                         <outlet property="lblTermsAndCondition" destination="Tai-DL-o0h" id="BEl-xh-sZh"/>
                         <outlet property="lblTermsAndConditionTitle" destination="qkQ-n3-jw4" id="3Yv-pf-L7G"/>
                         <outlet property="scrollView" destination="y1n-wS-gZz" id="Box-gw-knt"/>
+                        <outlet property="viewBackground1" destination="tw5-bO-zhK" id="pfv-aY-cl1"/>
+                        <outlet property="viewBackground2" destination="FgY-O1-aQL" id="hw1-dj-qJ3"/>
                         <outlet property="viewCouponDetail" destination="tw5-bO-zhK" id="bhN-y6-fi3"/>
                         <outlet property="viewDashLine1" destination="Swk-5f-Hbo" id="Q3a-kc-YzJ"/>
                         <outlet property="viewDashLine2" destination="Mem-r2-Ep5" id="a9M-mQ-qDQ"/>
@@ -868,17 +870,17 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stores" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1E-Cg-qjE">
-                                <rect key="frame" x="30" y="288" width="53.5" height="18"/>
+                                <rect key="frame" x="30" y="288" width="52.5" height="21"/>
                                 <fontDescription key="fontDescription" name="AvenirLTStd-Heavy" family="Avenir LT Std" pointSize="18"/>
                                 <color key="textColor" name="App000000"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6AQ-hW-I13">
-                                <rect key="frame" x="0.0" y="311" width="414" height="503"/>
+                                <rect key="frame" x="0.0" y="314" width="414" height="500"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No store to display" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRl-Lf-9EO">
-                                <rect key="frame" x="30" y="553.5" width="354" height="18"/>
+                                <rect key="frame" x="30" y="553.5" width="354" height="21"/>
                                 <fontDescription key="fontDescription" name="AvenirLTStd-Heavy" family="Avenir LT Std" pointSize="18"/>
                                 <color key="textColor" name="App000000"/>
                                 <nil key="highlightedColor"/>
@@ -1266,7 +1268,7 @@
     </scenes>
     <designables>
         <designable name="Agf-HO-ki1">
-            <size key="intrinsicContentSize" width="42.5" height="15.5"/>
+            <size key="intrinsicContentSize" width="44" height="18"/>
         </designable>
     </designables>
     <resources>

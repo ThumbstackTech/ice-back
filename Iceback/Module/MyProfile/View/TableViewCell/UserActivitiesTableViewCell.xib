@@ -87,6 +87,7 @@
                 <outlet property="lblDate" destination="ifH-MD-OXQ" id="5b5-wj-3sU"/>
                 <outlet property="lblDealName" destination="Eck-Si-Bg2" id="yuF-8Y-pxq"/>
                 <outlet property="lblShopName" destination="UtV-5I-00W" id="JcC-44-Th2"/>
+                <outlet property="viewBackground" destination="UUJ-gy-snA" id="YZI-A3-ELX"/>
             </connections>
             <point key="canvasLocation" x="19.847328244274809" y="3.8732394366197185"/>
         </tableViewCell>

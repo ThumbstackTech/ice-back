@@ -17,6 +17,8 @@ class SortByTableViewCell: BaseTableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+       lblSortByTitle.textColor = AppThemeManager.shared.labelColor
+       viewBackground.backgroundColor = AppThemeManager.shared.backgroundColor
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

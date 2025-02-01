@@ -16,6 +16,7 @@ class HeaderTitleTableViewCell: BaseTableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+       lblHeaderTitle.textColor = AppThemeManager.shared.labelColor
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

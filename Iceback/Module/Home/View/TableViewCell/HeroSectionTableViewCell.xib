@@ -106,6 +106,7 @@
                 <outlet property="imgBanner" destination="eDb-Oa-eao" id="hMt-Sx-MZk"/>
                 <outlet property="lblBannerDescription" destination="e5l-Qe-GyX" id="KRb-bw-u62"/>
                 <outlet property="lblBannerTitle" destination="bcG-aX-622" id="dOg-eG-XPB"/>
+                <outlet property="viewBackground" destination="2ab-vD-lI0" id="XoW-FS-1Pk"/>
             </connections>
             <point key="canvasLocation" x="77.862595419847324" y="71.83098591549296"/>
         </tableViewCell>

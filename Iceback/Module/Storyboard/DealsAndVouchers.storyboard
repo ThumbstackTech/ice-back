@@ -278,6 +278,7 @@
                         <outlet property="lblPaymentOptionsTitle" destination="OOG-eW-fgF" id="bwE-Jf-F19"/>
                         <outlet property="lblShippingDeliveryTitle" destination="tOo-vV-Ind" id="0f5-1M-2SZ"/>
                         <outlet property="lblShippingDetail" destination="Sem-J7-YlI" id="7op-Fz-2Q5"/>
+                        <outlet property="viewBackground" destination="bj3-gR-49p" id="dRD-OL-4NU"/>
                         <outlet property="viewDashLine1" destination="gBa-5e-gte" id="aeh-oC-Tov"/>
                         <outlet property="viewDashLine2" destination="uB4-ZM-PtX" id="3kG-TL-dgd"/>
                     </connections>

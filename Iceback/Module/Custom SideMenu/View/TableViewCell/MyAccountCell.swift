@@ -15,6 +15,7 @@ class MyAccountCell: BaseTableViewCell {
    
     override func awakeFromNib() {
         super.awakeFromNib()
+       lblTitle.textColor = AppThemeManager.shared.labelColor
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

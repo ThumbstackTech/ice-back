@@ -28,6 +28,7 @@ class PurchaseHistoryVC: UIViewController {
         setUpController()
         xibRegister()
         navigationItem.hidesBackButton = true
+       initializeSetUp()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -56,8 +57,18 @@ class PurchaseHistoryVC: UIViewController {
         lblPurchaseHistoryTitle.text = lblPurchaseHistoryTitle.text?.localized()
         lblMyBalanceTitle.text = lblMyBalanceTitle.text?.localized()
         btnReportIssue.setTitle(BUTTONTITLE.REPORTISSUE.localized(), for: .normal)
-        
     }
+
+   func initializeSetUp() {
+      btnReportIssue.backgroundColor = AppThemeManager.shared.primaryColor
+      setLabelTextColor(labelColor: AppThemeManager.shared.labelColor)
+
+      func setLabelTextColor(labelColor: UIColor) {
+         lblMyBalanceTitle.textColor = labelColor
+         lblMyBalance.textColor = labelColor
+         lblNoDataFound.textColor = labelColor
+      }
+   }
 }
 
 //MARK: - Button Actions

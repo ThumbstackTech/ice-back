@@ -38,10 +38,12 @@ class FilterByTableViewCell: BaseTableViewCell {
       } else {
         lblCategoryCount.text =  objFilterListModel.count<10 ? String(format: "%02d", objFilterListModel.count) : String(objFilterListModel.count)
       }
+       lblCategoryCount.textColor = AppThemeManager.shared.labelColor
       
       lblName.font = objFilterListModel.isSelected ? AFont(size: 14, type: .Heavy) : AFont(size: 14, type: .Roman)
-      lblName.textColor = objFilterListModel.isSelected ? .app000000 : .app00000060
-      bgView.backgroundColor = objFilterListModel.isSelected ?  .appFFFFFF : .appEFF8FF
+
+       lblName.textColor = objFilterListModel.isSelected ? AppThemeManager.shared.labelColor : AppThemeManager.shared.tertiaryColor
+       bgView.backgroundColor = objFilterListModel.isSelected ?  AppThemeManager.shared.backgroundColor : .appEFF8FF
       
     }
   }

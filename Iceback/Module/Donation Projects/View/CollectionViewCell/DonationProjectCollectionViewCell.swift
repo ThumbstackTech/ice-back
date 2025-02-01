@@ -14,11 +14,18 @@ class DonationProjectCollectionViewCell: BaseCollectionViewCell {
     @IBOutlet weak var lblDonationProjectDescription: UILabel!
     @IBOutlet weak var lblDonationProjectTitle: UILabel!
     @IBOutlet weak var imgDonationProject: UIImageView!
+   @IBOutlet weak var viewBackground: UIView!
+   @IBOutlet weak var viewMore: UIView!
+
     
     //MARK: - Awake From Nib
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+       lblDonationProjectTitle.textColor = AppThemeManager.shared.labelColor
+       lblDonationProjectDescription.textColor = AppThemeManager.shared.labelColor
+       viewBackground.backgroundColor = AppThemeManager.shared.backgroundColor
+       viewMore.backgroundColor = AppThemeManager.shared.backgroundColor
     }
     
     //MARK: - Setup Data

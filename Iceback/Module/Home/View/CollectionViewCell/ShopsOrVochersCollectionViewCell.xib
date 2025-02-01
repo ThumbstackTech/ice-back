@@ -75,6 +75,7 @@
             <connections>
                 <outlet property="imgShopOrVoucher" destination="ASO-4M-VM9" id="eCJ-sG-ADq"/>
                 <outlet property="lblShopOrVoucherDesc" destination="kAR-a1-8GO" id="03a-Sc-CYP"/>
+                <outlet property="viewBackground" destination="np4-fy-3og" id="L4L-cj-lIZ"/>
             </connections>
             <point key="canvasLocation" x="112.97709923664122" y="12.67605633802817"/>
         </collectionViewCell>

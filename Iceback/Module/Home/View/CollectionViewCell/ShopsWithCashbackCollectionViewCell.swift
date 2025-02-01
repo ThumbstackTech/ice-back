@@ -17,6 +17,7 @@ class ShopsWithCashbackCollectionViewCell: BaseCollectionViewCell {
     @IBOutlet weak var lblShopOrVoucherDesc: UILabel!
     @IBOutlet weak var constShippingFlagHeight: NSLayoutConstraint!
     @IBOutlet weak var constShippingFlagTop: NSLayoutConstraint!
+   @IBOutlet weak var viewBackground: UIView!
 
     //MARK: - Constant & Variables
     var arrShippingAndDeliveryFlag = [String]() {
@@ -38,6 +39,8 @@ class ShopsWithCashbackCollectionViewCell: BaseCollectionViewCell {
         lblShopOrVoucherDesc.text = ""
         imgShopOrVoucher.image = nil
         xibRegister()
+       lblShopOrVoucherDesc.textColor = AppThemeManager.shared.labelColor
+       viewBackground.backgroundColor = AppThemeManager.shared.backgroundColor
     }
     
     //MARK: - Setup Data

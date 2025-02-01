@@ -16,10 +16,12 @@ class DonationTableViewCell: BaseTableViewCell {
     @IBOutlet weak var lblDonationTitle: UILabel!
     @IBOutlet weak var viewMore: UIView!
     @IBOutlet weak var imgDonation: UIImageView!
+   @IBOutlet weak var viewBackground: UIView!
     
     //MARK: - Awake From Nib
     override func awakeFromNib() {
         super.awakeFromNib()
+       initializeSetUp()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -41,4 +43,12 @@ class DonationTableViewCell: BaseTableViewCell {
             lblMoreInformation.text = lblMoreInformation.text?.localized()
         }
     }
+
+   func initializeSetUp() {
+      lblDonationTitle.textColor = AppThemeManager.shared.labelColor
+      lblMoreInformation.textColor = AppThemeManager.shared.titleColor
+      lblDonationDescription.textColor = AppThemeManager.shared.labelColor
+      viewBackground.backgroundColor = AppThemeManager.shared.backgroundColor
+      viewMore.backgroundColor = AppThemeManager.shared.primaryColor
+   }
 }

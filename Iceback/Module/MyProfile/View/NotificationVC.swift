@@ -33,6 +33,8 @@ class NotificationVC: UIViewController {
         languageLocalize()
         setUpController()
         xibRegister()
+       lblNotificationTitle.textColor = AppThemeManager.shared.titleColor
+       lblNoDataAvailable.textColor = AppThemeManager.shared.labelColor
     }
     
     override func viewDidAppear(_ animated: Bool) {

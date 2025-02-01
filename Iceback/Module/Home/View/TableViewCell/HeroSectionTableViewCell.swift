@@ -15,11 +15,12 @@ class HeroSectionTableViewCell: BaseTableViewCell {
     @IBOutlet weak var btnSignUp: UIButton!
     @IBOutlet weak var lblBannerTitle: UILabel!
     @IBOutlet weak var imgBanner: UIImageView!
+   @IBOutlet weak var viewBackground: UIView!
     
     //MARK: - Awake From Nib
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+       initializeSetUp()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -27,6 +28,15 @@ class HeroSectionTableViewCell: BaseTableViewCell {
         
         // Configure the view for the selected state
     }
+
+   func initializeSetUp() {
+      lblBannerTitle.textColor = AppThemeManager.shared.labelColor
+      lblBannerTitle.font = AppThemeManager.shared.setTextFont(fontWeight: .bold)
+      lblBannerDescription.textColor = AppThemeManager.shared.labelColor
+      btnSignUp.backgroundColor = AppThemeManager.shared.primaryColor
+      viewBackground.backgroundColor = AppThemeManager.shared.backgroundColor
+      btnSignUp.setTitleColor(AppThemeManager.shared.buttonTitleColor, for: .normal)
+   }
     
     //MARK: - Setup Data
     override func setup<T>(_ object: T) {

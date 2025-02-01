@@ -11,10 +11,13 @@ class MenuListCell: BaseTableViewCell {
 
     @IBOutlet weak var switchEnable: UISwitch!
     @IBOutlet weak var lblTitle: UILabel!
+   @IBOutlet weak var viewBackground: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+       viewBackground.backgroundColor = AppThemeManager.shared.backgroundColor
+       lblTitle.textColor = AppThemeManager.shared.labelColor
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

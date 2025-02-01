@@ -30,6 +30,7 @@ class DonationProjectsDetailsVC: UIViewController {
   @IBOutlet weak var btnDonate: UIButton!
   @IBOutlet weak var btnViewMore: UIButton!
   @IBOutlet weak var lblSimilarProjectHeading: UILabel!
+   @IBOutlet weak var viewDonate: UIView!
 
   //MARK: - Constant & Variables
   var objDonationProjectDetail: DonationProjectsData?
@@ -47,6 +48,7 @@ class DonationProjectsDetailsVC: UIViewController {
     donationProjectsViewModel.donation()
     donationProjectsViewModel.donationDelegate = self
     setUpController()
+     initializeSetUp()
   }
 
   override func viewDidAppear(_ animated: Bool) {
@@ -127,6 +129,23 @@ class DonationProjectsDetailsVC: UIViewController {
     donationProjectsViewModel.donationProjectsListDelegate = self
   }
 
+   func initializeSetUp() {
+      viewDonate.backgroundColor = AppThemeManager.shared.backgroundColor
+      btnDonate.backgroundColor = AppThemeManager.shared.primaryColor
+      setLabelTextColor(labelColor: AppThemeManager.shared.labelColor)
+
+      func setLabelTextColor(labelColor: UIColor) {
+         lblLeft.textColor = labelColor
+         lblDonated.textColor = labelColor
+         lblLeftTitle.textColor = labelColor
+         lblProjectCost.textColor = labelColor
+         lblDonatedTitle.textColor = labelColor
+         lblProjectCostTitle.textColor = labelColor
+         lblDonationProjectDetail.textColor = labelColor
+         lblDonationProjectsTitle.textColor = labelColor
+         lblSimilarProjectHeading.textColor = labelColor
+      }
+   }
 }
 
 //MARK: - Button Action

@@ -40,7 +40,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         application.registerForRemoteNotifications()
         awsCognitoInitialize()
-        
+       //UIView.appearance().backgroundColor = AppThemeManager.shared.backgroundColor
+         dPrint("isDarkMode = \(appDelegate.window?.rootViewController?.traitCollection.userInterfaceStyle == .dark)")
         return true
     }
     

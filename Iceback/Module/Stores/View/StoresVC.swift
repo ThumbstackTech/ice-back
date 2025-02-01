@@ -133,7 +133,7 @@ class StoresVC: UIViewController {
     xibRegister()
     setUpController()
     searchStore()
-
+     initializeSetUp()
     self.tblStoreLists.addSubview(self.refreshControl)
 
   }
@@ -158,6 +158,18 @@ class StoresVC: UIViewController {
     tblStoreLists.registerCell(ofType: BottomEmptyTableViewCell.self)
     tblStoreLists.contentInset = UIEdgeInsets(top: 15, left: 0, bottom: 0, right: 0)
   }
+
+   func initializeSetUp() {
+      setLabelTextColor(labelColor: AppThemeManager.shared.labelColor)
+
+      func setLabelTextColor(labelColor: UIColor) {
+         lblAll.textColor = labelColor
+         lblNew.textColor = labelColor
+         lblTrending.textColor = labelColor
+         lblStoreTitle.textColor = labelColor
+         lblNoDataAvailable.textColor = labelColor
+      }
+   }
 
   //MARK: - Search Store
   func searchStore() {

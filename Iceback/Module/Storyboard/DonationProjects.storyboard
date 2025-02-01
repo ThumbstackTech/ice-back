@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -121,13 +121,13 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="118" height="78"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Project Cost" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JuG-pt-chK">
-                                                                                <rect key="frame" x="3" y="15" width="112" height="24"/>
+                                                                                <rect key="frame" x="3" y="15" width="112" height="12"/>
                                                                                 <fontDescription key="fontDescription" name="AvenirLTStd-Roman" family="Avenir LT Std" pointSize="12"/>
                                                                                 <color key="textColor" name="App000000(70%)"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 CHF" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwH-Ty-IAs">
-                                                                                <rect key="frame" x="0.0" y="47" width="118" height="16"/>
+                                                                                <rect key="frame" x="0.0" y="35" width="118" height="28"/>
                                                                                 <fontDescription key="fontDescription" name="AvenirLTStd-Black" family="Avenir LT Std" pointSize="16"/>
                                                                                 <color key="textColor" name="App000000"/>
                                                                                 <nil key="highlightedColor"/>
@@ -195,13 +195,13 @@
                                                                         <rect key="frame" x="236" y="0.0" width="118" height="78"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remaining Balance" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LGJ-D2-p54">
-                                                                                <rect key="frame" x="3" y="15" width="112" height="12"/>
+                                                                                <rect key="frame" x="3" y="15" width="112" height="24"/>
                                                                                 <fontDescription key="fontDescription" name="AvenirLTStd-Roman" family="Avenir LT Std" pointSize="12"/>
                                                                                 <color key="textColor" name="App000000(70%)"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 CHF" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELO-QA-BOU">
-                                                                                <rect key="frame" x="0.0" y="35" width="118" height="28"/>
+                                                                                <rect key="frame" x="0.0" y="47" width="118" height="16"/>
                                                                                 <fontDescription key="fontDescription" name="AvenirLTStd-Black" family="Avenir LT Std" pointSize="16"/>
                                                                                 <color key="textColor" name="AppED1925"/>
                                                                                 <nil key="highlightedColor"/>
@@ -386,6 +386,7 @@
                         <outlet property="lblProjectCost" destination="hwH-Ty-IAs" id="uy5-Gg-Ypf"/>
                         <outlet property="lblProjectCostTitle" destination="JuG-pt-chK" id="g3o-6L-IKX"/>
                         <outlet property="lblSimilarProjectHeading" destination="3tG-zI-uq4" id="SZV-Uy-5Tf"/>
+                        <outlet property="viewDonate" destination="OYa-1A-3yi" id="7zH-fl-Lwl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Td0-3s-BM8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -54,6 +54,7 @@ class LoginVC: UIViewController {
       xibRegister()
       setUpController()
       setTabGesture()
+      initialSetUp()
    }
    
    override func viewWillLayoutSubviews() {
@@ -79,6 +80,53 @@ class LoginVC: UIViewController {
       collSocialLogin.dataSource = self
       collSocialLogin.delegate = self
       collSocialLogin.register(nibWithCellClass: SocialLoginCollectionViewCell.self)
+   }
+
+   func initialSetUp() {
+
+      GCDMainThread.async { [self] in
+         viewTopLine.makeDashedBorderLine(strokeColor: UIColor.app000000.cgColor, lineWidth: 4, spacing: 2)
+         viewOrLine.makeDashedBorderLine(strokeColor: UIColor.app000000.cgColor, lineWidth: 4, spacing: 2)
+         viewBackground.roundCorners(corners: [.topLeft, .topRight], radius: AppThemeManager.shared.cornerRadius)
+      }
+      dPrint("AppThemeManager.shared.primary = \(AppThemeManager.shared.primaryColor)")
+
+      setTextColor(textColor: AppThemeManager.shared.textColor)
+      setPlaceholderColor(placeholderColor: AppThemeManager.shared.placeholderTextColor)
+      setFontAndColor()
+      setLabelTextColor(labelColor: AppThemeManager.shared.labelColor)
+
+      func setTextColor(textColor: UIColor) {
+         txtEmail.textColor = textColor
+         txtPassword.textColor = textColor
+      }
+
+      func setLabelTextColor(labelColor: UIColor) {
+         lblEmailTitle.textColor = labelColor
+         lblSignup.textColor = labelColor
+         lblWelcomeTitle.textColor = labelColor
+         lblEnterDetailTitle.textColor = labelColor
+         lblPasswordTitle.textColor = labelColor
+         lblRememberMeTitle.textColor = labelColor
+      }
+
+      func setPlaceholderColor(placeholderColor: UIColor) {
+         txtEmail.placeholderColor = placeholderColor
+         txtPassword.placeholderColor = placeholderColor
+      }
+
+      func setFontAndColor() {
+         lblWelcomeTitle.font = AppThemeManager.shared.setTextFont(fontWeight: .bold)
+         btnContinueAsGuest.backgroundColor = AppThemeManager.shared.primaryColor
+         btnForgetPassword.setTitleColor(AppThemeManager.shared.labelColor, for: .normal)
+         btnContinueAsGuest.setTitleColor(AppThemeManager.shared.buttonTitleColor, for: .normal)
+         btnLogin.setTitleColor(AppThemeManager.shared.buttonTitleColor, for: .normal)
+         btnLogin.backgroundColor = AppThemeManager.shared.primaryColor
+         switchRemember.thumbTintColor = AppThemeManager.shared.primaryColor
+      }
+
+      btnLogin.setTitleColor(AppThemeManager.shared.buttonTitleColor, for: .normal)
+    
    }
    
    //MARK: - Biometric Fetch

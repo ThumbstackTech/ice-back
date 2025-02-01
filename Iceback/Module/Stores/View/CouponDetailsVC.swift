@@ -34,6 +34,8 @@ class CouponDetailsVC: UIViewController {
   @IBOutlet weak var lblShippingDeliveryTitle: UILabel!
   @IBOutlet weak var colPaymentHeight: NSLayoutConstraint!
   @IBOutlet weak var lblNoDataAvailable: UILabel!
+   @IBOutlet weak var viewBackground1: UIView!
+   @IBOutlet weak var viewBackground2: UIView!
 
   //MARK: - Constant & Variables
   private var storesViewModel = StoresViewModel()
@@ -51,6 +53,7 @@ class CouponDetailsVC: UIViewController {
     super.viewDidLoad()
     languageLocalize()
     setUpController()
+     initializeSetUp()
   }
 
   override func viewDidAppear(_ animated: Bool) {
@@ -142,6 +145,26 @@ class CouponDetailsVC: UIViewController {
 
   }
 
+   func initializeSetUp() {
+      setLabelTextColor(labelColor: AppThemeManager.shared.labelColor)
+      btnRegister.backgroundColor = AppThemeManager.shared.primaryColor
+      btnRegister.setTitleColor(AppThemeManager.shared.buttonTitleColor, for: .normal)
+      viewBackground1.backgroundColor = AppThemeManager.shared.backgroundColor
+      viewBackground2.backgroundColor = AppThemeManager.shared.backgroundColor
+
+      func setLabelTextColor(labelColor: UIColor) {
+         lblTermsAndCondition.textColor = labelColor
+         lblPaymentOptionsTitle.textColor = labelColor
+         lblShippingDeliveryTitle.textColor = labelColor
+         lblShippingDeliveryRegion.textColor = labelColor
+         lblDealAndVouchersTitle.textColor = labelColor
+         lblDealAndVouchersDetail.textColor = labelColor
+         lblTermsAndConditionTitle.textColor = labelColor
+         lblSpecialDealsAndVouchersTitle.textColor = labelColor
+         lblNoDataAvailable.textColor = labelColor
+      }
+   }
+
   //MARK: - Check String Contain URL
   func checkStringContainURL(description: String) {
     let detector = try! NSDataDetector(types: NSTextCheckingResult.CheckingType.link.rawValue)
@@ -179,8 +202,11 @@ extension CouponDetailsVC {
 
   @IBAction func btnRegister(_ sender: UIButton) {
     if UserDefaultHelper.isLogin {
+       dPrint("objStoreDetail = \(String(describing:objStoreDetail))")
+
       let vc: WKWebViewVC = WKWebViewVC.instantiate(appStoryboard:.stores)
       vc.strWebviewURL =  "\(objStoreDetail?.redirectUrl ?? "")?user=\(UserDefaultHelper.user_id)"
+       dPrint("strWebviewURL = \(vc.strWebviewURL)")
       vc.isCashbackBottomView = true
       vc.isCashbackStatusActive = true
       vc.intStoreId = intStoreId
@@ -249,6 +275,7 @@ extension CouponDetailsVC: UICollectionViewDelegateFlowLayout {
 
 extension CouponDetailsVC: StoreDetailsDelegate {
   func StoreDetails(_ objData: StoreDetailsNewModel) {
+     dPrint("objData = \(objData)")
     self.objStoreDetail = objData
     xibRegister()
 

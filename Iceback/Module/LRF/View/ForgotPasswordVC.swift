@@ -29,6 +29,7 @@ class ForgotPasswordVC: UIViewController {
       super.viewDidLoad()
       setUpController()
       languageLocalize()
+      intialSetUp()
    }
 
    override func viewDidAppear(_ animated: Bool) {
@@ -49,6 +50,18 @@ class ForgotPasswordVC: UIViewController {
       lblEmailTitle.text = lblEmailTitle.text?.localized()
       txtEmail.placeholder = txtEmail.placeholder?.localized()
       btnSubmit.setTitle(BUTTONTITLE.SUBMIT.localized(), for: .normal)
+   }
+
+   func intialSetUp() {
+      txtEmail.placeholderColor = AppThemeManager.shared.placeholderTextColor
+      txtEmail.textColor = AppThemeManager.shared.textColor
+      lblEmailTitle.textColor = AppThemeManager.shared.labelColor
+      lblDesc.textColor = AppThemeManager.shared.labelColor
+      lblForgotPasswordTitle.textColor = AppThemeManager.shared.labelColor
+      lblForgotPasswordDescription.textColor = AppThemeManager.shared.labelColor
+
+      btnSubmit.backgroundColor = AppThemeManager.shared.primaryColor
+      btnSubmit.setTitleColor(AppThemeManager.shared.buttonTitleColor, for: .normal)
    }
 
       //MARK: - Setup Controller

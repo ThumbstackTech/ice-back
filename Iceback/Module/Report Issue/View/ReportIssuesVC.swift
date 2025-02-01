@@ -32,6 +32,7 @@ class ReportIssuesVC: UIViewController {
     super.viewDidLoad()
     navigationItem.hidesBackButton = true
     languageLocalize()
+    initialSetUp()
   }
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
@@ -80,6 +81,12 @@ class ReportIssuesVC: UIViewController {
     reportList.report(pageCount: currentPage)
     refreshControl.endRefreshing()
   }
+
+   func initialSetUp() {
+      lblNoDataFound.textColor = AppThemeManager.shared.labelColor
+      lblReportIssueTitle.textColor = AppThemeManager.shared.secondaryColor
+      btnReportIssue.backgroundColor = AppThemeManager.shared.primaryColor
+   }
 }
 
 

@@ -14,11 +14,13 @@ class UserActivitiesTableViewCell: BaseTableViewCell {
     @IBOutlet weak var lblShopName: UILabel!
     @IBOutlet weak var lblDate: UILabel!
     @IBOutlet weak var constDealsNameTop: NSLayoutConstraint!
+   @IBOutlet weak var viewBackground: UIView!
     
     //MARK: - Awake From Nib
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+       initializeSetUp()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -44,4 +46,14 @@ class UserActivitiesTableViewCell: BaseTableViewCell {
             }
         }
     }
+
+   func initializeSetUp() {
+      setLabelTextColor(labelColor: AppThemeManager.shared.labelColor)
+      viewBackground.backgroundColor = AppThemeManager.shared.backgroundColor
+      func setLabelTextColor(labelColor: UIColor) {
+         lblDate.textColor = labelColor
+         lblShopName.textColor = labelColor
+         lblDealName.textColor = labelColor
+      }
+   }
 }

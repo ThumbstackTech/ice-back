@@ -33,6 +33,7 @@ class ResetPasswordVC: UIViewController {
     super.viewDidLoad()
     setUpController()
     languageLocalize()
+    initialSetUp()
   }
 
   override func viewDidAppear(_ animated: Bool) {
@@ -69,6 +70,32 @@ class ResetPasswordVC: UIViewController {
     txtNewPassword.enablePasswordToggle()
     txtConfirmPassword.enablePasswordToggle()
   }
+
+   func initialSetUp() {
+      btnChangePassword.backgroundColor = AppThemeManager.shared.primaryColor
+      btnChangePassword.setTitleColor(AppThemeManager.shared.buttonTitleColor, for: .normal)
+      setTextColor(textColor: AppThemeManager.shared.textColor)
+      setLabelTextColor(labelColor: AppThemeManager.shared.labelColor)
+      setPlaceholderTextColor(placeholderColor: AppThemeManager.shared.placeholderTextColor)
+
+      func setTextColor(textColor: UIColor) {
+         txtNewPassword.textColor = textColor
+         txtConfirmPassword.textColor = textColor
+      }
+
+      func setLabelTextColor(labelColor: UIColor) {
+         lblConfirmPasswordTitle.textColor = labelColor
+         lblNewPasswordTitle.textColor = labelColor
+         lblResetPasswordTitle.textColor = labelColor
+         lblVerificationCodeTitle.textColor = labelColor
+         lblResetPasswordSubTitle.textColor = labelColor
+      }
+
+      func setPlaceholderTextColor(placeholderColor: UIColor) {
+         txtNewPassword.placeholderColor = placeholderColor
+         txtConfirmPassword.placeholderColor = placeholderColor
+      }
+   }
 }
 
 //MARK: - Button Actions

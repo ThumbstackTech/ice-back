@@ -18,6 +18,9 @@ class EditProfileVC: UIViewController {
     @IBOutlet weak var lblEmailTitle: UILabel!
     @IBOutlet weak var lblEditProfileTitle: UILabel!
     @IBOutlet weak var btnUpdate: UIButton!
+   @IBOutlet weak var viewBackground1: UIView!
+   @IBOutlet weak var viewBackground2: UIView!
+   @IBOutlet weak var viewBackground3: UIView!
     
     //MARK: - Variable
     var isProfileImageUpdate = false
@@ -31,6 +34,7 @@ class EditProfileVC: UIViewController {
         super.viewDidLoad()
         languageLocalize()
         setUpController()
+       initializeSetUp()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -54,6 +58,36 @@ class EditProfileVC: UIViewController {
         lblGivenNameTitle.text = lblGivenNameTitle.text?.localized()
         btnUpdate.setTitle(BUTTONTITLE.UPDATE.localized(), for: .normal)
     }
+
+   func initializeSetUp() {
+      btnUpdate.backgroundColor = AppThemeManager.shared.primaryColor
+      btnUpdate.setTitleColor(AppThemeManager.shared.buttonTitleColor, for: .normal)
+      setTextColor(textColor: AppThemeManager.shared.textColor)
+      setPlaceholderTextColor(placeholderColor: AppThemeManager.shared.placeholderTextColor)
+      setLabelTextColor(labelColor: AppThemeManager.shared.labelColor)
+      viewBackground1.backgroundColor = AppThemeManager.shared.backgroundColor
+      viewBackground2.backgroundColor = AppThemeManager.shared.backgroundColor
+      viewBackground3.backgroundColor = AppThemeManager.shared.backgroundColor
+
+
+      func setTextColor(textColor: UIColor) {
+         txtEmail.textColor = textColor
+         txtFamilyName.textColor = textColor
+         txtGivenName.textColor = textColor
+      }
+
+      func setPlaceholderTextColor(placeholderColor: UIColor) {
+         txtEmail.placeholderColor = placeholderColor
+         txtGivenName.placeholderColor = placeholderColor
+         txtFamilyName.placeholderColor = placeholderColor
+      }
+
+      func setLabelTextColor(labelColor: UIColor) {
+         lblEmailTitle.textColor = labelColor
+         lblGivenNameTitle.textColor = labelColor
+         lblFamilyNameTitle.textColor = labelColor
+      }
+   }
 }
 
 //MARK: - Button Action

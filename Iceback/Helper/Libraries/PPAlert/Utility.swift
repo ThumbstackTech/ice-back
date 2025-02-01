@@ -178,12 +178,12 @@ class Utility: NSObject {
   class func userActivitiesDescription(str: String, title: String) -> NSMutableAttributedString {
     
     let staticAttributes:[NSAttributedString.Key: Any] = [
-      .foregroundColor: UIColor.app000000,
-      .font: AFont(size: 15, type: .Black)
+      .foregroundColor: AppThemeManager.shared.labelColor,
+      .font: AFont(size: CGFloat(AppThemeManager.shared.appFont?.size ?? 15.0), type: .Black)
     ]
     let shippingDetail:[NSAttributedString.Key: Any] = [
-      .foregroundColor:UIColor.app000000,
-      .font: AFont(size: 16, type: .Roman)
+      .foregroundColor:AppThemeManager.shared.labelColor,
+      .font: AFont(size: CGFloat((AppThemeManager.shared.appFont?.size)! + 1.0), type: .Roman)
     ]
     
     let partOne = NSMutableAttributedString(string: "\(title): ".localized(), attributes: staticAttributes)
@@ -362,10 +362,10 @@ class Utility: NSObject {
   
   class func alreadyMember()-> NSMutableAttributedString {
     let attributeString : [NSAttributedString.Key: Any] = [
-      .underlineColor: UIColor.app1F8DFF ,
-      .foregroundColor:UIColor.app1F8DFF,
+      .underlineColor: AppThemeManager.shared.labelColor ,
+      .foregroundColor:AppThemeManager.shared.labelColor,
       .underlineStyle:NSUnderlineStyle.single.rawValue,
-      NSAttributedString.Key.font:  AFont(size: 14, type: .Heavy)
+      NSAttributedString.Key.font:  AFont(size: CGFloat(AppThemeManager.shared.appFont?.size ?? 14.0), type: .Heavy)
     ]
     
     let str = NSMutableAttributedString(string:LABELTITLE.ALREADYMEMBER.localized(), attributes: attributeString)

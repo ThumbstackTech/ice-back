@@ -33,6 +33,7 @@ class DonationProjectsVC: UIViewController {
     xibRegister()
     languageLocalize()
     setUpController()
+     initializeSetUp()
   }
 
   override func viewWillAppear(_ animated: Bool) {
@@ -77,6 +78,11 @@ class DonationProjectsVC: UIViewController {
     donationProjectsViewModel.donationProjectsList(pageCount: intCurrentPage, limitCount: Global.sharedManager.intPaginationLimit)
     refreshControl.endRefreshing()
   }
+
+   func initializeSetUp() {
+      lblDonationProjectsTitle.textColor = AppThemeManager.shared.labelColor
+      lblEmptyMsg.textColor = AppThemeManager.shared.labelColor
+   }
 }
 
 //MARK: - UITableViewDataSource

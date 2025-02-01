@@ -19,6 +19,7 @@ class StoresAndDealsVouchersCell: BaseTableViewCell {
     @IBOutlet weak var collShippingFlag: UICollectionView!
     @IBOutlet weak var constShippingFlagHeight: NSLayoutConstraint!
     @IBOutlet weak var constShippingFlagTop: NSLayoutConstraint!
+   @IBOutlet weak var viewBackground: UIView!
     
     //MARK: - Constant & Variables
     var arrShippingAndDeliveryFlag = [String]() {
@@ -32,6 +33,7 @@ class StoresAndDealsVouchersCell: BaseTableViewCell {
         super.awakeFromNib()
         languageLocalize()
         xibRegister()
+       initialSetUp()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -49,6 +51,13 @@ class StoresAndDealsVouchersCell: BaseTableViewCell {
         collShippingFlag.dataSource = self
         collShippingFlag.register(nibWithCellClass: PaymentOptionsCollectionViewCell.self)
     }
+
+   func initialSetUp() {
+      btnShopNow.backgroundColor = AppThemeManager.shared.primaryColor
+      btnShopNow.setTitleColor(AppThemeManager.shared.buttonTitleColor, for: .normal)
+      lblTitle.textColor = AppThemeManager.shared.labelColor
+      viewBackground.backgroundColor = AppThemeManager.shared.backgroundColor
+   }
     
     //MARK: - Setup Data
     override func setup<T>(_ object: T) {
@@ -93,6 +102,7 @@ class StoresAndDealsVouchersCell: BaseTableViewCell {
                 }
             }
             lblTitle.text = objDealsAndVouchers.name
+           lblTitle.textColor = AppThemeManager.shared.textColor
         }
     }
     

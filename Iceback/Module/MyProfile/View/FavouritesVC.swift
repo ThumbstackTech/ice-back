@@ -32,6 +32,7 @@ class FavouritesVC: UIViewController {
         super.viewDidLoad()
         languageLocalize()
         self.tblFavouritesList.addSubview(self.refreshControl)
+       initializeSetUp()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -74,6 +75,11 @@ class FavouritesVC: UIViewController {
         myProfileViewModel.favouriteStores(intPage: intCurrentPage)
         refreshControl.endRefreshing()
     }
+
+   func initializeSetUp() {
+      lblFavouriteTitle.textColor = AppThemeManager.shared.labelColor
+      lblNoDataAvailableMsg.textColor = AppThemeManager.shared.labelColor
+   }
 }
 
 

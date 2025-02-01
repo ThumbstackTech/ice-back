@@ -246,6 +246,11 @@
 		BA604B131BE1DCAF0580FBB8 /* Pods_IcebackTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53C5194F30DA06979F24F5F1 /* Pods_IcebackTests.framework */; };
 		CD2044827C7511C7BAA8A251 /* Pods_Iceback_IcebackUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A286B21E79DC8067F2489603 /* Pods_Iceback_IcebackUITests.framework */; };
 		D5C50D952EB45E6980533041 /* Pods_Iceback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E679D65CB16003C29759EF0A /* Pods_Iceback.framework */; };
+		D7813E6B2D4A41E1009B1A33 /* CustomDesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7813E6A2D4A41E1009B1A33 /* CustomDesignView.swift */; };
+		D7E2D5F02D4252BA00A50164 /* DesignTokens.json in Resources */ = {isa = PBXBuildFile; fileRef = D7E2D5EF2D4252BA00A50164 /* DesignTokens.json */; };
+		D7E2D5F22D42745B00A50164 /* DesignTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E2D5F12D42745B00A50164 /* DesignTokens.swift */; };
+		D7E2D5F42D429E9400A50164 /* DesignTokensConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E2D5F32D429E9400A50164 /* DesignTokensConfig.swift */; };
+		D7F113E72D40D3CE00C7470B /* AppThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F113E62D40D3CE00C7470B /* AppThemeManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -517,6 +522,11 @@
 		C2BCCD24ECEEAE7D6A152D3E /* Pods-IcebackTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IcebackTests.release.xcconfig"; path = "Target Support Files/Pods-IcebackTests/Pods-IcebackTests.release.xcconfig"; sourceTree = "<group>"; };
 		CADA7F4DFB62578774A7180D /* Pods-Iceback-IcebackUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Iceback-IcebackUITests.release.xcconfig"; path = "Target Support Files/Pods-Iceback-IcebackUITests/Pods-Iceback-IcebackUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D6A2F6DADAE20640625E82E3 /* Pods-Iceback.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Iceback.debug.xcconfig"; path = "Target Support Files/Pods-Iceback/Pods-Iceback.debug.xcconfig"; sourceTree = "<group>"; };
+		D7813E6A2D4A41E1009B1A33 /* CustomDesignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDesignView.swift; sourceTree = "<group>"; };
+		D7E2D5EF2D4252BA00A50164 /* DesignTokens.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DesignTokens.json; sourceTree = "<group>"; };
+		D7E2D5F12D42745B00A50164 /* DesignTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignTokens.swift; sourceTree = "<group>"; };
+		D7E2D5F32D429E9400A50164 /* DesignTokensConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignTokensConfig.swift; sourceTree = "<group>"; };
+		D7F113E62D40D3CE00C7470B /* AppThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppThemeManager.swift; sourceTree = "<group>"; };
 		D953731F350B43F3E5A638D1 /* Pods-Iceback.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Iceback.release.xcconfig"; path = "Target Support Files/Pods-Iceback/Pods-Iceback.release.xcconfig"; sourceTree = "<group>"; };
 		E679D65CB16003C29759EF0A /* Pods_Iceback.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Iceback.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -1208,6 +1218,7 @@
 		84A6A30F2B982D92001E800A /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				D7F113E52D40D3BD00C7470B /* App Theme */,
 				185BCEDD2B4D1FD800F5F453 /* CustomClasses */,
 				185BCED52B4D1FB800F5F453 /* Libraries */,
 				185BCEC42B4D1F9300F5F453 /* Generic Classes */,
@@ -1487,6 +1498,18 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		D7F113E52D40D3BD00C7470B /* App Theme */ = {
+			isa = PBXGroup;
+			children = (
+				D7E2D5EF2D4252BA00A50164 /* DesignTokens.json */,
+				D7F113E62D40D3CE00C7470B /* AppThemeManager.swift */,
+				D7E2D5F12D42745B00A50164 /* DesignTokens.swift */,
+				D7E2D5F32D429E9400A50164 /* DesignTokensConfig.swift */,
+				D7813E6A2D4A41E1009B1A33 /* CustomDesignView.swift */,
+			);
+			path = "App Theme";
+			sourceTree = "<group>";
+		};
 		EE43EC9DF81FFAC846933DF7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1662,6 +1685,7 @@
 				185BCF1F2B4D258300F5F453 /* Avenir LT Std 65 Medium Oblique.otf in Resources */,
 				84011F8D2BE8A5DB005F0DB1 /* awsconfiguration.json in Resources */,
 				841587312B637BDA009B2DC3 /* DonationProjectCollectionViewCell.xib in Resources */,
+				D7E2D5F02D4252BA00A50164 /* DesignTokens.json in Resources */,
 				84011F8F2BE8A640005F0DB1 /* DealsAndVouchers.storyboard in Resources */,
 				840BCE352B5001A7000A809D /* StoresAndDealsVouchersCell.xib in Resources */,
 				84011F942BE8B8E0005F0DB1 /* SideMenu.storyboard in Resources */,
@@ -1861,11 +1885,13 @@
 				84E1D82B2B56C68800247F90 /* FilterListsModel.swift in Sources */,
 				845768112BE3B18900B52C1E /* FavouritesVC.swift in Sources */,
 				8403C1E32B4D5E8F00E1D741 /* TitleAndViewMoreTableViewCell.swift in Sources */,
+				D7813E6B2D4A41E1009B1A33 /* CustomDesignView.swift in Sources */,
 				84E1D82C2B56C68800247F90 /* FilterByModel.swift in Sources */,
 				84C996172B5FC148008D4DD5 /* ShopsOrVochersCollectionViewCell.swift in Sources */,
 				840BC6222B60DEA3009081EE /* DealsAndVouchersViewModel.swift in Sources */,
 				185BCEB12B4D1F6000F5F453 /* ExtensionUITextView.swift in Sources */,
 				185BCEBD2B4D1F6000F5F453 /* ExtensionUITextField.swift in Sources */,
+				D7F113E72D40D3CE00C7470B /* AppThemeManager.swift in Sources */,
 				845D08462BC7B740005C94F1 /* ReportIssueDetailVC.swift in Sources */,
 				84FE1BA12B675E310070FBCF /* ReferalProgramModel.swift in Sources */,
 				843DE0722B4D496900502CCA /* UITableView + Extension.swift in Sources */,
@@ -1878,6 +1904,7 @@
 				844A7E1D2B57CC2D00F34370 /* FilterByTableViewCell.swift in Sources */,
 				84B3D2DD2B500B7C00CFEFC2 /* CustomerSupportVC.swift in Sources */,
 				185BCEB22B4D1F6000F5F453 /* ExtensionUIApplication.swift in Sources */,
+				D7E2D5F22D42745B00A50164 /* DesignTokens.swift in Sources */,
 				840BC6362B610532009081EE /* CategoriesInfo.swift in Sources */,
 				8452AE342B56542A00B3115B /* CouponDetailsVC.swift in Sources */,
 				846457152BBA986A00F4AB7F /* NotificationVC.swift in Sources */,
@@ -1987,6 +2014,7 @@
 				84F24A692BE4E9820075DBD2 /* MyAccountCell.swift in Sources */,
 				18D560BB2B4C2781007A9BDE /* AppDelegate.swift in Sources */,
 				185BCEFB2B4D1FD800F5F453 /* ProgressHUD.swift in Sources */,
+				D7E2D5F42D429E9400A50164 /* DesignTokensConfig.swift in Sources */,
 				843DE06D2B4D43C600502CCA /* HeroSectionTableViewCell.swift in Sources */,
 				840BC61D2B60D636009081EE /* CustomerSupportProtocol.swift in Sources */,
 				84B230AD2BB53E4D005B0627 /* AuthenticationCodeBox.swift in Sources */,

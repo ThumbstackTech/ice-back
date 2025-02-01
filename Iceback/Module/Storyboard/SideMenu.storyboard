@@ -185,6 +185,7 @@
                     </view>
                     <connections>
                         <outlet property="tblMenu" destination="8bQ-R4-zRw" id="wtI-Dv-Kin"/>
+                        <outlet property="viewBackground" destination="4da-3x-ExW" id="p0Q-mL-WFf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2WQ-Qc-vVc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

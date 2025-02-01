@@ -27,6 +27,7 @@ class LogoutPopupVC: UIViewController {
         super.viewDidLoad()
         setUpController()
         languageLocalize()
+       initializeSetUp()
     }
     
     override func viewDidLayoutSubviews() {
@@ -54,6 +55,15 @@ class LogoutPopupVC: UIViewController {
             Common.shared.doLogoutFromApp()
         }
     }
+
+   func initializeSetUp() {
+      lblPopUpMessage.textColor = AppThemeManager.shared.labelColor
+      btnNo.setTitleColor(AppThemeManager.shared.textColor, for: .normal)
+      btnYes.setTitleColor(AppThemeManager.shared.textColor, for: .normal)
+      btnNo.backgroundColor = AppThemeManager.shared.primaryColor
+      btnYes.backgroundColor = AppThemeManager.shared.primaryColor
+      viewCenter.backgroundColor = AppThemeManager.shared.backgroundColor
+   }
 }
 
 //MARK: - Button Actions

@@ -39,6 +39,7 @@ class CreateReportIssueVC: UIViewController {
         super.viewDidLoad()
         languageLocalize()
         setUpController()
+       initialSetUp()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -66,6 +67,24 @@ class CreateReportIssueVC: UIViewController {
         btnAddFile.setTitle(BUTTONTITLE.ADDFILE.localized(), for: .normal)
         btnSubmit.setTitle(BUTTONTITLE.SUBMIT.localized(), for: .normal)
     }
+
+   func initialSetUp() {
+      btnSubmit.backgroundColor = AppThemeManager.shared.primaryColor
+      setLabelTextColor(labelColor: AppThemeManager.shared.labelColor)
+      setTextColor(textColor: AppThemeManager.shared.textColor)
+
+      func setTextColor(textColor: UIColor) {
+         txtSubject.textColor = textColor
+      }
+
+      func setLabelTextColor(labelColor: UIColor) {
+         lblReportIssueTitle.textColor = labelColor
+         lblMessage.textColor = labelColor
+         lblImageName.textColor = labelColor
+         lblSubjectTitle.textColor = labelColor
+         lblUploadImageTitle.textColor = labelColor
+      }
+   }
 }
 
 //MARK: - Button Actions

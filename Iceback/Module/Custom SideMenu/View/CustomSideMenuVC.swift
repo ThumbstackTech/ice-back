@@ -13,6 +13,7 @@ import UIKit
 class CustomSideMenuVC: UIViewController {
     
     @IBOutlet weak var tblMenu: UITableView!
+   @IBOutlet weak var viewBackground: UIView!
     
     var arrMenu : [SIDEMENU] = []
     
@@ -21,6 +22,7 @@ class CustomSideMenuVC: UIViewController {
         
         setupControls()
         xibRegister()
+       viewBackground.backgroundColor = AppThemeManager.shared.backgroundColor
     }
     
     override func viewWillAppear(_ animated: Bool) {

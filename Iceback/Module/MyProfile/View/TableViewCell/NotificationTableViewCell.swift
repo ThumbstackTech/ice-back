@@ -18,6 +18,7 @@ class NotificationTableViewCell: BaseTableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+       initializeSetUp()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -25,7 +26,16 @@ class NotificationTableViewCell: BaseTableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
+   func initializeSetUp() {
+      setLabelTextColor(labelColor: AppThemeManager.shared.labelColor)
+
+      func setLabelTextColor(labelColor: UIColor) {
+         lblNotificationTitle.textColor = labelColor
+         lblNotificationDate.textColor = labelColor
+         lblNotificationDescription.textColor = labelColor
+      }
+   }
     //MARK: - Setup Data
     override func setup<T>(_ object: T) {
         if let objNotificationDataModel = object as? NotifcationData {

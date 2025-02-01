@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qe2-mT-i3U">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qe2-mT-i3U">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -63,6 +63,7 @@
                                     <constraint firstAttribute="height" constant="36" id="QD8-mG-J31"/>
                                     <constraint firstAttribute="width" constant="36" id="dCg-DH-VUT"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="18"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="ic_back_black"/>
                                 <userDefinedRuntimeAttributes>
@@ -142,7 +143,7 @@
                                                         <color key="textColor" name="App000000"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="znK-I1-nOP">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="znK-I1-nOP" customClass="CustomDesignView" customModule="Iceback" customModuleProvider="target">
                                                         <rect key="frame" x="24" y="45" width="366" height="55"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aj6-S5-PKh">
@@ -317,7 +318,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gkB-W8-8iA">
-                                                        <rect key="frame" x="151.5" y="534.5" width="111" height="35"/>
+                                                        <rect key="frame" x="153.5" y="534.5" width="107" height="35"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="35" id="Usj-0Q-EQI"/>
                                                         </constraints>
@@ -328,7 +329,7 @@
                                                                 <fragment content="Already Member">
                                                                     <attributes>
                                                                         <color key="NSColor" name="App1F8DFF"/>
-                                                                        <font key="NSFont" size="14" name="AvenirLTStd-Heavy"/>
+                                                                        <font key="NSFont" metaFont="system" size="14"/>
                                                                         <integer key="NSUnderline" value="1"/>
                                                                     </attributes>
                                                                 </fragment>

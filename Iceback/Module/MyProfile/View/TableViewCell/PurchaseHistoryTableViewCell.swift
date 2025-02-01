@@ -27,6 +27,7 @@ class PurchaseHistoryTableViewCell: BaseTableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         languageLocalize()
+       initializeSetUp()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -75,4 +76,22 @@ class PurchaseHistoryTableViewCell: BaseTableViewCell {
             }
         }
     }
+
+   func initializeSetUp() {
+      setLabelTextColor(labelColor: AppThemeManager.shared.labelColor)
+
+      func setLabelTextColor(labelColor: UIColor) {
+         lblDate.textColor = labelColor
+         lblCashback.textColor = labelColor
+         lblShopName.textColor = labelColor
+         lblStatusTitle.textColor = labelColor
+         lblCashbackTitle.textColor = labelColor
+         lblInvoiceAmount.textColor = labelColor
+         lblCashbackTitle.textColor = labelColor
+         lblCashbackStatus.textColor = labelColor
+         lblExpectedCashback.textColor = labelColor
+         lblInvoiceAmountTitle.textColor = labelColor
+         lblExpectedCashbackTitle.textColor = labelColor
+      }
+   }
 }

@@ -14,11 +14,13 @@ class ShopsOrVochersCollectionViewCell: BaseCollectionViewCell {
     //MARK: - IBOutlet
     @IBOutlet weak var imgShopOrVoucher: UIImageView!
     @IBOutlet weak var lblShopOrVoucherDesc: UILabel!
+   @IBOutlet weak var viewBackground: UIView!
     
     //MARK: - Awake From Nib
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+       viewBackground.backgroundColor = AppThemeManager.shared.backgroundColor
     }
     
     //MARK: - Setup Data
@@ -33,6 +35,8 @@ class ShopsOrVochersCollectionViewCell: BaseCollectionViewCell {
             }
            
             lblShopOrVoucherDesc.text = objVoucher.name
+           lblShopOrVoucherDesc.textColor = AppThemeManager.shared.labelColor
+
         }
     }
 }

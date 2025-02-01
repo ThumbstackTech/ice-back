@@ -24,6 +24,7 @@ class UserActivitiesVC: UIViewController {
         super.viewDidLoad()
         languageLocalize()
         setUpController()
+       initializeSetUp()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -51,6 +52,13 @@ class UserActivitiesVC: UIViewController {
         tblUserActivities.registerCell(ofType: UserActivitiesTableViewCell.self)
         tblUserActivities.contentInset = UIEdgeInsets(top: 15, left: 0, bottom: 100, right: 0)
     }
+
+   func initializeSetUp() {
+      lblNoDataAvailable.textColor = AppThemeManager.shared.labelColor
+      lblUserActivitiesTitle.textColor = AppThemeManager.shared.titleColor
+      btnClearActivitiesHistory.setTitleColor(AppThemeManager.shared.buttonTitleColor, for: .normal)
+      btnClearActivitiesHistory.backgroundColor = AppThemeManager.shared.primaryColor
+   }
 }
 
 
