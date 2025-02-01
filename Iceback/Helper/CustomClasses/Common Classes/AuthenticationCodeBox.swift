@@ -72,9 +72,9 @@ class AuthenticationCodeBox: UIStackView {
         textField.widthAnchor.constraint(equalToConstant: CGFloat(width)).isActive = true
         textField.textAlignment = .center
         textField.adjustsFontSizeToFitWidth = false
-        textField.font = UIFont(name: "Avenir LT Std 55 Roman", size: 16)
+        textField.font = UIFont(name: "Avenir LT Std 55 Roman", size: CGFloat((AppThemeManager.shared.appFont?.size)!) )
         textField.isSecureTextEntry = false
-        textField.textColor = UIColor.app000000
+        textField.textColor = AppThemeManager.shared.textColor
         textField.keyboardType = .numberPad
         textField.autocorrectionType = .yes
         textField.layer.borderWidth = 0
