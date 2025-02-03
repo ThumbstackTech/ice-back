@@ -120,6 +120,7 @@ class WKWebViewVC: UIViewController {
 
 //MARK: - Button Action
 extension WKWebViewVC {
+   // This will work for back and then close the web view
   @IBAction func btnCloseAction(_ sender: UIButton) {
     if (self.wkWebView.canGoBack) {
       self.wkWebView.goBack()
@@ -129,6 +130,12 @@ extension WKWebViewVC {
       self.navigationController?.popViewController(animated: false)
     }
   }
+
+   @IBAction func btnClose(_ sender: UIButton) {
+      timer.invalidate()
+      appDelegate.timeLeft = INTEGER.TIMEDURATION
+      self.navigationController?.popViewController(animated: false)
+   }
 }
 
 //MARK: - WKNavigationDelegate
