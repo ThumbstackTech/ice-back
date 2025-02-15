@@ -15,6 +15,7 @@ class ReportIssuesVC: UIViewController {
   @IBOutlet weak var tblReportIssues: UITableView!
   @IBOutlet weak var btnReportIssue: UIButton!
   
+  
   //MARK: - Constant & Variables
   var arrReportList : [ReportListData] = []
   var reportList  = ReportViewModel()
@@ -84,7 +85,7 @@ class ReportIssuesVC: UIViewController {
 
    func initialSetUp() {
       lblNoDataFound.textColor = AppThemeManager.shared.labelColor
-      lblReportIssueTitle.textColor = AppThemeManager.shared.secondaryColor
+     lblReportIssueTitle.textColor = AppThemeManager.shared.titleColor
       btnReportIssue.backgroundColor = AppThemeManager.shared.primaryColor
    }
 }

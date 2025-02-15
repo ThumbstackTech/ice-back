@@ -58,8 +58,8 @@ class LogoutPopupVC: UIViewController {
 
    func initializeSetUp() {
       lblPopUpMessage.textColor = AppThemeManager.shared.labelColor
-      btnNo.setTitleColor(AppThemeManager.shared.textColor, for: .normal)
-      btnYes.setTitleColor(AppThemeManager.shared.textColor, for: .normal)
+      btnNo.setTitleColor(AppThemeManager.shared.buttonTitleColor, for: .normal)
+      btnYes.setTitleColor(AppThemeManager.shared.buttonTitleColor, for: .normal)
       btnNo.backgroundColor = AppThemeManager.shared.primaryColor
       btnYes.backgroundColor = AppThemeManager.shared.primaryColor
       viewCenter.backgroundColor = AppThemeManager.shared.backgroundColor

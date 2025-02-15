@@ -16,7 +16,7 @@ class MenuListCell: BaseTableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-       viewBackground.backgroundColor = AppThemeManager.shared.backgroundColor
+      viewBackground.backgroundColor = AppThemeManager.shared.secondaryColor
        lblTitle.textColor = AppThemeManager.shared.labelColor
     }
 

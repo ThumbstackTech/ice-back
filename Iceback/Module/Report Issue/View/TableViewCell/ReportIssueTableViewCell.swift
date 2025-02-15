@@ -13,7 +13,8 @@ class ReportIssueTableViewCell: BaseTableViewCell {
    @IBOutlet weak var lblIssueSubject: UILabel!
    @IBOutlet weak var lblIssueId: UILabel!
    @IBOutlet weak var viewDash: UIView!
-
+  @IBOutlet weak var viewBackground: UIView!
+  
    var subj = "Subject: "
 
 
@@ -39,6 +40,7 @@ class ReportIssueTableViewCell: BaseTableViewCell {
       lblIssueId.textColor = AppThemeManager.shared.labelColor
       lblIssueDate.textColor = AppThemeManager.shared.labelColor
       lblIssueSubject.textColor = AppThemeManager.shared.labelColor
+     viewBackground.backgroundColor = AppThemeManager.shared.backgroundColor
    }
 
    //MARK: - Setup Data

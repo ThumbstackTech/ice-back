@@ -26,6 +26,8 @@ class CMSVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpController()
+      lblSubTitle.textColor = AppThemeManager.shared.labelColor
+      lblContant.textColor = AppThemeManager.shared.labelColor
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -97,12 +99,12 @@ extension CMSVC: AboutUsDelegate {
         self.objAboutUs = arrData.first
         lblSubTitle.text = objAboutUs?.title
        if slug == CMSPageValue.TermsConditions {
-            lblContant.attributedText = objAboutUs?.content.first?.content.htmlAttributed(using: AFont(size: 11, type: .Roman), color: .app00000070)
+         lblContant.attributedText = objAboutUs?.content.first?.content.htmlAttributed(using: AFont(size: 11, type: .Roman), color: AppThemeManager.shared.textColor)
        } else if  slug == CMSPageValue.PrivacyPolicy {
-            lblContant.attributedText = objAboutUs?.content.first?.text.convertHtmlToAttributedStringWithCSS(using: AFont(size: 11, type: .Roman), color: .app00000070)
+            lblContant.attributedText = objAboutUs?.content.first?.text.convertHtmlToAttributedStringWithCSS(using: AFont(size: 11, type: .Roman), color: AppThemeManager.shared.textColor)
             checkStringContainURL(description: lblContant.text!)
         }else {
-            lblContant.attributedText = objAboutUs?.content.first?.text.htmlAttributed(using: AFont(size: 11, type: .Roman), color: .app00000070)
+            lblContant.attributedText = objAboutUs?.content.first?.text.htmlAttributed(using: AFont(size: 11, type: .Roman), color: AppThemeManager.shared.textColor)
         }
         lblContant.setLineSpacing(lineSpacing: lineSpacingBetweenText)
     }

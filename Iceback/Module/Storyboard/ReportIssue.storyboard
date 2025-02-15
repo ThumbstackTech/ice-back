@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -408,7 +408,10 @@
                         <outlet property="lblUploadImageTitle" destination="NfO-9N-rBc" id="ElY-5O-xLv"/>
                         <outlet property="tvMessage" destination="hnJ-WG-37Q" id="4HR-v7-Su5"/>
                         <outlet property="txtSubject" destination="kzQ-6u-6PJ" id="Gyp-3v-0YG"/>
+                        <outlet property="viewMessage" destination="One-s7-ype" id="UiQ-yo-ObO"/>
                         <outlet property="viewReportImage" destination="GWQ-Sg-J6Z" id="qiI-SW-Elf"/>
+                        <outlet property="viewSubject" destination="l3h-FI-q8n" id="4id-id-qb1"/>
+                        <outlet property="viewUpload" destination="hDW-rB-D2w" id="rak-mv-Cej"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SB9-fY-rZl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

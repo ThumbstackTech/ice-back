@@ -22,7 +22,7 @@ class CustomSideMenuVC: UIViewController {
         
         setupControls()
         xibRegister()
-       viewBackground.backgroundColor = AppThemeManager.shared.backgroundColor
+      viewBackground.backgroundColor = AppThemeManager.shared.secondaryColor
     }
     
     override func viewWillAppear(_ animated: Bool) {

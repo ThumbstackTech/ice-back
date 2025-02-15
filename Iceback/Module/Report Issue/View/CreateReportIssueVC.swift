@@ -28,6 +28,9 @@ class CreateReportIssueVC: UIViewController {
     @IBOutlet weak var imgReport: UIImageView!
     @IBOutlet weak var viewReportImage: UIView!
     @IBOutlet weak var btnRemoveImage: UIButton!
+  @IBOutlet weak var viewSubject: UIView!
+  @IBOutlet weak var viewMessage: UIView!
+  @IBOutlet weak var viewUpload: UIView!
     
     //MARK: - Constant & Variables
     private var imagePicker: ImagePicker!
@@ -70,15 +73,18 @@ class CreateReportIssueVC: UIViewController {
 
    func initialSetUp() {
       btnSubmit.backgroundColor = AppThemeManager.shared.primaryColor
+     lblReportIssueTitle.textColor = AppThemeManager.shared.titleColor
       setLabelTextColor(labelColor: AppThemeManager.shared.labelColor)
       setTextColor(textColor: AppThemeManager.shared.textColor)
+     viewSubject.backgroundColor = AppThemeManager.shared.backgroundColor
+     viewMessage.backgroundColor = AppThemeManager.shared.backgroundColor
+     viewUpload.backgroundColor = AppThemeManager.shared.backgroundColor
 
       func setTextColor(textColor: UIColor) {
          txtSubject.textColor = textColor
       }
 
       func setLabelTextColor(labelColor: UIColor) {
-         lblReportIssueTitle.textColor = labelColor
          lblMessage.textColor = labelColor
          lblImageName.textColor = labelColor
          lblSubjectTitle.textColor = labelColor

@@ -43,6 +43,7 @@ class HowItWorksStepsTableViewCell: BaseTableViewCell {
 
    func initializeSetUp() {
       lblStepNo.textColor = AppThemeManager.shared.labelColor
+     lblStepNo.backgroundColor = AppThemeManager.shared.secondaryColor
       lblStepTitle.textColor = AppThemeManager.shared.labelColor
       lblStepTitle.font = AppThemeManager.shared.setTextFont(fontWeight: .bold)
       viewBackground.backgroundColor = AppThemeManager.shared.backgroundColor

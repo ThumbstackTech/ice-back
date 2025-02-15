@@ -54,7 +54,7 @@ class ReportIssueDetailVC: UIViewController {
 
       func setLabelTextColor(labelColor: UIColor) {
 
-         lblReportTitle.textColor = AppThemeManager.shared.secondaryColor
+         lblReportTitle.textColor = AppThemeManager.shared.titleColor
          lblIssueDescription.textColor = labelColor
          lblAdminReplyDate.textColor = labelColor
          lblReportIssueDate.textColor = labelColor
@@ -73,6 +73,7 @@ extension ReportIssueDetailVC {
 //MARK: - ReportListDelegate
 extension ReportIssueDetailVC : ReportDetailDelegate {
     func reportDetailSuccess(_ arrData: [ReportListData]) {
+      dPrint("arrData = \(arrData.count)")
         if !arrData.isEmpty {
             lblReportTitle.text = LABELTITLE.REPORTDETAIL.localized() + "\(arrData.first?.issueNumber ?? 0)"
             arrViewReport = arrData

@@ -51,7 +51,7 @@ class MyProfileVC: UIViewController {
     }   
 
    func initializeSetUp() {
-      lblMyProfileTitle.textColor = AppThemeManager.shared.secondaryColor
+     lblMyProfileTitle.textColor = AppThemeManager.shared.titleColor
    }
 }
 

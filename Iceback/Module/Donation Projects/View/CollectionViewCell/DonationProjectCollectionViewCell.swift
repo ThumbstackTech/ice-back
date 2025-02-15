@@ -25,7 +25,7 @@ class DonationProjectCollectionViewCell: BaseCollectionViewCell {
        lblDonationProjectTitle.textColor = AppThemeManager.shared.labelColor
        lblDonationProjectDescription.textColor = AppThemeManager.shared.labelColor
        viewBackground.backgroundColor = AppThemeManager.shared.backgroundColor
-       viewMore.backgroundColor = AppThemeManager.shared.backgroundColor
+      viewMore.backgroundColor = AppThemeManager.shared.primaryColor
     }
     
     //MARK: - Setup Data

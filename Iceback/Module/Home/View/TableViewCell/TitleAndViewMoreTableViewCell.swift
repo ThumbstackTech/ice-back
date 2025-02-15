@@ -18,6 +18,8 @@ class TitleAndViewMoreTableViewCell: BaseTableViewCell {
         super.awakeFromNib()
         btnViewMore.setTitle(BUTTONTITLE.VIEWMORE.localized(), for: .normal)
        lblViewMoreTitle.textColor = AppThemeManager.shared.labelColor
+      btnViewMore.backgroundColor = AppThemeManager.shared.secondaryColor
+      btnViewMore.setTitleColor(AppThemeManager.shared.buttonTitleColor, for: .normal)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
