@@ -104,6 +104,8 @@ struct BUTTONTITLE{
     static let UPDATE                    = "Update"
     static let ALREADYMEMBER             = "Already Member"
     static let RESETPASSWORD             = "Reset Password"
+  static let DONE                        = "Done"
+  static let DETAIL = "Details"
 }
 
 struct AlertMessage {
@@ -137,6 +139,12 @@ struct LABELTITLE{
     static let ALREADYMEMBER                        = "Already Member"
     static let REPORTDETAIL                         = "Report Detail - "
     static let SUBJECT                              = "Subject"
+  static let CashbackAndDiscounts = "CashbackAndDiscounts"
+  static let MaximumCashback = "MaximumCashback"
+  static let TermsAndConditions = "TermsAndConditions"
+  static let CashbackDescription1 = "CashbackDescription1"
+  static let CashbackDescription2 = "CashbackDescription2"
+  static let CashbackDescription3 = "CashbackDescription3"
 }
 struct ARRAY{
     

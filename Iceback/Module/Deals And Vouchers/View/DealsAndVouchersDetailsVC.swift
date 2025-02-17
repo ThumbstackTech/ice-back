@@ -113,6 +113,7 @@ extension DealsAndVouchersDetailsVC {
     @IBAction func btnRegister(_ sender: UIButton) {
         if UserDefaultHelper.isLogin {
             let vc: WKWebViewVC = WKWebViewVC.instantiate(appStoryboard:.stores)
+            vc.objDealsAndVoucherDetailData = objDealsAndVoucherDetailData
             vc.isCashbackBottomView = true
             vc.isCashbackStatusActive = true
             vc.intStoreId = storeId

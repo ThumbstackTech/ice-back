@@ -183,6 +183,7 @@ extension CouponDetailsVC {
       vc.isCashbackStatusActive = true
       vc.intStoreId = intStoreId
       vc.isStore = true
+      vc.objStoreDetail = objStoreDetail
       self.navigationController?.pushViewController(vc, animated: false)
 
     } else {

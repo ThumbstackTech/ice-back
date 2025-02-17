@@ -18,6 +18,16 @@ class WKWebViewVC: UIViewController {
   @IBOutlet weak var lblCashbackStatus: UILabel!
   @IBOutlet weak var constWkWebViewBottom: NSLayoutConstraint!
   @IBOutlet weak var btnBack: UIButton!
+  
+  @IBOutlet weak var btnGoForward: UIButton!
+  @IBOutlet weak var btnGoBackward: UIButton!
+  @IBOutlet weak var btnRefresh: UIButton!
+  @IBOutlet weak var btnURLText: UIButton!
+  @IBOutlet weak var btnDone: UIButton!
+  @IBOutlet weak var btnDetails: UIButton!
+  var objDealsAndVoucherDetailData : DealsAndVoucherDetailData?
+  var objStoreDetail: StoreDetailsNewModel?
+  
 
   //MARK: - Constant & Variables
   private var storesViewModel = StoresViewModel()
@@ -31,6 +41,7 @@ class WKWebViewVC: UIViewController {
   var intStoreId = 0
   var isStore = false
   private var isFirstTimeLoad = false
+  var isHideDetailButton: Bool = false
 
   //MARK: - View Life Cycle Methods
   override func viewDidLoad() {
@@ -38,6 +49,13 @@ class WKWebViewVC: UIViewController {
     setCashbackStatus()
     setUpController()
     setSwipeGesture()
+    btnDone.setTitle(BUTTONTITLE.DONE.localized(), for: .normal)
+    btnDetails.setTitle(BUTTONTITLE.DETAIL.localized(), for: .normal)
+    if isHideDetailButton {
+      btnDetails.isHidden = true
+    } else {
+      btnDetails.isHidden = false
+    }
   }
 
   override func viewDidAppear(_ animated: Bool) {
@@ -51,6 +69,10 @@ class WKWebViewVC: UIViewController {
     dPrint("WEBVIEW VIEW DID DISAPPEAR")
     timer.invalidate()
     appDelegate.timeLeft = INTEGER.TIMEDURATION
+  }
+  
+  deinit {
+    
   }
 
   //MARK: - Set Swipe Gesture
@@ -73,17 +95,42 @@ class WKWebViewVC: UIViewController {
     }
   }
 
+  func manageButtonStates() {
+    if wkWebView.canGoBack {
+      setButtonVisibilityAndEnability(btn: btnGoBackward)
+    } else {
+      setButtonVisibilityAndEnability(btn: btnGoBackward, isEnabled: false, alpha: 0.5)
+    }
+    
+    if wkWebView.canGoForward {
+      setButtonVisibilityAndEnability(btn: btnGoForward)
+    } else {
+      setButtonVisibilityAndEnability(btn: btnGoForward, isEnabled: false, alpha: 0.5)
+    }
+    
+    func setButtonVisibilityAndEnability(btn: UIButton, isEnabled: Bool = true, alpha: CGFloat = 1.0) {
+      btn.isEnabled = isEnabled
+      btn.alpha = alpha
+    }
+  }
+  
   //MARK: - Setup Controller
   func setUpController() {
+    manageButtonStates()
     navigationItem.hidesBackButton = true
-    viewBottom.isHidden = isCashbackBottomView ? false : true
+    viewCashbackStatus.isHidden = isCashbackBottomView ? false : true
 
     wkWebView.navigationDelegate = self
-
+    dPrint("strWebviewURL = \(strWebviewURL)")
     let link = URL(string: strWebviewURL )!
     let request = URLRequest(url: link )
     wkWebView.load(request)
-    constWkWebViewBottom.constant = isCashbackBottomView ? 70 : 0
+    if #available(iOS 16.0, *) {
+      btnURLText.setTitle(wkWebView.url?.host(), for: .normal)
+    } else {
+      btnURLText.setTitle(wkWebView.url?.absoluteString ?? "", for: .normal)
+    }
+    constWkWebViewBottom.constant = isCashbackBottomView ? 70 : 70
     if isCashbackBottomView {
       if appDelegate.timeLeft < 0 {
         appDelegate.timeLeft = 2
@@ -136,12 +183,57 @@ extension WKWebViewVC {
       appDelegate.timeLeft = INTEGER.TIMEDURATION
       self.navigationController?.popViewController(animated: false)
    }
+  
+  @IBAction func btnGoBackward(_ sender: UIButton) {
+    if (self.wkWebView.canGoBack) {
+      self.wkWebView.goBack()
+    }
+    manageButtonStates()
+  }
+  
+  @IBAction func btnGoForward(_ sender: UIButton) {
+    if (self.wkWebView.canGoForward) {
+      self.wkWebView.goForward()
+    }
+    manageButtonStates()
+  }
+  
+  @IBAction func btnRefresh(_ sender: UIButton) {
+    timer.invalidate()
+    appDelegate.timeLeft = 0
+    setUpController()
+  }
+  
+  @IBAction func btnDetails(_ sender: UIButton) {
+    let vc: ContentDetailsViewController = ContentDetailsViewController.instantiate(appStoryboard:.stores)
+    if let obStore = objStoreDetail {
+      vc.objStoreDetail = obStore
+    }
+    if let obDeals = objDealsAndVoucherDetailData {
+      vc.objDealsAndVoucherDetailData = obDeals
+    }
+    vc.modalPresentationStyle = UIModalPresentationStyle.pageSheet
+    if #available(iOS 15.0, *) {
+      if let sheetPresentationController = vc.presentationController as? UISheetPresentationController {
+        sheetPresentationController.prefersGrabberVisible = true
+        // Define which heights are allowed for our sheet
+        sheetPresentationController.detents = [
+          UISheetPresentationController.Detent.medium(),
+          UISheetPresentationController.Detent.large()
+        ]
+      }
+    } else {
+      // Fallback on earlier versions
+    }
+    self.present(vc, animated: true)
+  }
 }
 
 //MARK: - WKNavigationDelegate
 extension WKWebViewVC: WKNavigationDelegate  {
   func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
     dPrint("WEBVIEW ERROR: \(error.localizedDescription)")
+    manageButtonStates()
   }
 
   func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
@@ -150,11 +242,13 @@ extension WKWebViewVC: WKNavigationDelegate  {
       HUD.show()
       isFirstTimeLoad = true
     }
+    manageButtonStates()
   }
 
   func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
     print("WEBVIEW LOAD FINISH: \(webView.canGoBack)")
     HUD.hide()
+    manageButtonStates()
   }
 
   func webView(_ webView: WKWebView, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
@@ -162,6 +256,7 @@ extension WKWebViewVC: WKNavigationDelegate  {
       completionHandler(.useCredential, nil)
       return
     }
+    manageButtonStates()
     let credential = URLCredential(trust: serverTrust)
     completionHandler(.useCredential, credential)
   }
