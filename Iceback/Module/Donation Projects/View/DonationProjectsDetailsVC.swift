@@ -75,9 +75,7 @@ class DonationProjectsDetailsVC: UIViewController {
   @objc func labelTapped(_ gesture: UITapGestureRecognizer) {
     for linkRange in arrTargetLink {
       if gesture.didTapAttributedTextInLabel(label: lblDonationProjectDetail, inRange: linkRange.targetLinkRange) {
-        let vc: WKWebViewVC = WKWebViewVC.instantiate(appStoryboard:.stores)
-        vc.strWebviewURL = linkRange.urlString
-        self.navigationController?.pushViewController(vc, animated: false)
+        Common().openInAppBrowser(url: linkRange.urlString, for: self)
       }else {
         dPrint("Tapped none")
       }
@@ -156,9 +154,7 @@ extension DonationProjectsDetailsVC {
   }
 
   @IBAction func btnDonateAction(_ sender: Any) {
-    let vc: WKWebViewVC = WKWebViewVC.instantiate(appStoryboard:.stores)
-    vc.strWebviewURL = "\(REDIRECTIONURL.DONATEURL.localized())/\(objDonationProjectDetail?.slug ?? "")"
-    self.navigationController?.pushViewController(vc, animated: false)
+    Common().openInAppBrowser(url: "\(REDIRECTIONURL.DONATEURL.localized())/\(objDonationProjectDetail?.slug ?? "")", for: self)
   }
 }
 

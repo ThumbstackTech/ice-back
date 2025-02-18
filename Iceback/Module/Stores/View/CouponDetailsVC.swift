@@ -75,9 +75,7 @@ class CouponDetailsVC: UIViewController {
   @objc func labelTapped(_ gesture: UITapGestureRecognizer) {
     for linkRange in arrTargetLink {
       if gesture.didTapAttributedTextInLabel(label: lblTermsAndCondition, inRange: linkRange.targetLinkRange) {
-        let vc: WKWebViewVC = WKWebViewVC.instantiate(appStoryboard:.stores)
-        vc.strWebviewURL = linkRange.urlString
-        self.navigationController?.pushViewController(vc, animated: false)
+        Common().openInAppBrowser(url: linkRange.urlString, for: self)
       }else {
         dPrint("Tapped none")
       }
@@ -185,6 +183,7 @@ extension CouponDetailsVC {
       vc.isCashbackStatusActive = true
       vc.intStoreId = intStoreId
       vc.isStore = true
+      vc.objStoreDetail = objStoreDetail
       self.navigationController?.pushViewController(vc, animated: false)
 
     } else {
