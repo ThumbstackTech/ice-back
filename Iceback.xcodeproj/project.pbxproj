@@ -246,6 +246,7 @@
 		BA604B131BE1DCAF0580FBB8 /* Pods_IcebackTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53C5194F30DA06979F24F5F1 /* Pods_IcebackTests.framework */; };
 		CD2044827C7511C7BAA8A251 /* Pods_Iceback_IcebackUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A286B21E79DC8067F2489603 /* Pods_Iceback_IcebackUITests.framework */; };
 		D5C50D952EB45E6980533041 /* Pods_Iceback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E679D65CB16003C29759EF0A /* Pods_Iceback.framework */; };
+		D5D9FBD22D5A276B000F5A71 /* ContentDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D9FBD12D5A276B000F5A71 /* ContentDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -516,6 +517,7 @@
 		B3FD6A722741A3700D9C3C97 /* Pods-IcebackTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IcebackTests.debug.xcconfig"; path = "Target Support Files/Pods-IcebackTests/Pods-IcebackTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C2BCCD24ECEEAE7D6A152D3E /* Pods-IcebackTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IcebackTests.release.xcconfig"; path = "Target Support Files/Pods-IcebackTests/Pods-IcebackTests.release.xcconfig"; sourceTree = "<group>"; };
 		CADA7F4DFB62578774A7180D /* Pods-Iceback-IcebackUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Iceback-IcebackUITests.release.xcconfig"; path = "Target Support Files/Pods-Iceback-IcebackUITests/Pods-Iceback-IcebackUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D5D9FBD12D5A276B000F5A71 /* ContentDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailsViewController.swift; sourceTree = "<group>"; };
 		D6A2F6DADAE20640625E82E3 /* Pods-Iceback.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Iceback.debug.xcconfig"; path = "Target Support Files/Pods-Iceback/Pods-Iceback.debug.xcconfig"; sourceTree = "<group>"; };
 		D953731F350B43F3E5A638D1 /* Pods-Iceback.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Iceback.release.xcconfig"; path = "Target Support Files/Pods-Iceback/Pods-Iceback.release.xcconfig"; sourceTree = "<group>"; };
 		E679D65CB16003C29759EF0A /* Pods_Iceback.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Iceback.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -965,6 +967,7 @@
 			isa = PBXGroup;
 			children = (
 				840F4EBB2B870F13003A7A84 /* WKWebViewVC.swift */,
+				D5D9FBD12D5A276B000F5A71 /* ContentDetailsViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1921,6 +1924,7 @@
 				84F24A742BE4ECC50075DBD2 /* EditProfileVC.swift in Sources */,
 				185BCF0B2B4D20C600F5F453 /* ExtensionUITableView.swift in Sources */,
 				185BCECF2B4D1F9300F5F453 /* GenericButton.swift in Sources */,
+				D5D9FBD22D5A276B000F5A71 /* ContentDetailsViewController.swift in Sources */,
 				84423C362B623B38005CC71A /* FilterViewModel.swift in Sources */,
 				840BC63B2B610902009081EE /* RegionData.swift in Sources */,
 				8487F2122BF1E06E001CC020 /* Global.swift in Sources */,

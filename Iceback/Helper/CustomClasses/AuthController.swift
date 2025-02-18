@@ -83,9 +83,9 @@ class AuthController : ObservableObject{
                     case .notInteractive:
 //                        Displaying the required authentication user interface is forbidden.
                         completion(.failure(error))
-                    case .watchNotAvailable:
+                    //case .watchNotAvailable:
 //                        An attempt to authenticate with Apple Watch failed.
-                        completion(.failure(error))
+                      //  completion(.failure(error))
 //                  case .touchIDNotAvailable,touchIDNotEnrolled,touchIDLockout:
 //                  TODO: Apple shows those errors altaught they're deprecated in iOS 11
                     default:

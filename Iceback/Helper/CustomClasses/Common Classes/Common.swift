@@ -389,6 +389,25 @@ class Common {
         }
     }
     
+  func openInAppBrowser(url: String, for viewController:UIViewController) {
+    /*if let url = URL(string: url) {
+      let config = SFSafariViewController.Configuration()
+      config.entersReaderIfAvailable = true
+      let vc = SFSafariViewController(url: url, configuration: config)
+      viewController.present(vc, animated: true)
+    } else {
+      let vc: WKWebViewVC = WKWebViewVC.instantiate(appStoryboard:.stores)
+      vc.strWebviewURL = url
+      viewController.navigationController?.pushViewController(vc, animated: false)
+    } */
+    
+    if let url = URL(string: url) {
+      let vc: WKWebViewVC = WKWebViewVC.instantiate(appStoryboard:.stores)
+      vc.strWebviewURL = url.absoluteString
+      vc.isHideDetailButton = true
+      viewController.navigationController?.pushViewController(vc, animated: false)
+    }
+  }
 }
 
 // MARK: - Classes -
